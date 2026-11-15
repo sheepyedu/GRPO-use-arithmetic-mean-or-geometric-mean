@@ -2,7 +2,7 @@
 
 本项目研究序列概率比的算术平均（AM）与几何平均（GM）在强化学习中的性能差异与机制。主模型固定为官方 `Qwen/Qwen3-8B`，默认统一启用 thinking 模式。
 
-当前进入实现与试运行阶段。Node01已复用官方Qwen3-8B，固定三套公开数据及双环境6000题划分，12项测试通过。首个seed17按纯数学AM/GM、混合AM/GM顺序推进。正式完成0/20，当前试运行结果待核。
+当前按用户要求在阿里云PAI H20重新训练。GPU0–3同时运行seed17的纯数学AM/GM与混合AM/GM，随后推进其他seed。Node01试运行已停止并释放本作业显存，已验证的两轮证据保留。正式完成0/20，PAI环境、重新下载的固定数据及19项测试已通过，四个正式run均已实际加载模型并进入初始验证。
 
 ## 实验设计
 
@@ -13,7 +13,7 @@
 | 纯数学 | 6,000 道 GSM8K | 5 个 seed | 5 个 seed |
 | 混合 | 3,000 道 GSM8K、1,500 道 ARC-Easy、1,500 道 BoolQ | 5 个 seed | 5 个 seed |
 
-配对 seed 为 `[17, 29, 43, 71, 101]`。训练 temperature=1.0、top-p=1.0，评估 temperature=0、每题一次贪心生成。每个运行计划进行 200 轮 rollout，每轮 64 个 prompt，每题 8 个回答，共 102,400 条训练回答，20 个运行合计 2,048,000 条。
+配对 seed 为 `[17, 29, 43, 71, 101]`。训练 temperature=1.0、top-p=1.0，评估 temperature=0、每题一次贪心生成。每个运行最多进行 200 轮 rollout，采用共同早停规则，每轮 64 个 prompt，每题 8 个回答，共 102,400 条训练回答，20 个运行合计 2,048,000 条。
 
 两组共享优势计算、序列级裁切、KL、数据顺序与训练预算，仅改变序列概率比聚合算子。AM 组不是标准 token 级 GRPO。两个环境均测试 GSM8K、ARC-Easy 和 BoolQ，按环境报告五个 seed 的配对统计。
 
@@ -21,21 +21,21 @@
 
 ## 运行
 
-实现采用 Transformers/PEFT 训练与 vLLM 单卡 rollout，每卡独立进程。后端决策与共同配置见 [实施决策](docs/method_decision.md)，测试见 [TEST.md](TEST.md)。服务器工作目录为 `/home/remoteadmin/grpo-sequence-ratio`，模型与数据路径在 `configs/seed17.json`。
+实现采用Transformers/PEFT训练及vLLM单卡rollout。PAI模型为 `/mount-data/Models/Qwen3-8B`，配置为 `configs/pai-seed17.json`，工作根 `/mount-data/GRPO-Sequence-Ratio`。软件及共同配置见[实施决策](docs/method_decision.md)，测试见[TEST.md](TEST.md)。
 
 ```sh
 export PYTHONPATH="$PWD"
 export USE_TF=0 USE_FLAX=0
 python -m unittest discover -s tests -v
-python -m src.data --output artifacts/data-v1
-python scripts/run_seed.py --config configs/pilot-seed17.json --output artifacts/pilot-seed17-v1 --phase pilot
-# 四个条件试运行校准完成并冻结共同配置后执行
-python scripts/run_seed.py --config configs/seed17.json --output artifacts/formal-seed17-v1 --phase formal
+HF_ENDPOINT=https://hf-mirror.com python -m src.data --output /mount-data/Datasets/GRPO-Sequence-Ratio/data-v1 --source-manifest reports/data-manifest.json
+python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data/GRPO-Sequence-Ratio/runs/seed17 --phase formal --parallel-environments
 ```
 
-`pilot-seed17.json` 由seed17共同配置复制，将轮数改为10；试运行产物与正式run独立。已存在的数据清单和run目录需核实复用，入口拒绝覆盖。当前正式训练尚未启动。
+## 早停
 
-每个run保存配置、源码和环境清单、原始回答/token、冻结行为/参考分数、逐轮指标、LoRA与AdamW/scheduler/RNG检查点、最终测试预测及终态回执。异常保留原日志。完整checkpoint和原始轨迹位于服务器 `artifacts/`，GitHub保存可复现源码及结果摘要。
+每10轮验证、至少20轮。AM和GM都连续两次未提升0.5个百分点时，在同一完整轮次停止。每个环境另设12小时软上限，可优先于最小轮数，在完整checkpoint提交后触发。最终验证和锁定测试另计。200轮为最大上限。保存共同停止轮次的模型，报告真实轮数及原因。停止判据只使用验证集。
+
+原始轨迹、LoRA、AdamW/scheduler/RNG及检查点保存在服务器 `runs/`，GitHub保存源码、配置和小摘要。异常保留原日志和退出码。seed17四run全部终态、最终测试及结果汇总完成后，再进入下一seed。
 
 ## 项目进度
 

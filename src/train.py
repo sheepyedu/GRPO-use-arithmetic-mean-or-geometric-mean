@@ -20,6 +20,7 @@ from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
 
 from src.data import PromptSchedule, content_hash, file_sha256, write_json
+from src.early_stop import exchange_round
 from src.objectives import group_advantages, sequence_loss
 from src.rewards import parse_answer, score, user_prompt
 
@@ -57,7 +58,7 @@ def move_optimizer(optimizer, device):
 
 
 class Experiment:
-    def __init__(self, config, environment, operator, directory):
+    def __init__(self, config, environment, operator, directory, pair_control=None):
         from vllm import LLM
 
         if config["prompt_batch"] != 64 or config["group_size"] != 8:
@@ -67,6 +68,7 @@ class Experiment:
         if config["minibatch_sequences"] < 1 or 512 % config["minibatch_sequences"]:
             raise ValueError("The optimizer minibatch must divide 512 sequences")
         self.config, self.environment, self.operator = config, environment, operator
+        self.pair_control = Path(pair_control) if pair_control else None
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=False)
         write_json(
@@ -454,6 +456,8 @@ class Experiment:
 
     def run(self, calibration=False):
         adapter = None
+        decision = None
+        last_validation = 0
         if calibration:
             # Fixed validation-only subset, selected by task and content order.
             rows = [
@@ -482,7 +486,8 @@ class Experiment:
                     "Calibration degenerate; inspect parser/template/length before formal training"
                 )
         else:
-            self.evaluate("validation-000", adapter, self.validation)
+            metrics = self.evaluate("validation-000", adapter, self.validation)
+            self.synchronize(0, metrics)
         for number in range(1, self.config["rounds"] + 1):
             rows = self.schedule.batch()
             event(
@@ -497,16 +502,30 @@ class Experiment:
             )
             write_json(self.directory / f"rollout-{number:03d}.json", records)
             adapter = self.train_round(number, records)
+            metrics = None
             if not calibration and number % self.config["validation_every"] == 0:
-                self.evaluate(f"validation-{number:03d}", adapter, self.validation)
+                metrics = self.evaluate(
+                    f"validation-{number:03d}", adapter, self.validation
+                )
+                last_validation = number
+            if not calibration:
+                decision = self.synchronize(number, metrics)
+                if decision and decision["stop"]:
+                    write_json(self.directory / "STOP_DECISION.json", decision)
+                    break
         if not calibration:
+            if last_validation != number:
+                self.evaluate(f"validation-{number:03d}", adapter, self.validation)
             metrics = self.evaluate("test-final", adapter, self.test)
         else:
             metrics = {"calibration": True}
         write_json(
             self.directory / "COMPLETE.json",
             {
-                "rounds": self.config["rounds"],
+                "rounds": number,
+                "planned_rounds": self.config["rounds"],
+                "stop_reason": decision["reason"] if decision else "max_rounds",
+                "paired_stop_decision": decision,
                 "updates": self.updates,
                 "elapsed_seconds": time.time() - self.start,
                 "metrics": metrics,
@@ -516,8 +535,30 @@ class Experiment:
         event(
             self.directory,
             "complete",
-            rounds=self.config["rounds"],
+            rounds=number,
             updates=self.updates,
+        )
+
+    def synchronize(self, number, metrics):
+        if self.pair_control is None:
+            if self.config.get("early_stopping"):
+                raise ValueError("Early stopping requires the paired controller")
+            return None
+        primary = None
+        if metrics is not None:
+            primary = (
+                metrics["gsm8k"]["accuracy"]
+                if self.environment == "math"
+                else metrics["mixed_weighted"]
+            )
+        checkpoint_sha = None
+        if number:
+            checkpoint_sha = file_sha256(
+                self.directory / f"checkpoint-{number:03d}" / "COMMITTED.json"
+            )
+        event(self.directory, "pair_wait", round=number, updates=self.updates)
+        return exchange_round(
+            self.pair_control, self.operator, number, primary, checkpoint_sha
         )
 
 
@@ -528,14 +569,19 @@ def main():
     parser.add_argument("--operator", choices=["am", "gm"], required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--calibration", action="store_true")
+    parser.add_argument("--pair-control")
     args = parser.parse_args()
+    config = json.loads(Path(args.config).read_text())
+    if config.get("early_stopping") and not args.calibration and not args.pair_control:
+        parser.error("Early-stopped formal runs require --pair-control")
     directory = Path(args.output)
     try:
         experiment = Experiment(
-            json.loads(Path(args.config).read_text()),
+            config,
             args.environment,
             args.operator,
             directory,
+            args.pair_control,
         )
         experiment.run(args.calibration)
     except BaseException:

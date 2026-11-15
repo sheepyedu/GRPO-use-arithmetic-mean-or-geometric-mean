@@ -1,0 +1,43 @@
+{
+  "model": "/mount-data/Models/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "data": "/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1",
+  "seed": 17,
+  "rounds": 200,
+  "group_size": 8,
+  "prompt_batch": 64,
+  "optimization_epochs": 2,
+  "minibatch_sequences": 64,
+  "microbatch_sequences": 1,
+  "learning_rate": 1e-05,
+  "epsilon": 0.2,
+  "beta": 0.01,
+  "advantage_delta": 1e-06,
+  "max_new_tokens": 2048,
+  "max_model_len": 8192,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "thinking": true,
+  "gradient_clip": 1.0,
+  "validation_every": 10,
+  "vllm_memory_fraction": 0.72,
+  "vllm_max_sequences": 32,
+  "early_stopping": {
+    "min_rounds": 20,
+    "patience": 2,
+    "min_delta": 0.005,
+    "max_pair_hours": 12
+  }
+}

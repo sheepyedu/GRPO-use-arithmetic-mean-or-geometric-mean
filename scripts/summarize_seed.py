@@ -15,19 +15,42 @@ def summarize(root):
     runs = []
     common_config = None
     common_source = None
+    paired_terminals = {}
     for environment in ("math", "mixed"):
         for operator in ("am", "gm"):
             path = root / f"formal-{environment}-{operator}"
             complete = load(path / "COMPLETE.json")
             config = load(path / "config.json")
             assert complete["formal"] is True
-            assert complete["rounds"] == config["rounds"] == 200
+            actual_rounds = complete["rounds"]
+            assert config["rounds"] == 200
+            assert 1 <= actual_rounds <= config["rounds"]
+            stop_decision = complete.get("paired_stop_decision")
+            if actual_rounds < config["rounds"] or config.get("early_stopping"):
+                assert stop_decision and stop_decision["stop"] is True
+                assert stop_decision["round"] == actual_rounds
+                assert stop_decision["reason"] in (
+                    "paired_plateau",
+                    "wall_time",
+                    "max_rounds",
+                )
+                assert load(path / "STOP_DECISION.json") == stop_decision
+                assert (
+                    load(root / f"formal-{environment}-control" / "STOP_DECISION.json")
+                    == stop_decision
+                )
+            terminal = (actual_rounds, stop_decision)
+            if environment in paired_terminals:
+                assert terminal == paired_terminals[environment], (
+                    "Paired stopping rounds or decisions differ"
+                )
+            paired_terminals[environment] = terminal
             assert not (path / "FAILURE.json").exists()
-            assert (path / "checkpoint-200/COMMITTED.json").exists()
-            assert (path / "checkpoint-200/training_state.pt").stat().st_size > 0
-            checkpoint = path / "checkpoint-200"
+            checkpoint = path / f"checkpoint-{actual_rounds:03d}"
+            assert (checkpoint / "COMMITTED.json").exists()
+            assert (checkpoint / "training_state.pt").stat().st_size > 0
             committed = load(checkpoint / "COMMITTED.json")
-            assert committed["round"] == 200
+            assert committed["round"] == actual_rounds
             assert committed["updates"] == complete["updates"]
             for name, digest in committed["files_sha256"].items():
                 assert file_sha256(checkpoint / name) == digest, name
@@ -54,24 +77,33 @@ def summarize(root):
                     else value["mixed_weighted"]
                 )
                 learning.append((step, primary))
-            assert [step for step, _ in learning] == list(range(0, 201, 20))
+            expected_validation = list(
+                range(0, actual_rounds + 1, config.get("validation_every", 20))
+            )
+            if expected_validation[-1] != actual_rounds:
+                expected_validation.append(actual_rounds)
+            assert [step for step, _ in learning] == expected_validation
             auc = (
                 sum(
                     (b[0] - a[0]) * (a[1] + b[1]) / 2
                     for a, b in zip(learning, learning[1:])
                 )
-                / 200
+                / actual_rounds
             )
             rounds = [
                 json.loads(line)
                 for line in (path / "metrics.jsonl").read_text().splitlines()
             ]
-            assert [row["round"] for row in rounds] == list(range(1, 201))
+            assert [row["round"] for row in rounds] == list(range(1, actual_rounds + 1))
             runs.append(
                 {
                     "environment": environment,
                     "operator": operator,
                     "seed": config["seed"],
+                    "rounds": actual_rounds,
+                    "planned_rounds": config["rounds"],
+                    "stop_reason": complete.get("stop_reason", "max_rounds"),
+                    "paired_stop_decision": stop_decision,
                     "primary": metrics["gsm8k"]["accuracy"]
                     if environment == "math"
                     else metrics["mixed_weighted"],

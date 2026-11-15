@@ -11,10 +11,12 @@ from pathlib import Path
 
 
 def snapshot(root):
-    pair_file = root / "pair.json"
-    pair = json.loads(pair_file.read_text()) if pair_file.exists() else None
+    pair_files = sorted(root.glob("*-pair.json"))
+    if not pair_files and (root / "pair.json").exists():
+        pair_files = [root / "pair.json"]
+    pairs = [json.loads(path.read_text()) for path in pair_files]
     runs = []
-    if pair:
+    for pair in pairs:
         for child in pair["children"]:
             path = Path(child["output"])
             status_file = path / "status.json"
@@ -65,7 +67,8 @@ def snapshot(root):
     return {
         "observed_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "root": str(root),
-        "pair": pair,
+        "pair": pairs[0] if len(pairs) == 1 else None,
+        "pairs": pairs,
         "runs": runs,
         "gpu_csv": gpu.stdout.strip(),
         "disk_free_bytes": shutil.disk_usage(root).free,

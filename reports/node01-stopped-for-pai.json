@@ -1,0 +1,103 @@
+{
+  "request": "user requested stopping Node01 GRPO and migration to PAI GPU0-3",
+  "time": 1794756529.4232094,
+  "targets": [
+    {
+      "pid": 110627,
+      "uid": 1005,
+      "ppid": 1,
+      "start_ticks": 2081029500,
+      "state": "S",
+      "cmdline_sha256": "95dba27e5c3d71b9640a45b4e92f9896319f4a5f5db11e0b9acc99d9eec11d7c"
+    },
+    {
+      "pid": 110628,
+      "uid": 1005,
+      "ppid": 110627,
+      "start_ticks": 2081029505,
+      "state": "S",
+      "cmdline_sha256": "0ad8f8609cca7963f3bfe7e1531e0be7825d6a9f811ecfeb27718371a125f757"
+    },
+    {
+      "pid": 110629,
+      "uid": 1005,
+      "ppid": 110627,
+      "start_ticks": 2081029505,
+      "state": "S",
+      "cmdline_sha256": "1c05fe4243e35130c0596f8b97ea51314d5e20691e85990dafb847a8ea2f97b4"
+    },
+    {
+      "pid": 111045,
+      "uid": 1005,
+      "ppid": 110629,
+      "start_ticks": 2081030773,
+      "state": "S",
+      "cmdline_sha256": "41fb80826704ca64664641f2f88d0f98a85b6b14738f2745b00dcf6adbb2e735"
+    },
+    {
+      "pid": 111014,
+      "uid": 1005,
+      "ppid": 110628,
+      "start_ticks": 2081030725,
+      "state": "S",
+      "cmdline_sha256": "41fb80826704ca64664641f2f88d0f98a85b6b14738f2745b00dcf6adbb2e735"
+    },
+    {
+      "pid": 111015,
+      "uid": 1005,
+      "ppid": 110628,
+      "start_ticks": 2081030726,
+      "state": "R",
+      "cmdline_sha256": "d6aca8646e9e67df94b1f1771bedb80d4d7ad1a666448b377197ec937ed8ae9e"
+    },
+    {
+      "pid": 111046,
+      "uid": 1005,
+      "ppid": 110629,
+      "start_ticks": 2081030773,
+      "state": "R",
+      "cmdline_sha256": "d6aca8646e9e67df94b1f1771bedb80d4d7ad1a666448b377197ec937ed8ae9e"
+    }
+  ],
+  "signals": [
+    {
+      "pid": 110627,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 110628,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 110629,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 111045,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 111014,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 111015,
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 111046,
+      "signal": "SIGTERM"
+    }
+  ],
+  "remaining_live": [],
+  "checkpoints": {
+    "am": [
+      "checkpoint-001",
+      "checkpoint-002"
+    ],
+    "gm": [
+      "checkpoint-001",
+      "checkpoint-002"
+    ]
+  }
+}

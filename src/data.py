@@ -102,7 +102,7 @@ def exclude_duplicates(candidates, protected):
     return kept, counts
 
 
-def prepare(destination):
+def prepare(destination, source_manifest=None):
     from datasets import load_dataset
     from huggingface_hub import HfApi
 
@@ -117,8 +117,15 @@ def prepare(destination):
         "boolq": ("google/boolq", "default"),
     }
     data, revisions = {}, {}
+    pinned = (
+        json.loads(Path(source_manifest).read_text())["sources"]
+        if source_manifest
+        else {}
+    )
     for task, (repo, config) in sources.items():
-        info = HfApi().dataset_info(repo)
+        info = HfApi().dataset_info(
+            repo, revision=pinned[task]["revision"] if pinned else None
+        )
         revisions[task] = {
             "repo": repo,
             "revision": info.sha,
@@ -209,4 +216,6 @@ class PromptSchedule:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", required=True)
-    prepare(parser.parse_args().output)
+    parser.add_argument("--source-manifest")
+    args = parser.parse_args()
+    prepare(args.output, args.source_manifest)

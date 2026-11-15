@@ -1,0 +1,26 @@
+{
+  "wrapper_pid": 2330885,
+  "time": 1794757248.1646242,
+  "command": [
+    "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+    "-u",
+    "scripts/run_seed.py",
+    "--config",
+    "configs/pai-seed17.json",
+    "--output",
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
+    "--phase",
+    "formal",
+    "--parallel-environments"
+  ],
+  "gpu_scope": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "source_archive_sha256": "1b6a80451a0960d6b4ebb483ccf4eece6060bf6a2bcf7ab3f2f0238d0e73545c",
+  "config_sha256": "88b5a17fc5be7386cedde9f2bb404d8bfbd01f51b1f880d85f7b3f3889fb0d8c",
+  "data_hashes_match": true,
+  "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17"
+}

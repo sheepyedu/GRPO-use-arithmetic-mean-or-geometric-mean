@@ -1,0 +1,25 @@
+test_digits_preserved (test_core.DataTests.test_digits_preserved) ... ok
+test_duplicates (test_core.DataTests.test_duplicates) ... ok
+test_paired_schedule (test_core.DataTests.test_paired_schedule) ... ok
+test_clipping_and_zero_rewards (test_core.ObjectiveTests.test_clipping_and_zero_rewards) ... ok
+test_extreme_log_domain (test_core.ObjectiveTests.test_extreme_log_domain) ... ok
+test_identity_gradients (test_core.ObjectiveTests.test_identity_gradients) ... ok
+test_inequality_and_mask (test_core.ObjectiveTests.test_inequality_and_mask) ... ok
+test_tiny_qwen_update (test_core.ObjectiveTests.test_tiny_qwen_update) ... ok
+test_unsupported_batch_rejected (test_core.ObjectiveTests.test_unsupported_batch_rejected) ... W1115 23:38:21.999000 2328146 torch/utils/cpp_extension.py:118] No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+ok
+test_strict_final (test_core.RewardTests.test_strict_final) ... ok
+test_both_must_plateau (test_early_stop.EarlyStopTests.test_both_must_plateau) ... ok
+test_minimum_and_delta (test_early_stop.EarlyStopTests.test_minimum_and_delta) ... ok
+test_nonfinite_rejected (test_early_stop.EarlyStopTests.test_nonfinite_rejected) ... ok
+test_round_exchange_and_abort (test_early_stop.EarlyStopTests.test_round_exchange_and_abort) ... ok
+test_time_and_maximum (test_early_stop.EarlyStopTests.test_time_and_maximum) ... ok
+test_two_processes_stop_on_the_same_checkpoint (test_early_stop.EarlyStopTests.test_two_processes_stop_on_the_same_checkpoint) ... ok
+test_early_stopped_pair_and_asymmetric_rejection (test_results.ResultTests.test_early_stopped_pair_and_asymmetric_rejection) ... ok
+test_incomplete_seed_rejected (test_results.ResultTests.test_incomplete_seed_rejected) ... ok
+test_paired_summary_and_integrity (test_results.ResultTests.test_paired_summary_and_integrity) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 9.951s
+
+OK

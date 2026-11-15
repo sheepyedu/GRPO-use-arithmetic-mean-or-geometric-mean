@@ -8,8 +8,18 @@ from src.data import file_sha256, write_json
 
 
 class ResultTests(unittest.TestCase):
-    def fixture(self, root):
+    def fixture(self, root, actual_rounds=200, early=False):
         for environment in ("math", "mixed"):
+            decision = {
+                "round": actual_rounds,
+                "stop": True,
+                "reason": "paired_plateau",
+            }
+            if early:
+                write_json(
+                    root / f"formal-{environment}-control" / "STOP_DECISION.json",
+                    decision,
+                )
             for operator in ("am", "gm"):
                 path = root / f"formal-{environment}-{operator}"
                 path.mkdir()
@@ -27,6 +37,7 @@ class ResultTests(unittest.TestCase):
                         "operator": operator,
                         "seed": 17,
                         "rounds": 200,
+                        **({"early_stopping": {"min_rounds": 20}} if early else {}),
                     },
                 )
                 write_json(path / "source_manifest.json", {"src/train.py": "fixture"})
@@ -34,13 +45,23 @@ class ResultTests(unittest.TestCase):
                     path / "COMPLETE.json",
                     {
                         "formal": True,
-                        "rounds": 200,
-                        "updates": 3200,
+                        "rounds": actual_rounds,
+                        "updates": actual_rounds * 16,
+                        **(
+                            {
+                                "paired_stop_decision": decision,
+                                "stop_reason": decision["reason"],
+                            }
+                            if early
+                            else {}
+                        ),
                         "elapsed_seconds": 3600,
                         "metrics": metrics,
                     },
                 )
-                checkpoint = path / "checkpoint-200"
+                if early:
+                    write_json(path / "STOP_DECISION.json", decision)
+                checkpoint = path / f"checkpoint-{actual_rounds:03d}"
                 checkpoint.mkdir()
                 for name in (
                     "adapter_config.json",
@@ -51,8 +72,8 @@ class ResultTests(unittest.TestCase):
                 write_json(
                     checkpoint / "COMMITTED.json",
                     {
-                        "round": 200,
-                        "updates": 3200,
+                        "round": actual_rounds,
+                        "updates": actual_rounds * 16,
                         "files_sha256": {
                             name: file_sha256(checkpoint / name)
                             for name in (
@@ -63,12 +84,12 @@ class ResultTests(unittest.TestCase):
                         },
                     },
                 )
-                for step in range(0, 201, 20):
+                for step in range(0, actual_rounds + 1, 20):
                     write_json(path / f"validation-{step:03d}-metrics.json", metrics)
                 (path / "metrics.jsonl").write_text(
                     "\n".join(
                         json.dumps({"round": step, "tokens": 100})
-                        for step in range(1, 201)
+                        for step in range(1, actual_rounds + 1)
                     )
                 )
 
@@ -91,6 +112,21 @@ class ResultTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             with self.assertRaises(FileNotFoundError):
                 summarize(Path(temporary))
+
+    def test_early_stopped_pair_and_asymmetric_rejection(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.fixture(root, actual_rounds=20, early=True)
+            result = summarize(root)
+            self.assertEqual(result["runs"][0]["rounds"], 20)
+            self.assertEqual(result["runs"][0]["planned_rounds"], 200)
+            self.assertEqual(result["runs"][0]["stop_reason"], "paired_plateau")
+            path = root / "formal-math-gm/COMPLETE.json"
+            complete = json.loads(path.read_text())
+            complete["rounds"] = 21
+            write_json(path, complete)
+            with self.assertRaises(AssertionError):
+                summarize(root)
 
 
 if __name__ == "__main__":

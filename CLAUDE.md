@@ -89,6 +89,12 @@ rebase 发生冲突时：
 - 主模型固定为官方 `Qwen/Qwen3-8B`，默认统一启用 thinking 模式；实施时固定 revision 并核验许可证、模板与后端兼容性。
 - 保留纯数学与混合双环境、序列概率比 AM/GM 配对比较及五个 seed（17、29、43、71、101），共 20 个正式运行。AM 组不是标准 token 级 GRPO。
 - 已实现 `src/{data,rewards,objectives,train}.py`、`scripts/run_seed.py` 和 `configs/seed17.json`。Node01现有torch2.10/transformers4.57.6/peft0.17.1/vLLM0.17.1用于BF16 LoRA单卡训练，后端选择见 `docs/method_decision.md`。
-- 首seed17先纯数学AM/GM两卡并行，完成保存后再混合AM/GM。独立试运行与正式200轮分别记账，正式完成仍0/20。
-- 服务器工作目录 `/home/remoteadmin/grpo-sequence-ratio`，官方模型复用 `/home/remoteadmin/skillos-repeatability-v1/models/Qwen3-8B-b968826d9c46`，原模型只读。大产物保存在服务器 `artifacts/`，仓库只提交源码、文档和小摘要。
-- 测试 `python -m unittest discover -s tests -v`，12项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。
+- 首seed17在PAI GPU0–3同时运行数学AM/GM和混合AM/GM。正式采用成对早停，最多200轮，真实完成0/20。
+- 当前服务器工作根 `/mount-data/GRPO-Sequence-Ratio`，官方模型 `/mount-data/Models/Qwen3-8B`，数据 `/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1`。Node01历史试运行及停止证据保留原目录。仓库提交源码、文档和小摘要。
+- 测试 `python -m unittest discover -s tests -v`，19项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。
+
+## 最新执行调整
+
+- 2026-11-15用户要求停止Node01并在PAI从原始Qwen3-8B重新训练，GPU0/1数学AM/GM，GPU2/3混合AM/GM，seed17完成后继续29/43/71/101。
+- 最新配置 `configs/pai-seed17.json`，`scripts/run_seed.py --parallel-environments` 同时启动两个配对控制器，每轮checkpoint屏障后共同决定继续或停止。
+- 早停为验证间隔10、最小20、patience2、min_delta0.005及每对12小时软上限，最大200轮。记录真实轮数、共同停止原因及最终测试。Node01试运行证据独立保留。
