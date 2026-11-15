@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T21:46:43.517224+00:00",
+  "observed_at": "2026-11-15T22:18:59.665523+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
   "pair": null,
   "pairs": [
@@ -42,11 +42,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
       "status": {
-        "time": 1794779169.713223,
-        "phase": "rollout",
+        "time": 1794781129.8584862,
+        "phase": "optimizer",
         "pid": 2330890,
-        "round": 19,
-        "updates": 288
+        "round": 20,
+        "epoch": 2,
+        "updates": 315,
+        "grad_norm": 0.00741474237293005,
+        "minibatch_offset": 128
       },
       "identity": {
         "pid": 2330890,
@@ -62,11 +65,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
       "status": {
-        "time": 1794779169.4702249,
-        "phase": "rollout",
+        "time": 1794781131.0326004,
+        "phase": "optimizer",
         "pid": 2330892,
-        "round": 19,
-        "updates": 288
+        "round": 20,
+        "epoch": 2,
+        "updates": 315,
+        "grad_norm": 0.01079926360398531,
+        "minibatch_offset": 128
       },
       "identity": {
         "pid": 2330892,
@@ -74,7 +80,7 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "1f2e5de639f12d94d1585d12ad7b87058c5891ceb7ea6edbb1afda296bc25c80",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "failure": null,
       "complete": false
@@ -82,12 +88,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
       "status": {
-        "time": 1794778622.6925416,
-        "phase": "evaluation",
+        "time": 1794780896.3083067,
+        "phase": "rollout",
         "pid": 2330889,
-        "stage": "validation-020",
-        "examples": 2570,
-        "updates": 320
+        "round": 22,
+        "updates": 336
       },
       "identity": {
         "pid": 2330889,
@@ -103,12 +108,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
       "status": {
-        "time": 1794778614.250217,
-        "phase": "evaluation",
+        "time": 1794780896.3226247,
+        "phase": "rollout",
         "pid": 2330891,
-        "stage": "validation-020",
-        "examples": 2570,
-        "updates": 320
+        "round": 22,
+        "updates": 336
       },
       "identity": {
         "pid": 2330891,
@@ -122,8 +126,8 @@
       "complete": false
     }
   ],
-  "gpu_csv": "0, 71204, 30\n1, 70938, 30\n2, 71050, 31\n3, 70998, 32\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6542841610240,
+  "gpu_csv": "0, 28048, 97\n1, 26048, 97\n2, 70924, 30\n3, 70928, 33\n4, 77092, 71\n5, 77092, 29\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6538718609408,
   "host_identity": {
     "hostname": "dsw-556082-75966ff79-6qp6m",
     "uid": 0,
@@ -152,41 +156,42 @@
         15,
         16,
         17,
-        18
+        18,
+        19
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.94921875,
-        "group_std": 0.03659851476550102,
+        "reward": 0.890625,
+        "group_std": 0.03579877316951752,
         "zero_advantage_fraction": 0.90625,
-        "sampling_scoring_logp_mae": 0.009324806179392908,
-        "tokens": 308767,
-        "truncation": 0.041015625,
-        "valid": 0.955078125,
+        "sampling_scoring_logp_mae": 0.00947138546143833,
+        "tokens": 328175,
+        "truncation": 0.046875,
+        "valid": 0.94921875,
         "tasks": {
           "gsm8k": {
             "count": 512,
-            "reward": 0.94921875,
-            "mean_tokens": 603.060546875,
-            "truncation": 0.041015625
+            "reward": 0.890625,
+            "mean_tokens": 640.966796875,
+            "truncation": 0.046875
           }
         },
-        "kl": 0.002625968424979419,
+        "kl": 0.0027016762591642873,
         "clip_fraction": 0.0,
-        "ratio": 1.0005164107424207,
-        "am_gm_log_gap": 0.0005396341248768977,
-        "entropy": 0.1804012010252336,
-        "loss": -9.172095394305302e-06,
+        "ratio": 1.0005179055733606,
+        "am_gm_log_gap": 0.00055227020514792,
+        "entropy": 0.18798941186469165,
+        "loss": -2.4787630711564645e-05,
         "ratio_quantiles": {
-          "0.0": 0.9938439726829529,
-          "0.01": 0.9965636134147644,
-          "0.5": 1.0004836320877075,
-          "0.99": 1.0044825077056885,
-          "1.0": 1.006338119506836
+          "0.0": 0.9889280796051025,
+          "0.01": 0.9967262148857117,
+          "0.5": 1.0004504919052124,
+          "0.99": 1.0043866634368896,
+          "1.0": 1.0086325407028198
         },
-        "round": 18,
-        "updates": 288,
-        "elapsed": 21889.775835990906
+        "round": 19,
+        "updates": 304,
+        "elapsed": 23023.664601564407
       },
       "validation_metrics": [
         {
@@ -246,10 +251,10 @@
           }
         }
       ],
-      "committed_sha256": "153fdf35ac331ecb4163ca434a1e10ccdc46a4e0b4f29295d0424fb446cc8153",
+      "committed_sha256": "3555a67ddf9e27d254e08bf6eb3bde63c9ccdb3ffccc16e79ae445747b19be49",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 18,
+        "round": 19,
         "stop": false,
         "reason": null,
         "best": {
@@ -261,7 +266,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 21920.822076615004
+        "elapsed_seconds": 23040.668976849993
       }
     },
     {
@@ -284,41 +289,42 @@
         15,
         16,
         17,
-        18
+        18,
+        19
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.955078125,
-        "group_std": 0.02029632404446602,
-        "zero_advantage_fraction": 0.953125,
-        "sampling_scoring_logp_mae": 0.009492104887158348,
-        "tokens": 318175,
+        "reward": 0.8984375,
+        "group_std": 0.035798776894807816,
+        "zero_advantage_fraction": 0.90625,
+        "sampling_scoring_logp_mae": 0.009567733965013758,
+        "tokens": 333050,
         "truncation": 0.041015625,
-        "valid": 0.958984375,
+        "valid": 0.95703125,
         "tasks": {
           "gsm8k": {
             "count": 512,
-            "reward": 0.955078125,
-            "mean_tokens": 621.435546875,
+            "reward": 0.8984375,
+            "mean_tokens": 650.48828125,
             "truncation": 0.041015625
           }
         },
-        "kl": 0.002558027173336086,
+        "kl": 0.0025231438415858065,
         "clip_fraction": 0.0,
-        "ratio": 1.000058579375036,
-        "am_gm_log_gap": 0.0005687470880957335,
-        "entropy": 0.18723229860552237,
-        "loss": -1.241164904630665e-05,
+        "ratio": 1.0000201857765205,
+        "am_gm_log_gap": 0.0005632915780466874,
+        "entropy": 0.18911695120914374,
+        "loss": -6.410936608158835e-05,
         "ratio_quantiles": {
-          "0.0": 0.9934111833572388,
-          "0.01": 0.9960827827453613,
+          "0.0": 0.9883581399917603,
+          "0.01": 0.9962338805198669,
           "0.5": 1.0,
-          "0.99": 1.0038022994995117,
-          "1.0": 1.0058950185775757
+          "0.99": 1.0035676956176758,
+          "1.0": 1.0046122074127197
         },
-        "round": 18,
-        "updates": 288,
-        "elapsed": 21910.30309033394
+        "round": 19,
+        "updates": 304,
+        "elapsed": 23030.81999349594
       },
       "validation_metrics": [
         {
@@ -378,10 +384,10 @@
           }
         }
       ],
-      "committed_sha256": "7c49146e15a3eb55f12a8bf9690a5150d4dbd99cacc112959805b510499c462b",
+      "committed_sha256": "16a7f9fa7c2c4af586ca7fa3763795ea1d583a70bbdf325ce0408aa20525291d",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 18,
+        "round": 19,
         "stop": false,
         "reason": null,
         "best": {
@@ -393,7 +399,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 21920.822076615004
+        "elapsed_seconds": 23040.668976849993
       }
     },
     {
@@ -418,53 +424,54 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.951171875,
-        "group_std": 0.028908567503094673,
-        "zero_advantage_fraction": 0.9375,
-        "sampling_scoring_logp_mae": 0.010834845687440975,
-        "tokens": 235876,
-        "truncation": 0.015625,
-        "valid": 0.984375,
+        "reward": 0.9140625,
+        "group_std": 0.012731904163956642,
+        "zero_advantage_fraction": 0.96875,
+        "sampling_scoring_logp_mae": 0.011148028877414617,
+        "tokens": 227695,
+        "truncation": 0.00390625,
+        "valid": 0.99609375,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.9765625,
-            "mean_tokens": 595.4921875,
-            "truncation": 0.0234375
+            "reward": 0.9375,
+            "mean_tokens": 520.0078125,
+            "truncation": 0.00390625
           },
           "arc": {
             "count": 128,
-            "reward": 0.890625,
-            "mean_tokens": 409.6875,
-            "truncation": 0.015625
+            "reward": 0.9921875,
+            "mean_tokens": 451.703125,
+            "truncation": 0.0078125
           },
           "boolq": {
             "count": 128,
-            "reward": 0.9609375,
-            "mean_tokens": 242.109375,
+            "reward": 0.7890625,
+            "mean_tokens": 287.1484375,
             "truncation": 0.0
           }
         },
-        "kl": 0.004522162694826193,
+        "kl": 0.0045979940142615305,
         "clip_fraction": 0.0,
-        "ratio": 1.0005736173479818,
-        "am_gm_log_gap": 0.0006252911158242114,
-        "entropy": 0.21576559537788853,
-        "loss": -1.82490854219175e-05,
+        "ratio": 1.000718473631423,
+        "am_gm_log_gap": 0.0006630240207670113,
+        "entropy": 0.22308129761222517,
+        "loss": 2.9524579006512397e-05,
         "ratio_quantiles": {
-          "0.0": 0.9878903031349182,
-          "0.01": 0.9946569204330444,
-          "0.5": 1.0004287958145142,
-          "0.99": 1.0063990354537964,
-          "1.0": 1.017080545425415
+          "0.0": 0.9921025037765503,
+          "0.01": 0.9946970343589783,
+          "0.5": 1.000541090965271,
+          "0.99": 1.0064367055892944,
+          "1.0": 1.0134037733078003
         },
-        "round": 20,
-        "updates": 320,
-        "elapsed": 21364.89244747162
+        "round": 21,
+        "updates": 336,
+        "elapsed": 23628.224613904953
       },
       "validation_metrics": [
         {
@@ -522,24 +529,52 @@
             "macro": 0.9165555555555556,
             "mixed_weighted": 0.9174166666666667
           }
+        },
+        {
+          "round": 20,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.928,
+              "mean_tokens": 593.224,
+              "truncation": 0.044,
+              "valid": 0.956
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.9701754385964912,
+              "mean_tokens": 432.5105263157895,
+              "truncation": 0.014035087719298246,
+              "valid": 0.9859649122807017
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.864,
+              "mean_tokens": 278.435,
+              "truncation": 0.008,
+              "valid": 0.992
+            },
+            "macro": 0.9207251461988304,
+            "mixed_weighted": 0.9225438596491228
+          }
         }
       ],
-      "committed_sha256": "45beee73614d97685b2e57cb8c80aded772e64dde384aeddd98f84d563671a93",
-      "ready_matches_committed": null,
+      "committed_sha256": "14948550ce496dee82b73fe2dc212ffbdc1f7f8cb2da8f5dc2a1a81d371a1937",
+      "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 19,
+        "round": 21,
         "stop": false,
         "reason": null,
         "best": {
-          "am": 0.9174166666666667,
+          "am": 0.9225438596491228,
           "gm": 0.9177894736842106
         },
         "bad_checks": {
           "am": 0,
-          "gm": 0
+          "gm": 1
         },
         "scores": null,
-        "elapsed_seconds": 20480.642201092967
+        "elapsed_seconds": 23647.11559968698
       }
     },
     {
@@ -564,53 +599,54 @@
         17,
         18,
         19,
-        20
+        20,
+        21
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.87890625,
-        "group_std": 0.08395698666572571,
-        "zero_advantage_fraction": 0.796875,
-        "sampling_scoring_logp_mae": 0.010660160985025868,
-        "tokens": 240659,
-        "truncation": 0.02734375,
-        "valid": 0.90234375,
+        "reward": 0.8984375,
+        "group_std": 0.02491328865289688,
+        "zero_advantage_fraction": 0.9375,
+        "sampling_scoring_logp_mae": 0.011130038679311838,
+        "tokens": 236868,
+        "truncation": 0.005859375,
+        "valid": 0.982421875,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.94921875,
-            "mean_tokens": 602.828125,
-            "truncation": 0.05078125
+            "reward": 0.9375,
+            "mean_tokens": 540.734375,
+            "truncation": 0.0078125
           },
           "arc": {
             "count": 128,
-            "reward": 0.671875,
-            "mean_tokens": 425.1484375,
+            "reward": 0.9453125,
+            "mean_tokens": 453.5859375,
             "truncation": 0.0078125
           },
           "boolq": {
             "count": 128,
-            "reward": 0.9453125,
-            "mean_tokens": 249.34375,
+            "reward": 0.7734375,
+            "mean_tokens": 315.4765625,
             "truncation": 0.0
           }
         },
-        "kl": 0.0025018533966374434,
+        "kl": 0.0025745084896158232,
         "clip_fraction": 0.0,
-        "ratio": 0.9999637833680026,
-        "am_gm_log_gap": 0.0007221532156478361,
-        "entropy": 0.2050570394785609,
-        "loss": -0.00022776891413545108,
+        "ratio": 1.000065138679929,
+        "am_gm_log_gap": 0.0007514854221284395,
+        "entropy": 0.21109173453078256,
+        "loss": -1.3369870045298882e-05,
         "ratio_quantiles": {
-          "0.0": 0.985285222530365,
-          "0.01": 0.9929270148277283,
+          "0.0": 0.9917052984237671,
+          "0.01": 0.9942588210105896,
           "0.5": 1.0,
-          "0.99": 1.0052069425582886,
-          "1.0": 1.011191964149475
+          "0.99": 1.0070221424102783,
+          "1.0": 1.0108044147491455
         },
-        "round": 20,
-        "updates": 320,
-        "elapsed": 21356.302295684814
+        "round": 21,
+        "updates": 336,
+        "elapsed": 23637.363912820816
       },
       "validation_metrics": [
         {
@@ -668,25 +704,116 @@
             "macro": 0.916719298245614,
             "mixed_weighted": 0.9177894736842106
           }
+        },
+        {
+          "round": 20,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.92,
+              "mean_tokens": 627.402,
+              "truncation": 0.056,
+              "valid": 0.943
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.9245614035087719,
+              "mean_tokens": 436.49649122807017,
+              "truncation": 0.015789473684210527,
+              "valid": 0.9385964912280702
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.865,
+              "mean_tokens": 284.619,
+              "truncation": 0.009,
+              "valid": 0.989
+            },
+            "macro": 0.903187134502924,
+            "mixed_weighted": 0.907390350877193
+          }
         }
       ],
-      "committed_sha256": "ac941ff1117475693ab3847f0143564e8973079365c1e2adcae522787d2c58ff",
-      "ready_matches_committed": null,
+      "committed_sha256": "7cad70143b7baafd2b2d2ecd854d3680a7af4564e73cba466df52eb359cb9c53",
+      "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 19,
+        "round": 21,
         "stop": false,
         "reason": null,
         "best": {
-          "am": 0.9174166666666667,
+          "am": 0.9225438596491228,
           "gm": 0.9177894736842106
         },
         "bad_checks": {
           "am": 0,
-          "gm": 0
+          "gm": 1
         },
         "scores": null,
-        "elapsed_seconds": 20480.642201092967
+        "elapsed_seconds": 23647.11559968698
       }
     }
-  ]
+  ],
+  "gpu_process_observation": {
+    "observed_at": "2026-11-15T22:18:59.874908+00:00",
+    "processes": [
+      {
+        "gpu_uuid": "GPU-29fbff28-1179-98a5-41cc-9e2980005df8",
+        "pid": 811724,
+        "memory_mib": "610",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-29fbff28-1179-98a5-41cc-9e2980005df8",
+        "pid": 810381,
+        "memory_mib": "27382",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-5c212b69-0b96-3189-05af-49a8ad375cdb",
+        "pid": 811741,
+        "memory_mib": "610",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-5c212b69-0b96-3189-05af-49a8ad375cdb",
+        "pid": 810383,
+        "memory_mib": "25382",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-744eb5bf-cb6e-49d3-c0b6-8759bd2d4248",
+        "pid": 811747,
+        "memory_mib": "70238",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-744eb5bf-cb6e-49d3-c0b6-8759bd2d4248",
+        "pid": 810380,
+        "memory_mib": "630",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-4e5caf63-c61d-182f-326a-80f3c3fd2d17",
+        "pid": 811754,
+        "memory_mib": "70238",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      },
+      {
+        "gpu_uuid": "GPU-4e5caf63-c61d-182f-326a-80f3c3fd2d17",
+        "pid": 810382,
+        "memory_mib": "634",
+        "owner_driver": null,
+        "identity_error": "FileNotFoundError"
+      }
+    ],
+    "query_exit_code": 0,
+    "query_error": null
+  }
 }
