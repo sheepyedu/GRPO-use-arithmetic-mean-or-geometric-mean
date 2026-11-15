@@ -1,5 +1,15 @@
 # 项目进展与经验
 
+## 2026-11-15 23:53 · PAI正式训练与夜间自主执行
+
+- 当前发布提交 `c7e3868c690f36b82ef2020c137569349e450c71` 已与远端main核对一致。Node01原GRPO相关7进程已停止，释放对应显存，历史两个完整检查点留原服务器。PAI从共享原始Qwen3-8B重新训练，未转移Node01训练模型。
+- PAI实际训练源 `/mount-data/GRPO-Sequence-Ratio/source-v2`，隔离环境 `/mount-data/GRPO-Sequence-Ratio/env`，数据 `/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1`。19项测试通过、固定数据划分和模型文件SHA匹配，来源及启动证据在 `reports/pai-seed17/`。活动源码保持冻结，后续管理或修复单独版本化。
+- GPU0数学AM、GPU1数学GM、GPU2混合AM、GPU3混合GM同时运行。23:48:42实际四个当前pair记录对应PID/UID/start/cmdline身份均匹配，处于validation-000，各2570题、optimizer更新0，未出现FAILURE文件。GPU0–3利用率54/52/54/49%，显存70341/70371/70387/70341MiB，CPFS剩余6764896452608B。GPU4–7未用于本实验。
+- 用户明确启用 `/Users/mac/.codex/skills/night-autonomous-execution/SKILL.md`。北京时间2026-11-16 10:00之前，执行Agent在现有授权范围自主决断和修复，持续监督当前四run。10:00为决策权切换时刻，此后需要用户判断的问题交用户决定，其余已授权工作和Goal继续推进至完成。此前误记的10:00停止调度已在Notion更正。任何时间均不据此停止训练或暂停Goal。
+- 沿用每10轮验证、至少20轮平台期判断、两侧patience2/min_delta0.005的成对早停，以及每环境12小时软预算。原科学预算、配对完整轮次和最终测试保持。每个run实际完成后验收COMPLETE、父控制器真实退出码、最终验证/测试和完整检查点，再更新任务勾选。四run汇总后按固定Skill提交审核，随后推进已授权seed29/43/71/101。
+- Notion数值属性已改按现有待办清单，子页12/18为66.67%，父页3/7为42.86%，正文说明口径变化。正式执行终态独立记0/4、0/20。每项验收完成后立即同步正文勾选、数值属性、原始证据和父摘要。
+- 下一实际动作是监督初始验证完成、原配对decision-000及首轮rollout/AdamW/checkpoint闭合。通过当前 `*-pair.json` 与 `scripts/status.py` 获取进程身份，不用本文历史PID作未来判断。当前native Goal保持active，旧目标文字中的Node01顺序执行由用户最新PAI四条件并行及后续seed授权覆盖。
+
 ## 2026-11-15 · Qwen3-8B 实验方案发布
 
 - 已完成完整协议 `docs/experiment_plan.md`、README 入口及文档检查指南，并在项目指南中统一官方主模型 `Qwen/Qwen3-8B`。保留双环境、AM/GM 序列概率比对照和五个配对 seed，共 20 个正式运行。
