@@ -1,0 +1,137 @@
+{
+  "observed_at": "2026-11-15T16:02:40.444649+00:00",
+  "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
+  "pair": null,
+  "pairs": [
+    {
+      "phase": "formal",
+      "environment": "math",
+      "children": [
+        {
+          "pid": 2330890,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
+          "gpu": 0
+        },
+        {
+          "pid": 2330892,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
+          "gpu": 1
+        }
+      ],
+      "start": 1794757248.2609782
+    },
+    {
+      "phase": "formal",
+      "environment": "mixed",
+      "children": [
+        {
+          "pid": 2330889,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
+          "gpu": 2
+        },
+        {
+          "pid": 2330891,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
+          "gpu": 3
+        }
+      ],
+      "start": 1794757248.2592435
+    }
+  ],
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
+      "status": {
+        "time": 1794758558.5351324,
+        "phase": "optimizer",
+        "pid": 2330890,
+        "round": 1,
+        "epoch": 1,
+        "updates": 2,
+        "grad_norm": 0.0225693192332983,
+        "minibatch_offset": 64
+      },
+      "identity": {
+        "pid": 2330890,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "3cf8f038293067313acdf71b55c94936eaa8bdfcc9c1aa43abbdf210a1ae2914",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
+      "status": {
+        "time": 1794758526.7871315,
+        "phase": "optimizer",
+        "pid": 2330892,
+        "round": 1,
+        "epoch": 1,
+        "updates": 1,
+        "grad_norm": 0.011765984818339348,
+        "minibatch_offset": 0
+      },
+      "identity": {
+        "pid": 2330892,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "1f2e5de639f12d94d1585d12ad7b87058c5891ceb7ea6edbb1afda296bc25c80",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
+      "status": {
+        "time": 1794758559.3248105,
+        "phase": "optimizer",
+        "pid": 2330889,
+        "round": 1,
+        "epoch": 1,
+        "updates": 4,
+        "grad_norm": 0.08443357050418854,
+        "minibatch_offset": 192
+      },
+      "identity": {
+        "pid": 2330889,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "2c03b8f285f51e6afe6071e8729dcdcf21c1f3ad75f5ebfb814e272d3da4178f",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
+      "status": {
+        "time": 1794758555.4013581,
+        "phase": "optimizer",
+        "pid": 2330891,
+        "round": 1,
+        "epoch": 1,
+        "updates": 4,
+        "grad_norm": 0.047771651297807693,
+        "minibatch_offset": 192
+      },
+      "identity": {
+        "pid": 2330891,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "7b6b85e5bcd8b2b76f7dba559f04a2635a86b088d8975042d34aa3a825eb4074",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    }
+  ],
+  "gpu_csv": "0, 28420, 93\n1, 26316, 95\n2, 25784, 96\n3, 29924, 95\n4, 81138, 0\n5, 80345, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6763772379136
+}
