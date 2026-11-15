@@ -1,5 +1,14 @@
 # 项目进展与经验
 
+## 2026-11-16 06:50 · 四条件第20轮验证闭合，补齐实际子进程身份
+
+- 06:50:12实际读取，数学第20轮GSM8K为AM93.0%/GM93.9%，相对第10轮+0.2/+1.1个百分点，原耐心计数AM1/GM0并继续第21轮采样、各320次更新。混合原第20轮加权92.2544%/90.7390%、耐心0/1，已完成23轮、第24轮采样、各368次更新。较06:18:59增量5/5/32/32，原四driver PID/UID/start/full cmdline身份一致，FAILURE缺席，正式终态0/4。
+- 四份基线/第10/20轮完整分任务指标和当前配对状态已提取至 `reports/pai-seed17/interim-validation-020.json`，统计范围为seed17验证，最终测试与五seed比较待完成。两环境共同平台停止均最早40轮，原12小时软预算独立生效，四run训练及测试仍估今天13–15点。
+- 全部已记录训练指标有限，数学checkpoint-020、混合checkpoint-023与ready摘要匹配，最新共享决定均继续。GPU0–3利用率31/33/29/32%，显存71324/71054/70928/70944MiB，均vLLM采样。CPU184/1800GiB与CPFS源匹配，剩余6532972412928B。
+- 沿已验证driver实际父子关系，只读记录8个UID0子进程，包含Engine PID2331155/2331170/2331176/2331183及4个resource_tracker，UID/start/full cmdline SHA和owner-driver身份完整，保存 `reports/pai-seed17/driver-descendant-identities.json`。NVML直接PID映射仍未验证，前帧原始FileNotFound证据保留。该子进程身份记录用于本作业后续进程验收，未发送信号或变更服务。
+- 本段接续提交 `1a89b09`。Notion父子最新摘要、第20轮结果及诊断边界已同步，当前清单重核子13/19、父4/8。实际快照在 `reports/pai-seed17/latest-status.json`、`latest-supervision-summary.json`，下一例行门北京时间07:20:12.593683，Goal active。
+
+
 ## 2026-11-16 06:19 · 混合第20轮验证完成，AM耐心归零
 
 - 06:18:59门后实际读取，数学已完成19轮、第20轮epoch2累计315/315次AdamW；混合第20轮验证闭合，已完成21轮、各336次更新，第22轮采样。较05:46:43增量27/27/16/16，原四进程PID/UID/start/full cmdline身份一致，FAILURE缺席，正式终态0/4。
