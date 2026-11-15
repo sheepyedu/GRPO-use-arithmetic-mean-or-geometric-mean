@@ -1,15 +1,18 @@
 {
-  "observed_at": "2026-11-15T17:09:58.545710+00:00",
-  "previous_observed_at": "2026-11-15T16:38:51.767017+00:00",
+  "observed_at": "2026-11-15T17:40:51.007051+00:00",
+  "previous_observed_at": "2026-11-15T17:09:58.545710+00:00",
   "runs": [
     {
       "name": "formal-math-am",
       "status": {
-        "time": 1794762564.5501237,
-        "phase": "rollout",
+        "time": 1794764432.7803352,
+        "phase": "optimizer",
         "pid": 2330890,
-        "round": 5,
-        "updates": 64
+        "round": 6,
+        "epoch": 1,
+        "updates": 85,
+        "grad_norm": 0.019231529906392097,
+        "minibatch_offset": 256
       },
       "identity": {
         "pid": 2330890,
@@ -17,21 +20,24 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "3cf8f038293067313acdf71b55c94936eaa8bdfcc9c1aa43abbdf210a1ae2914",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "same_actual_identity": true,
-      "updates_delta": 32,
+      "updates_delta": 21,
       "complete": false,
       "failure": null
     },
     {
       "name": "formal-math-gm",
       "status": {
-        "time": 1794762564.2327526,
-        "phase": "rollout",
+        "time": 1794764449.1918716,
+        "phase": "optimizer",
         "pid": 2330892,
-        "round": 5,
-        "updates": 64
+        "round": 6,
+        "epoch": 1,
+        "updates": 85,
+        "grad_norm": 0.01779407076537609,
+        "minibatch_offset": 256
       },
       "identity": {
         "pid": 2330892,
@@ -39,24 +45,24 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "1f2e5de639f12d94d1585d12ad7b87058c5891ceb7ea6edbb1afda296bc25c80",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "same_actual_identity": true,
-      "updates_delta": 32,
+      "updates_delta": 21,
       "complete": false,
       "failure": null
     },
     {
       "name": "formal-mixed-am",
       "status": {
-        "time": 1794762575.7910914,
+        "time": 1794764433.775665,
         "phase": "optimizer",
         "pid": 2330889,
-        "round": 5,
+        "round": 7,
         "epoch": 2,
-        "updates": 74,
-        "grad_norm": 0.03440362960100174,
-        "minibatch_offset": 64
+        "updates": 105,
+        "grad_norm": 0.014332879334688187,
+        "minibatch_offset": 0
       },
       "identity": {
         "pid": 2330889,
@@ -67,21 +73,21 @@
         "state": "S"
       },
       "same_actual_identity": true,
-      "updates_delta": 33,
+      "updates_delta": 31,
       "complete": false,
       "failure": null
     },
     {
       "name": "formal-mixed-gm",
       "status": {
-        "time": 1794762592.4776232,
+        "time": 1794764424.5089877,
         "phase": "optimizer",
         "pid": 2330891,
-        "round": 5,
-        "epoch": 2,
-        "updates": 75,
-        "grad_norm": 0.013477620668709278,
-        "minibatch_offset": 128
+        "round": 7,
+        "epoch": 1,
+        "updates": 104,
+        "grad_norm": 0.007734736427664757,
+        "minibatch_offset": 448
       },
       "identity": {
         "pid": 2330891,
@@ -89,15 +95,287 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "7b6b85e5bcd8b2b76f7dba559f04a2635a86b088d8975042d34aa3a825eb4074",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "same_actual_identity": true,
-      "updates_delta": 33,
+      "updates_delta": 29,
       "complete": false,
       "failure": null
     }
   ],
-  "gpu_csv": "0, 71202, 26\n1, 70930, 25\n2, 30808, 96\n3, 31880, 93\n4, 3, 0\n5, 3, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6295486726144,
-  "next_check_not_before": "2026-11-15T17:39:58.545710+00:00"
+  "training_progress": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
+      "recorded_rounds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "metrics_all_finite": true,
+      "latest_metrics": {
+        "reward": 0.94140625,
+        "group_std": 0.049330420792102814,
+        "zero_advantage_fraction": 0.875,
+        "sampling_scoring_logp_mae": 0.008852663975631003,
+        "tokens": 292621,
+        "truncation": 0.052734375,
+        "valid": 0.94140625,
+        "tasks": {
+          "gsm8k": {
+            "count": 512,
+            "reward": 0.94140625,
+            "mean_tokens": 571.525390625,
+            "truncation": 0.052734375
+          }
+        },
+        "kl": 0.002765875906703741,
+        "clip_fraction": 0.0,
+        "ratio": 1.000398316013161,
+        "am_gm_log_gap": 0.000534487766373104,
+        "entropy": 0.1647622526543273,
+        "loss": -3.820141998911453e-05,
+        "ratio_quantiles": {
+          "0.0": 0.9938634037971497,
+          "0.01": 0.9964978694915771,
+          "0.5": 1.0001626014709473,
+          "0.99": 1.0048915147781372,
+          "1.0": 1.0061970949172974
+        },
+        "round": 5,
+        "updates": 80,
+        "elapsed": 6272.709663152695
+      },
+      "committed_sha256": "1a996e7ad776440ff5e8955ff783331bcfccc9d1c369b2387275662462aceeaf",
+      "ready_matches_committed": true,
+      "latest_paired_decision": {
+        "round": 5,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.91,
+          "gm": 0.914
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 6333.190693226992
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
+      "recorded_rounds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "metrics_all_finite": true,
+      "latest_metrics": {
+        "reward": 0.935546875,
+        "group_std": 0.039243534207344055,
+        "zero_advantage_fraction": 0.90625,
+        "sampling_scoring_logp_mae": 0.009040126842592144,
+        "tokens": 308157,
+        "truncation": 0.060546875,
+        "valid": 0.935546875,
+        "tasks": {
+          "gsm8k": {
+            "count": 512,
+            "reward": 0.935546875,
+            "mean_tokens": 601.869140625,
+            "truncation": 0.060546875
+          }
+        },
+        "kl": 0.0016044723012100803,
+        "clip_fraction": 0.0,
+        "ratio": 1.0000528245582245,
+        "am_gm_log_gap": 0.000524871644344671,
+        "entropy": 0.1773847079493862,
+        "loss": 1.2327101122089346e-06,
+        "ratio_quantiles": {
+          "0.0": 0.993931770324707,
+          "0.01": 0.9963971376419067,
+          "0.5": 1.0,
+          "0.99": 1.0039163827896118,
+          "1.0": 1.005571722984314
+        },
+        "round": 5,
+        "updates": 80,
+        "elapsed": 6323.46147274971
+      },
+      "committed_sha256": "68066c871d9e053957818f934fb2ec45291de27a393df6f121bdeb9d0b73a9d2",
+      "ready_matches_committed": true,
+      "latest_paired_decision": {
+        "round": 5,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.91,
+          "gm": 0.914
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 6333.190693226992
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
+      "recorded_rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "metrics_all_finite": true,
+      "latest_metrics": {
+        "reward": 0.91796875,
+        "group_std": 0.025463808327913284,
+        "zero_advantage_fraction": 0.9375,
+        "sampling_scoring_logp_mae": 0.011314596558349876,
+        "tokens": 247528,
+        "truncation": 0.013671875,
+        "valid": 0.984375,
+        "tasks": {
+          "gsm8k": {
+            "count": 256,
+            "reward": 0.96484375,
+            "mean_tokens": 628.8984375,
+            "truncation": 0.02734375
+          },
+          "arc": {
+            "count": 128,
+            "reward": 0.9921875,
+            "mean_tokens": 407.390625,
+            "truncation": 0.0
+          },
+          "boolq": {
+            "count": 128,
+            "reward": 0.75,
+            "mean_tokens": 268.625,
+            "truncation": 0.0
+          }
+        },
+        "kl": 0.002547033810358812,
+        "clip_fraction": 0.0,
+        "ratio": 1.000566871254705,
+        "am_gm_log_gap": 0.0006690268337052885,
+        "entropy": 0.21926026746223215,
+        "loss": 2.1239630427327683e-05,
+        "ratio_quantiles": {
+          "0.0": 0.9919719099998474,
+          "0.01": 0.9954531192779541,
+          "0.5": 1.000409722328186,
+          "0.99": 1.0061856508255005,
+          "1.0": 1.0087618827819824
+        },
+        "round": 6,
+        "updates": 96,
+        "elapsed": 6409.14368391037
+      },
+      "committed_sha256": "e415b69f86af898cc363b25d57a61914b7226404018fe00bca1807bc111c1556",
+      "ready_matches_committed": true,
+      "latest_paired_decision": {
+        "round": 6,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.7718026315789474,
+          "gm": 0.7733728070175439
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 6421.242396024987
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
+      "recorded_rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "metrics_all_finite": true,
+      "latest_metrics": {
+        "reward": 0.91796875,
+        "group_std": 0.03063243441283703,
+        "zero_advantage_fraction": 0.921875,
+        "sampling_scoring_logp_mae": 0.011637241871540027,
+        "tokens": 260145,
+        "truncation": 0.017578125,
+        "valid": 0.98046875,
+        "tasks": {
+          "gsm8k": {
+            "count": 256,
+            "reward": 0.9609375,
+            "mean_tokens": 685.56640625,
+            "truncation": 0.03515625
+          },
+          "arc": {
+            "count": 128,
+            "reward": 0.9921875,
+            "mean_tokens": 399.8828125,
+            "truncation": 0.0
+          },
+          "boolq": {
+            "count": 128,
+            "reward": 0.7578125,
+            "mean_tokens": 261.3671875,
+            "truncation": 0.0
+          }
+        },
+        "kl": 0.002888214743634876,
+        "clip_fraction": 0.0,
+        "ratio": 0.9999204608029686,
+        "am_gm_log_gap": 0.000690942459073085,
+        "entropy": 0.22497084722999716,
+        "loss": 1.9619015897753833e-05,
+        "ratio_quantiles": {
+          "0.0": 0.9921309947967529,
+          "0.01": 0.9949549436569214,
+          "0.5": 1.0,
+          "0.99": 1.005679726600647,
+          "1.0": 1.0068004131317139
+        },
+        "round": 6,
+        "updates": 96,
+        "elapsed": 6410.680071115494
+      },
+      "committed_sha256": "aacf0696072e73858bb1dd5af02dcdb776840d3e55ecf8ea52db5525b514539f",
+      "ready_matches_committed": true,
+      "latest_paired_decision": {
+        "round": 6,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.7718026315789474,
+          "gm": 0.7733728070175439
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 6421.242396024987
+      }
+    }
+  ],
+  "gpu_csv": "0, 24464, 92\n1, 24584, 67\n2, 26792, 97\n3, 26326, 97\n4, 75770, 0\n5, 75770, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6750044422144,
+  "next_check_not_before": "2026-11-15T18:10:51.007051+00:00"
 }
