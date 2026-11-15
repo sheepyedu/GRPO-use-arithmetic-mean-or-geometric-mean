@@ -1,0 +1,22 @@
+[
+  {
+    "operator": "am",
+    "round": 1,
+    "updates": 16,
+    "optimizer_parameters": 504,
+    "optimizer_tensors": 1512,
+    "all_optimizer_tensors_finite": true,
+    "rng_scheduler_schedule_present": true,
+    "adapter_bytes": 174655536
+  },
+  {
+    "operator": "gm",
+    "round": 1,
+    "updates": 16,
+    "optimizer_parameters": 504,
+    "optimizer_tensors": 1512,
+    "all_optimizer_tensors_finite": true,
+    "rng_scheduler_schedule_present": true,
+    "adapter_bytes": 174655536
+  }
+]
