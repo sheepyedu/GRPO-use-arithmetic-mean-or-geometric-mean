@@ -67,6 +67,13 @@ except ImportError:
 
 @unittest.skipIf(torch is None, "torch required for objective tests")
 class ObjectiveTests(unittest.TestCase):
+    def test_unsupported_batch_rejected(self):
+        from src.train import Experiment
+
+        config = {"prompt_batch": 32, "group_size": 8}
+        with self.assertRaisesRegex(ValueError, "64 prompts"):
+            Experiment(config, "math", "am", "unused-output")
+
     def test_extreme_log_domain(self):
         d = torch.tensor([[1000.0, -1000.0]])
         mask = torch.ones_like(d, dtype=torch.bool)

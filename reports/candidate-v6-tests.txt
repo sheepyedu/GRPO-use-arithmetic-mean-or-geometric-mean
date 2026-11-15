@@ -1,0 +1,24 @@
+
+remoteadmin@20.78.153.131's password: 
+/home/hongchang/miniconda3/lib/python3.10/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+test_digits_preserved (test_core.DataTests) ... ok
+test_duplicates (test_core.DataTests) ... ok
+test_paired_schedule (test_core.DataTests) ... ok
+test_clipping_and_zero_rewards (test_core.ObjectiveTests) ... ok
+test_extreme_log_domain (test_core.ObjectiveTests) ... ok
+test_identity_gradients (test_core.ObjectiveTests) ... ok
+test_inequality_and_mask (test_core.ObjectiveTests) ... ok
+test_tiny_qwen_update (test_core.ObjectiveTests) ... /home/hongchang/miniconda3/lib/python3.10/site-packages/torch/jit/_script.py:362: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+ok
+test_unsupported_batch_rejected (test_core.ObjectiveTests) ... W1115 22:41:39.085000 136634 site-packages/torch/utils/cpp_extension.py:118] No CUDA runtime is found, using CUDA_HOME='/usr'
+ok
+test_strict_final (test_core.RewardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 12.030s
+
+OK
+
+TRANSPORT_EXIT 0

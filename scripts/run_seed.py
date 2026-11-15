@@ -2,6 +2,7 @@
 
 import argparse
 import fcntl
+import json
 import os
 import subprocess
 import sys
@@ -86,6 +87,11 @@ def main():
     with (root / "manager.lock").open("w") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         config = Path(args.config).resolve()
+        expected_rounds = 10 if args.phase == "pilot" else 200
+        if json.loads(config.read_text())["rounds"] != expected_rounds:
+            raise ValueError(
+                f"The {args.phase} phase requires {expected_rounds} rounds"
+            )
         for environment in ("math", "mixed"):
             pair(root, config, environment, args.phase)
         write_json(

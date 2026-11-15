@@ -61,6 +61,12 @@ class Experiment:
     def __init__(self, config, environment, operator, directory):
         from vllm import LLM
 
+        if config["prompt_batch"] != 64 or config["group_size"] != 8:
+            raise ValueError("This protocol requires 64 prompts and 8 answers")
+        if config["microbatch_sequences"] != 1:
+            raise ValueError("The current trainer supports sequence microbatch 1")
+        if config["minibatch_sequences"] < 1 or 512 % config["minibatch_sequences"]:
+            raise ValueError("The optimizer minibatch must divide 512 sequences")
         self.config, self.environment, self.operator = config, environment, operator
         self.directory = Path(directory)
         self.directory.mkdir(parents=True, exist_ok=False)
@@ -138,6 +144,14 @@ class Experiment:
             (Path(config["data"]) / "validation.json").read_text()
         )
         self.test = json.loads((Path(config["data"]) / "test.json").read_text())
+        data_manifest = json.loads((Path(config["data"]) / "manifest.json").read_text())
+        for name, rows in (
+            (environment, self.rows),
+            ("validation", self.validation),
+            ("test", self.test),
+        ):
+            if content_hash(rows) != data_manifest["split_hashes"][name]:
+                raise ValueError(f"Data content hash mismatch for {name}")
         self.schedule = PromptSchedule(self.rows, environment, config["seed"])
         self.updates = 0
         source_root = Path(__file__).resolve().parent.parent
