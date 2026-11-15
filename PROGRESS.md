@@ -23,5 +23,5 @@
 - 正在运行的原试运行版本为服务器根目录v4源码，manager PID110627，纯数学AM/GM PID110628/110629，UID1005，两者start_ticks2081029505。按实际 `pair.json` 和 `scripts/status.py` 获取后续阶段和身份，不用历史PID认定未来作业。唯一试运行目录 `/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1`，先两侧math各10轮，后两侧mixed各10轮。不能在已有目录重复派发。
 - 两侧首轮512回答、两epoch及16次优化已完成，checkpoint-001原生CPU读取通过，各504个AdamW参数状态、1512个张量均有限，scheduler/RNG/调度状态齐全。原核验SSH超过50秒留124，读取实际回执确认已完成；另一个四线程只读核验也通过，无模型或optimizer重放。小回执见 `reports/pilot-first-checkpoint-verification.json`。
 - 两侧已载入checkpoint-001 LoRA进入第2轮rollout，观测快照见 `reports/pilot-latest-status.json`，该文件含原观测时间。首轮耗时约20–21分钟，按200轮和顺序双环境，首seed正式4run粗略约一周量级，实际依后续吞吐及评价开销修正。用户已获告知，原预算保持。
-- Native goal保持active，首seed四个正式run尚未完成。继续监测并修复真实故障，四条件试运行通过后固定共同配置，从原始Qwen3-8B重新初始化正式四run。正式阶段通过 `scripts/run_seed.py --phase formal`，200轮，数学配对完成才转混合。结束后用 `scripts/summarize_seed.py` 验证完整四run及检查点哈希，再提交固定Notion审核聊天。下一seed尚未授权推进。
+- Native goal保持active，首seed四个正式run尚未完成。继续监测并修复真实故障，四条件试运行通过后固定共同配置，从原始Qwen3-8B重新初始化正式四run。正式阶段通过 `scripts/run_seed.py --phase formal`，200轮，数学配对完成才转混合。结束后用 `scripts/summarize_seed.py` 验证完整四run及检查点哈希，再提交固定Notion审核聊天。当前goal先完成首seed四run。
 - Notion根项目 `4195e704-b6a8-8148-bbfc-d9b3c8240945`，子项目 `4195e704-b6a8-8130-8564-c2afff182ec4`。每完成一个任务及时勾选子页并同步父摘要，正式完成数仅按真实终态更新。候选源码和运行中旧试运行源码分别保存，不覆盖运行中版本。后续正式版本保留HF/vLLM logprob差异及严格截断解析的实施披露。
