@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T14:57:05.075841+00:00",
+  "observed_at": "2026-11-15T15:13:21.241271+00:00",
   "root": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1",
   "pair": {
     "phase": "pilot",
@@ -20,11 +20,14 @@
     {
       "directory": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-am",
       "status": {
-        "time": 1794754511.0262873,
-        "phase": "rollout",
+        "time": 1794755555.2950523,
+        "phase": "optimizer",
         "pid": 110628,
         "round": 2,
-        "updates": 16
+        "epoch": 1,
+        "updates": 18,
+        "grad_norm": 0.006450212094932795,
+        "minibatch_offset": 64
       },
       "identity": {
         "pid": 110628,
@@ -40,11 +43,14 @@
     {
       "directory": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-gm",
       "status": {
-        "time": 1794754460.6879034,
-        "phase": "rollout",
+        "time": 1794755587.5084221,
+        "phase": "optimizer",
         "pid": 110629,
         "round": 2,
-        "updates": 16
+        "epoch": 1,
+        "updates": 20,
+        "grad_norm": 0.00938846543431282,
+        "minibatch_offset": 192
       },
       "identity": {
         "pid": 110629,
@@ -58,6 +64,6 @@
       "complete": false
     }
   ],
-  "gpu_csv": "0, 37255, 40\n1, 35886, 32",
-  "disk_free_bytes": 1283503005696
+  "gpu_csv": "0, 27043, 73\n1, 29228, 97",
+  "disk_free_bytes": 1283494928384
 }

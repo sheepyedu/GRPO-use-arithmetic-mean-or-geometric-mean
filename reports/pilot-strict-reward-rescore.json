@@ -1,0 +1,26 @@
+[
+  {
+    "operator": "am",
+    "file": "rollout-001.json",
+    "records": 512,
+    "reward_differences": 0
+  },
+  {
+    "operator": "am",
+    "file": "rollout-002.json",
+    "records": 512,
+    "reward_differences": 0
+  },
+  {
+    "operator": "gm",
+    "file": "rollout-001.json",
+    "records": 512,
+    "reward_differences": 0
+  },
+  {
+    "operator": "gm",
+    "file": "rollout-002.json",
+    "records": 512,
+    "reward_differences": 0
+  }
+]

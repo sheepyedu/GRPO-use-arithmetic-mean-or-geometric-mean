@@ -25,3 +25,8 @@
 - 两侧已载入checkpoint-001 LoRA进入第2轮rollout，观测快照见 `reports/pilot-latest-status.json`，该文件含原观测时间。首轮耗时约20–21分钟，按200轮和顺序双环境，首seed正式4run粗略约一周量级，实际依后续吞吐及评价开销修正。用户已获告知，原预算保持。
 - Native goal保持active，首seed四个正式run尚未完成。继续监测并修复真实故障，四条件试运行通过后固定共同配置，从原始Qwen3-8B重新初始化正式四run。正式阶段通过 `scripts/run_seed.py --phase formal`，200轮，数学配对完成才转混合。结束后用 `scripts/summarize_seed.py` 验证完整四run及检查点哈希，再提交固定Notion审核聊天。当前goal先完成首seed四run。
 - Notion根项目 `4195e704-b6a8-8148-bbfc-d9b3c8240945`，子项目 `4195e704-b6a8-8130-8564-c2afff182ec4`。每完成一个任务及时勾选子页并同步父摘要，正式完成数仅按真实终态更新。候选源码和运行中旧试运行源码分别保存，不覆盖运行中版本。后续正式版本保留HF/vLLM logprob差异及严格截断解析的实施披露。
+
+## 2026-11-15 23:13 · 第二轮持续推进
+
+- 本轮按实际/proc核对原两训练进程和各自vLLM子进程仍live、身份匹配。两侧更新后LoRA已完成第二轮512条采样和冻结概率计算，进入第二轮AdamW优化；未出现FAILURE，正式完成仍0/4。最新观测时刻及身份、GPU/资源见 `reports/pilot-latest-status.json`。
+- 对两侧已保存的首两轮共2048条回答，以候选v8严格截断解析复评分，奖励差异全部为0，未新增模型调用。回执 `reports/pilot-strict-reward-rescore.json`。Notion子页及根摘要已同步当前优化阶段，native goal保持active。
