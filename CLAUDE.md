@@ -91,4 +91,4 @@ rebase 发生冲突时：
 - 已实现 `src/{data,rewards,objectives,train}.py`、`scripts/run_seed.py` 和 `configs/seed17.json`。Node01现有torch2.10/transformers4.57.6/peft0.17.1/vLLM0.17.1用于BF16 LoRA单卡训练，后端选择见 `docs/method_decision.md`。
 - 首seed17先纯数学AM/GM两卡并行，完成保存后再混合AM/GM。独立试运行与正式200轮分别记账，正式完成仍0/20。
 - 服务器工作目录 `/home/remoteadmin/grpo-sequence-ratio`，官方模型复用 `/home/remoteadmin/skillos-repeatability-v1/models/Qwen3-8B-b968826d9c46`，原模型只读。大产物保存在服务器 `artifacts/`，仓库只提交源码、文档和小摘要。
-- 测试 `python -m unittest discover -s tests -v`，10项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。
+- 测试 `python -m unittest discover -s tests -v`，12项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。

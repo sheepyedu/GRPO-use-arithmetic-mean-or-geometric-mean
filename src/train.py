@@ -6,7 +6,6 @@ Rollouts, frozen behavior/reference scores and optimizer commits are retained.
 
 import argparse
 import gc
-import hashlib
 import importlib.metadata
 import json
 import os
@@ -20,7 +19,7 @@ import torch
 from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
 
-from src.data import PromptSchedule, content_hash, write_json
+from src.data import PromptSchedule, content_hash, file_sha256, write_json
 from src.objectives import group_advantages, sequence_loss
 from src.rewards import parse_answer, score, user_prompt
 
@@ -156,9 +155,7 @@ class Experiment:
         self.updates = 0
         source_root = Path(__file__).resolve().parent.parent
         source_files = {
-            str(path.relative_to(source_root)): hashlib.sha256(
-                path.read_bytes()
-            ).hexdigest()
+            str(path.relative_to(source_root)): file_sha256(path)
             for folder in ("src", "scripts", "configs")
             for path in sorted((source_root / folder).rglob("*"))
             if path.is_file() and "__pycache__" not in path.parts
@@ -430,9 +427,14 @@ class Experiment:
             {
                 "round": number,
                 "updates": self.updates,
-                "adapter_sha": content_hash(
-                    (checkpoint / "adapter_config.json").read_text()
-                ),
+                "files_sha256": {
+                    name: file_sha256(checkpoint / name)
+                    for name in (
+                        "adapter_config.json",
+                        "adapter_model.safetensors",
+                        "training_state.pt",
+                    )
+                },
             },
         )
         for key in diagnostics[0]:

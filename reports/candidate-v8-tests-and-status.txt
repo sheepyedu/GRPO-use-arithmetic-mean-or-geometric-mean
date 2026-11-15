@@ -1,0 +1,27 @@
+
+remoteadmin@20.78.153.131's password: 
+/home/hongchang/miniconda3/lib/python3.10/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+test_digits_preserved (test_core.DataTests) ... ok
+test_duplicates (test_core.DataTests) ... ok
+test_paired_schedule (test_core.DataTests) ... ok
+test_clipping_and_zero_rewards (test_core.ObjectiveTests) ... ok
+test_extreme_log_domain (test_core.ObjectiveTests) ... ok
+test_identity_gradients (test_core.ObjectiveTests) ... ok
+test_inequality_and_mask (test_core.ObjectiveTests) ... ok
+test_tiny_qwen_update (test_core.ObjectiveTests) ... /home/hongchang/miniconda3/lib/python3.10/site-packages/torch/jit/_script.py:362: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+ok
+test_unsupported_batch_rejected (test_core.ObjectiveTests) ... W1115 22:50:20.668000 152377 site-packages/torch/utils/cpp_extension.py:118] No CUDA runtime is found, using CUDA_HOME='/usr'
+ok
+test_strict_final (test_core.RewardTests) ... ok
+test_incomplete_seed_rejected (test_results.ResultTests) ... ok
+test_paired_summary_and_integrity (test_results.ResultTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 7.702s
+
+OK
+{"observed_at": "2026-11-15T14:50:23.561210+00:00", "root": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1", "pair": {"phase": "pilot", "environment": "math", "children": [{"pid": 110628, "output": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-am"}, {"pid": 110629, "output": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-gm"}], "start": 1794752886.2216668}, "runs": [{"directory": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-am", "status": {"time": 1794754220.3499317, "phase": "optimizer", "pid": 110628, "round": 1, "epoch": 2, "updates": 9, "grad_norm": 0.012571866624057293, "minibatch_offset": 0}, "identity": {"pid": 110628, "uid": 1005, "start_ticks": 2081029505, "cmdline_sha256": "0ad8f8609cca7963f3bfe7e1531e0be7825d6a9f811ecfeb27718371a125f757", "matches_output": true, "state": "R"}, "failure": null, "complete": false}, {"directory": "/home/remoteadmin/grpo-sequence-ratio/artifacts/pilot-seed17-v1/pilot-math-gm", "status": {"time": 1794754220.9594672, "phase": "optimizer", "pid": 110629, "round": 1, "epoch": 2, "updates": 10, "grad_norm": 0.010707798413932323, "minibatch_offset": 64}, "identity": {"pid": 110629, "uid": 1005, "start_ticks": 2081029505, "cmdline_sha256": "1c05fe4243e35130c0596f8b97ea51314d5e20691e85990dafb847a8ea2f97b4", "matches_output": true, "state": "R"}, "failure": null, "complete": false}], "gpu_csv": "0, 27627, 34\n1, 27440, 72", "disk_free_bytes": 1284555530240}
+
+TRANSPORT_EXIT 0

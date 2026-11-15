@@ -1,10 +1,9 @@
 """Hash local model files without copying weights or loading a GPU model."""
 
 import argparse
-import hashlib
 from pathlib import Path
 
-from src.data import write_json
+from src.data import file_sha256, write_json
 
 
 def main():
@@ -25,13 +24,9 @@ def main():
     ]
     manifest = {}
     for path in files:
-        digest = hashlib.sha256()
-        with path.open("rb") as stream:
-            for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b""):
-                digest.update(chunk)
         manifest[path.name] = {
             "bytes": path.stat().st_size,
-            "sha256": digest.hexdigest(),
+            "sha256": file_sha256(path),
         }
     write_json(args.output, manifest)
     print(f"Hashed {len(manifest)} model files")
