@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T16:31:22.619963+00:00",
+  "observed_at": "2026-11-15T16:38:51.767017+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
   "pair": null,
   "pairs": [
@@ -42,10 +42,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
       "status": {
-        "time": 1794760232.7438145,
-        "phase": "rollout",
+        "time": 1794760718.143547,
+        "phase": "frozen_scores",
         "pid": 2330890,
         "round": 3,
+        "sequences": 512,
         "updates": 32
       },
       "identity": {
@@ -54,7 +55,7 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "3cf8f038293067313acdf71b55c94936eaa8bdfcc9c1aa43abbdf210a1ae2914",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "failure": null,
       "complete": false
@@ -82,11 +83,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
       "status": {
-        "time": 1794759830.9230828,
-        "phase": "rollout",
+        "time": 1794760701.1100895,
+        "phase": "optimizer",
         "pid": 2330889,
         "round": 3,
-        "updates": 32
+        "epoch": 2,
+        "updates": 41,
+        "grad_norm": 0.05792133882641792,
+        "minibatch_offset": 0
       },
       "identity": {
         "pid": 2330889,
@@ -102,12 +106,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
       "status": {
-        "time": 1794760277.6004095,
-        "phase": "frozen_scores",
+        "time": 1794760727.265326,
+        "phase": "optimizer",
         "pid": 2330891,
         "round": 3,
-        "sequences": 512,
-        "updates": 32
+        "epoch": 2,
+        "updates": 42,
+        "grad_norm": 0.01016162894666195,
+        "minibatch_offset": 64
       },
       "identity": {
         "pid": 2330891,
@@ -115,12 +121,12 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "7b6b85e5bcd8b2b76f7dba559f04a2635a86b088d8975042d34aa3a825eb4074",
         "matches_output": true,
-        "state": "R"
+        "state": "S"
       },
       "failure": null,
       "complete": false
     }
   ],
-  "gpu_csv": "0, 71190, 29\n1, 70924, 29\n2, 3276, 11\n3, 23204, 97\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6705815486464
+  "gpu_csv": "0, 27296, 100\n1, 2480, 41\n2, 36170, 91\n3, 33830, 90\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6705530273792
 }

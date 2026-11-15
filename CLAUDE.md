@@ -98,3 +98,5 @@ rebase 发生冲突时：
 - 2026-11-15用户要求停止Node01并在PAI从原始Qwen3-8B重新训练，GPU0/1数学AM/GM，GPU2/3混合AM/GM，seed17完成后继续29/43/71/101。
 - 最新配置 `configs/pai-seed17.json`，`scripts/run_seed.py --parallel-environments` 同时启动两个配对控制器，每轮checkpoint屏障后共同决定继续或停止。
 - 早停为验证间隔10、最小20、patience2、min_delta0.005及每对12小时软上限，最大200轮。记录真实轮数、共同停止原因及最终测试。Node01试运行证据独立保留。
+
+- 稳定训练使用本聊天原生heartbeat `grpo-h20-30` 每30分钟监督，Goal续接共用 `reports/pai-seed17/supervision.json` 的下一观测门。10:00仅切换需用户判断事项的决策权，其他授权工作和Goal持续完成。每项实际完成后更新Notion待办与百分比。

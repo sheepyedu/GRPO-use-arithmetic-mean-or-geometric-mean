@@ -39,4 +39,6 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 
 ## 项目进度
 
+已启用本聊天每30分钟一次的定时监督，检查进程、轮次/更新、验证/测试、早停、资源及故障，并同步Notion。按最近完整轮次估算，首seed若在第20轮附近早停，预计11月16日09:00–11:00结束；若达到12小时软预算再完成评测，约13:00–15:00，后续按实测修正。
+
 [Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
