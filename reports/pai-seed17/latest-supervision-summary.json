@@ -1,0 +1,103 @@
+{
+  "observed_at": "2026-11-15T17:09:58.545710+00:00",
+  "previous_observed_at": "2026-11-15T16:38:51.767017+00:00",
+  "runs": [
+    {
+      "name": "formal-math-am",
+      "status": {
+        "time": 1794762564.5501237,
+        "phase": "rollout",
+        "pid": 2330890,
+        "round": 5,
+        "updates": 64
+      },
+      "identity": {
+        "pid": 2330890,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "3cf8f038293067313acdf71b55c94936eaa8bdfcc9c1aa43abbdf210a1ae2914",
+        "matches_output": true,
+        "state": "S"
+      },
+      "same_actual_identity": true,
+      "updates_delta": 32,
+      "complete": false,
+      "failure": null
+    },
+    {
+      "name": "formal-math-gm",
+      "status": {
+        "time": 1794762564.2327526,
+        "phase": "rollout",
+        "pid": 2330892,
+        "round": 5,
+        "updates": 64
+      },
+      "identity": {
+        "pid": 2330892,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "1f2e5de639f12d94d1585d12ad7b87058c5891ceb7ea6edbb1afda296bc25c80",
+        "matches_output": true,
+        "state": "S"
+      },
+      "same_actual_identity": true,
+      "updates_delta": 32,
+      "complete": false,
+      "failure": null
+    },
+    {
+      "name": "formal-mixed-am",
+      "status": {
+        "time": 1794762575.7910914,
+        "phase": "optimizer",
+        "pid": 2330889,
+        "round": 5,
+        "epoch": 2,
+        "updates": 74,
+        "grad_norm": 0.03440362960100174,
+        "minibatch_offset": 64
+      },
+      "identity": {
+        "pid": 2330889,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "2c03b8f285f51e6afe6071e8729dcdcf21c1f3ad75f5ebfb814e272d3da4178f",
+        "matches_output": true,
+        "state": "S"
+      },
+      "same_actual_identity": true,
+      "updates_delta": 33,
+      "complete": false,
+      "failure": null
+    },
+    {
+      "name": "formal-mixed-gm",
+      "status": {
+        "time": 1794762592.4776232,
+        "phase": "optimizer",
+        "pid": 2330891,
+        "round": 5,
+        "epoch": 2,
+        "updates": 75,
+        "grad_norm": 0.013477620668709278,
+        "minibatch_offset": 128
+      },
+      "identity": {
+        "pid": 2330891,
+        "uid": 0,
+        "start_ticks": 44388183,
+        "cmdline_sha256": "7b6b85e5bcd8b2b76f7dba559f04a2635a86b088d8975042d34aa3a825eb4074",
+        "matches_output": true,
+        "state": "S"
+      },
+      "same_actual_identity": true,
+      "updates_delta": 33,
+      "complete": false,
+      "failure": null
+    }
+  ],
+  "gpu_csv": "0, 71202, 26\n1, 70930, 25\n2, 30808, 96\n3, 31880, 93\n4, 3, 0\n5, 3, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6295486726144,
+  "next_check_not_before": "2026-11-15T17:39:58.545710+00:00"
+}
