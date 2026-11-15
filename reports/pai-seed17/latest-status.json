@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T16:11:47.844556+00:00",
+  "observed_at": "2026-11-15T16:31:22.619963+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
   "pair": null,
   "pairs": [
@@ -42,11 +42,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
       "status": {
-        "time": 1794759027.5533793,
+        "time": 1794760232.7438145,
         "phase": "rollout",
         "pid": 2330890,
-        "round": 2,
-        "updates": 16
+        "round": 3,
+        "updates": 32
       },
       "identity": {
         "pid": 2330890,
@@ -62,11 +62,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
       "status": {
-        "time": 1794759027.1310654,
+        "time": 1794760233.2201004,
         "phase": "rollout",
         "pid": 2330892,
-        "round": 2,
-        "updates": 16
+        "round": 3,
+        "updates": 32
       },
       "identity": {
         "pid": 2330892,
@@ -82,11 +82,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
       "status": {
-        "time": 1794758905.4632962,
+        "time": 1794759830.9230828,
         "phase": "rollout",
         "pid": 2330889,
-        "round": 2,
-        "updates": 16
+        "round": 3,
+        "updates": 32
       },
       "identity": {
         "pid": 2330889,
@@ -94,7 +94,7 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "2c03b8f285f51e6afe6071e8729dcdcf21c1f3ad75f5ebfb814e272d3da4178f",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "failure": null,
       "complete": false
@@ -102,11 +102,12 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
       "status": {
-        "time": 1794758905.8324053,
-        "phase": "rollout",
+        "time": 1794760277.6004095,
+        "phase": "frozen_scores",
         "pid": 2330891,
-        "round": 2,
-        "updates": 16
+        "round": 3,
+        "sequences": 512,
+        "updates": 32
       },
       "identity": {
         "pid": 2330891,
@@ -114,12 +115,12 @@
         "start_ticks": 44388183,
         "cmdline_sha256": "7b6b85e5bcd8b2b76f7dba559f04a2635a86b088d8975042d34aa3a825eb4074",
         "matches_output": true,
-        "state": "S"
+        "state": "R"
       },
       "failure": null,
       "complete": false
     }
   ],
-  "gpu_csv": "0, 71190, 34\n1, 70934, 34\n2, 70918, 31\n3, 70918, 30\n4, 74737, 0\n5, 74333, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6744537300992
+  "gpu_csv": "0, 71190, 29\n1, 70924, 29\n2, 3276, 11\n3, 23204, 97\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6705815486464
 }
