@@ -1,0 +1,411 @@
+{
+  "data_seed": 2026,
+  "normalization": "NFKC/casefold/word tokens preserving digits",
+  "near_duplicate": "word bigram Jaccard >=0.9",
+  "sources": {
+    "gsm8k": {
+      "repo": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "config": "main",
+      "card": {
+        "annotations_creators": [
+          "crowdsourced"
+        ],
+        "language_creators": [
+          "crowdsourced"
+        ],
+        "language": [
+          "en"
+        ],
+        "license": [
+          "mit"
+        ],
+        "multilinguality": [
+          "monolingual"
+        ],
+        "size_categories": [
+          "1K<n<10K"
+        ],
+        "source_datasets": [
+          "original"
+        ],
+        "task_categories": [
+          "text-generation"
+        ],
+        "task_ids": [],
+        "paperswithcode_id": "gsm8k",
+        "pretty_name": "Grade School Math 8K",
+        "tags": [
+          "math-word-problems"
+        ],
+        "dataset_info": [
+          {
+            "config_name": "main",
+            "features": [
+              {
+                "name": "question",
+                "dtype": "string"
+              },
+              {
+                "name": "answer",
+                "dtype": "string"
+              }
+            ],
+            "splits": [
+              {
+                "name": "train",
+                "num_bytes": 3963202,
+                "num_examples": 7473
+              },
+              {
+                "name": "test",
+                "num_bytes": 713732,
+                "num_examples": 1319
+              }
+            ],
+            "download_size": 2725633,
+            "dataset_size": 4676934
+          },
+          {
+            "config_name": "socratic",
+            "features": [
+              {
+                "name": "question",
+                "dtype": "string"
+              },
+              {
+                "name": "answer",
+                "dtype": "string"
+              }
+            ],
+            "splits": [
+              {
+                "name": "train",
+                "num_bytes": 5198108,
+                "num_examples": 7473
+              },
+              {
+                "name": "test",
+                "num_bytes": 936859,
+                "num_examples": 1319
+              }
+            ],
+            "download_size": 3164254,
+            "dataset_size": 6134967
+          }
+        ],
+        "configs": [
+          {
+            "config_name": "main",
+            "data_files": [
+              {
+                "split": "train",
+                "path": "main/train-*"
+              },
+              {
+                "split": "test",
+                "path": "main/test-*"
+              }
+            ]
+          },
+          {
+            "config_name": "socratic",
+            "data_files": [
+              {
+                "split": "train",
+                "path": "socratic/train-*"
+              },
+              {
+                "split": "test",
+                "path": "socratic/test-*"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "arc": {
+      "repo": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "config": "ARC-Easy",
+      "card": {
+        "annotations_creators": [
+          "found"
+        ],
+        "language_creators": [
+          "found"
+        ],
+        "language": [
+          "en"
+        ],
+        "license": [
+          "cc-by-sa-4.0"
+        ],
+        "multilinguality": [
+          "monolingual"
+        ],
+        "size_categories": [
+          "1K<n<10K"
+        ],
+        "source_datasets": [
+          "original"
+        ],
+        "task_categories": [
+          "question-answering"
+        ],
+        "task_ids": [
+          "open-domain-qa",
+          "multiple-choice-qa"
+        ],
+        "pretty_name": "Ai2Arc",
+        "language_bcp47": [
+          "en-US"
+        ],
+        "dataset_info": [
+          {
+            "config_name": "ARC-Challenge",
+            "features": [
+              {
+                "name": "id",
+                "dtype": "string"
+              },
+              {
+                "name": "question",
+                "dtype": "string"
+              },
+              {
+                "name": "choices",
+                "sequence": [
+                  {
+                    "name": "text",
+                    "dtype": "string"
+                  },
+                  {
+                    "name": "label",
+                    "dtype": "string"
+                  }
+                ]
+              },
+              {
+                "name": "answerKey",
+                "dtype": "string"
+              }
+            ],
+            "splits": [
+              {
+                "name": "train",
+                "num_bytes": 349760,
+                "num_examples": 1119
+              },
+              {
+                "name": "test",
+                "num_bytes": 375511,
+                "num_examples": 1172
+              },
+              {
+                "name": "validation",
+                "num_bytes": 96660,
+                "num_examples": 299
+              }
+            ],
+            "download_size": 449460,
+            "dataset_size": 821931
+          },
+          {
+            "config_name": "ARC-Easy",
+            "features": [
+              {
+                "name": "id",
+                "dtype": "string"
+              },
+              {
+                "name": "question",
+                "dtype": "string"
+              },
+              {
+                "name": "choices",
+                "sequence": [
+                  {
+                    "name": "text",
+                    "dtype": "string"
+                  },
+                  {
+                    "name": "label",
+                    "dtype": "string"
+                  }
+                ]
+              },
+              {
+                "name": "answerKey",
+                "dtype": "string"
+              }
+            ],
+            "splits": [
+              {
+                "name": "train",
+                "num_bytes": 619000,
+                "num_examples": 2251
+              },
+              {
+                "name": "test",
+                "num_bytes": 657514,
+                "num_examples": 2376
+              },
+              {
+                "name": "validation",
+                "num_bytes": 157394,
+                "num_examples": 570
+              }
+            ],
+            "download_size": 762935,
+            "dataset_size": 1433908
+          }
+        ],
+        "configs": [
+          {
+            "config_name": "ARC-Challenge",
+            "data_files": [
+              {
+                "split": "train",
+                "path": "ARC-Challenge/train-*"
+              },
+              {
+                "split": "test",
+                "path": "ARC-Challenge/test-*"
+              },
+              {
+                "split": "validation",
+                "path": "ARC-Challenge/validation-*"
+              }
+            ]
+          },
+          {
+            "config_name": "ARC-Easy",
+            "data_files": [
+              {
+                "split": "train",
+                "path": "ARC-Easy/train-*"
+              },
+              {
+                "split": "test",
+                "path": "ARC-Easy/test-*"
+              },
+              {
+                "split": "validation",
+                "path": "ARC-Easy/validation-*"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "boolq": {
+      "repo": "google/boolq",
+      "revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+      "config": "default",
+      "card": {
+        "annotations_creators": [
+          "crowdsourced"
+        ],
+        "language_creators": [
+          "found"
+        ],
+        "language": [
+          "en"
+        ],
+        "license": [
+          "cc-by-sa-3.0"
+        ],
+        "multilinguality": [
+          "monolingual"
+        ],
+        "size_categories": [
+          "10K<n<100K"
+        ],
+        "source_datasets": [
+          "original"
+        ],
+        "task_categories": [
+          "text-classification"
+        ],
+        "task_ids": [
+          "natural-language-inference"
+        ],
+        "paperswithcode_id": "boolq",
+        "pretty_name": "BoolQ",
+        "dataset_info": {
+          "features": [
+            {
+              "name": "question",
+              "dtype": "string"
+            },
+            {
+              "name": "answer",
+              "dtype": "bool"
+            },
+            {
+              "name": "passage",
+              "dtype": "string"
+            }
+          ],
+          "splits": [
+            {
+              "name": "train",
+              "num_bytes": 5829584,
+              "num_examples": 9427
+            },
+            {
+              "name": "validation",
+              "num_bytes": 1998182,
+              "num_examples": 3270
+            }
+          ],
+          "download_size": 4942776,
+          "dataset_size": 7827766
+        },
+        "configs": [
+          {
+            "config_name": "default",
+            "data_files": [
+              {
+                "split": "train",
+                "path": "data/train-*"
+              },
+              {
+                "split": "validation",
+                "path": "data/validation-*"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "exclusions": {
+    "gsm8k": {
+      "exact": 0,
+      "near": 1
+    },
+    "arc": {
+      "exact": 2,
+      "near": 2,
+      "validation_excluded": {
+        "exact": 0,
+        "near": 0
+      }
+    },
+    "boolq": {
+      "exact": 3,
+      "near": 1255
+    }
+  },
+  "train_total": 6000,
+  "split_hashes": {
+    "test": "57b49dfcd28f67ac700fdd98dfbc11bb3ab1fbbc86eb8dde98422de50e8c9a02",
+    "validation": "5a8dbe805253143ffd485c8b75d4d6026fe366a5db01402e0a82e829786e7b46",
+    "train_pools": "d3fa4cae01913fa2bbf6e82528e9b8dd83ae57dc17829c8b634bdcb198408aca",
+    "math": "0cdfcb001fe77b73df47005861142e4fbbaf19bea6915e734fa001d8c018ca2e",
+    "mixed": "47ce84fd8f732625b19396c23e4db41521ef269753541e7ce9ab6c9d3c4e0784"
+  },
+  "test_labels_used_for_selection": false
+}

@@ -88,4 +88,7 @@ rebase 发生冲突时：
 - 完整协议位于 `docs/experiment_plan.md`，用户入口为 `README.md`，文档检查指南为 `TEST.md`。
 - 主模型固定为官方 `Qwen/Qwen3-8B`，默认统一启用 thinking 模式；实施时固定 revision 并核验许可证、模板与后端兼容性。
 - 保留纯数学与混合双环境、序列概率比 AM/GM 配对比较及五个 seed（17、29、43、71、101），共 20 个正式运行。AM 组不是标准 token 级 GRPO。
-- 当前仅发布实验方案，尚无训练结果；文献核查、代码实现、模型下载、数据准备和训练均待后续执行。不得将计划写成已完成结果。
+- 已实现 `src/{data,rewards,objectives,train}.py`、`scripts/run_seed.py` 和 `configs/seed17.json`。Node01现有torch2.10/transformers4.57.6/peft0.17.1/vLLM0.17.1用于BF16 LoRA单卡训练，后端选择见 `docs/method_decision.md`。
+- 首seed17先纯数学AM/GM两卡并行，完成保存后再混合AM/GM。独立试运行与正式200轮分别记账，正式完成仍0/20。
+- 服务器工作目录 `/home/remoteadmin/grpo-sequence-ratio`，官方模型复用 `/home/remoteadmin/skillos-repeatability-v1/models/Qwen3-8B-b968826d9c46`，原模型只读。大产物保存在服务器 `artifacts/`，仓库只提交源码、文档和小摘要。
+- 测试 `python -m unittest discover -s tests -v`，9项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。

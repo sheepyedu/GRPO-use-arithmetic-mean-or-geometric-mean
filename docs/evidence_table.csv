@@ -1,0 +1,5 @@
+source,version,location,evidence_type,supports,limitations
+DeepSeekMath,2402.03300v3,section4.1,method_definition,group_relative_advantages,token_ratio_not_sequence_AM
+DeepSeek-R1,2501.12948,report,indirect,rule_based_RL,no_controlled_AM_GM_evidence
+GSPO,2507.18071v2,section4.1-4.2,method_definition,sequence_geometric_ratio,original_comparison_changes_multiple_factors
+Memory_R2,unidentified,unverified,pending,none,ambiguous_identity

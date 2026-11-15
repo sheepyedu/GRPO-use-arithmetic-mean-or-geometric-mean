@@ -1,6 +1,6 @@
 # Qwen3-8B 序列概率比 AM/GM 受控实验协议
 
-本项目当前处于方案阶段，尚无训练结果。本协议规定后续实施、验证与正式实验的流程。本次发布交付完整实验方案文档，实验代码实现、模型下载、数据准备及训练留待后续执行。
+本项目已进入实现及独立试运行阶段，尚无正式训练结果。本协议规定实施、验证与正式实验流程。当前代码、数据和后端决策见README及实施决策文档，首seed17正式完成0/4。
 
 ## 1. 目标与模型
 
@@ -165,7 +165,7 @@ M_{\mathrm{mixed}}=0.5\,\mathrm{Acc}_{\mathrm{GSM8K}}
 
 \(\mathrm{AM}\geq\mathrm{GM}\) 不意味着 GM 性能更好，优势符号和裁切分支会改变更新。静态诊断不能替代在线训练。标准 GRPO、奖励噪声和额外分布外任务如需增加，应作为独立预算的扩展实验。
 
-后续实现目录为 `src/data/`、`src/rewards/`、`src/objectives/`、`configs/`、`scripts/`、`tests/`、`docs/` 和 `reports/`。维护 `README.md`、`TEST.md` 及同步的项目指南。本次仅创建实际需要的文档目录。
+当前实现采用 `src/data.py`、`src/rewards.py`、`src/objectives.py`、`src/train.py` 及 `configs/`、`scripts/`、`tests/`、`docs/`。结果摘要保存于 `reports/`，原始大产物在服务器 `artifacts/`。维护 `README.md`、`TEST.md` 及同步的项目指南。
 
 关键验证包括以下内容。
 

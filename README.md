@@ -2,7 +2,7 @@
 
 本项目研究序列概率比的算术平均（AM）与几何平均（GM）在强化学习中的性能差异与机制。主模型固定为官方 `Qwen/Qwen3-8B`，默认统一启用 thinking 模式。
 
-项目当前处于方案阶段，尚无训练结果。实验代码实现、模型下载、数据准备及训练均为后续工作，文献核查与证据整理也尚待执行。
+当前进入实现与试运行阶段。Node01已复用官方Qwen3-8B，固定三套公开数据及双环境6000题划分，9项测试通过。首个seed17按纯数学AM/GM、混合AM/GM顺序推进。正式完成0/20，当前试运行结果待核。
 
 ## 实验设计
 
@@ -19,6 +19,24 @@
 
 完整协议包含数据隔离、奖励解析、目标公式、共同配置、统计与机制诊断要求。见[实验方案](docs/experiment_plan.md)。
 
-## 文档检查
+## 运行
 
-当前仓库仅包含方案文档，尚无训练实现、自动测试套件或构建配置。现阶段检查方式及后续实现的验证要求见[检查指南](TEST.md)。
+实现采用 Transformers/PEFT 训练与 vLLM 单卡 rollout，每卡独立进程。后端决策与共同配置见 [实施决策](docs/method_decision.md)，测试见 [TEST.md](TEST.md)。服务器工作目录为 `/home/remoteadmin/grpo-sequence-ratio`，模型与数据路径在 `configs/seed17.json`。
+
+```sh
+export PYTHONPATH="$PWD"
+export USE_TF=0 USE_FLAX=0
+python -m unittest discover -s tests -v
+python -m src.data --output artifacts/data-v1
+python scripts/run_seed.py --config configs/pilot-seed17.json --output artifacts/pilot-seed17-v1 --phase pilot
+# 四个条件试运行校准完成并冻结共同配置后执行
+python scripts/run_seed.py --config configs/seed17.json --output artifacts/formal-seed17-v1 --phase formal
+```
+
+`pilot-seed17.json` 由seed17共同配置复制，将轮数改为10；试运行产物与正式run独立。已存在的数据清单和run目录需核实复用，入口拒绝覆盖。当前正式训练尚未启动。
+
+每个run保存配置、源码和环境清单、原始回答/token、冻结行为/参考分数、逐轮指标、LoRA与AdamW/scheduler/RNG检查点、最终测试预测及终态回执。异常保留原日志。完整checkpoint和原始轨迹位于服务器 `artifacts/`，GitHub保存可复现源码及结果摘要。
+
+## 项目进度
+
+[Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
