@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-15T16:02:40.444649+00:00",
+  "observed_at": "2026-11-15T16:11:47.844556+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
   "pair": null,
   "pairs": [
@@ -42,14 +42,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am",
       "status": {
-        "time": 1794758558.5351324,
-        "phase": "optimizer",
+        "time": 1794759027.5533793,
+        "phase": "rollout",
         "pid": 2330890,
-        "round": 1,
-        "epoch": 1,
-        "updates": 2,
-        "grad_norm": 0.0225693192332983,
-        "minibatch_offset": 64
+        "round": 2,
+        "updates": 16
       },
       "identity": {
         "pid": 2330890,
@@ -65,14 +62,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm",
       "status": {
-        "time": 1794758526.7871315,
-        "phase": "optimizer",
+        "time": 1794759027.1310654,
+        "phase": "rollout",
         "pid": 2330892,
-        "round": 1,
-        "epoch": 1,
-        "updates": 1,
-        "grad_norm": 0.011765984818339348,
-        "minibatch_offset": 0
+        "round": 2,
+        "updates": 16
       },
       "identity": {
         "pid": 2330892,
@@ -88,14 +82,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am",
       "status": {
-        "time": 1794758559.3248105,
-        "phase": "optimizer",
+        "time": 1794758905.4632962,
+        "phase": "rollout",
         "pid": 2330889,
-        "round": 1,
-        "epoch": 1,
-        "updates": 4,
-        "grad_norm": 0.08443357050418854,
-        "minibatch_offset": 192
+        "round": 2,
+        "updates": 16
       },
       "identity": {
         "pid": 2330889,
@@ -111,14 +102,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm",
       "status": {
-        "time": 1794758555.4013581,
-        "phase": "optimizer",
+        "time": 1794758905.8324053,
+        "phase": "rollout",
         "pid": 2330891,
-        "round": 1,
-        "epoch": 1,
-        "updates": 4,
-        "grad_norm": 0.047771651297807693,
-        "minibatch_offset": 192
+        "round": 2,
+        "updates": 16
       },
       "identity": {
         "pid": 2330891,
@@ -132,6 +120,6 @@
       "complete": false
     }
   ],
-  "gpu_csv": "0, 28420, 93\n1, 26316, 95\n2, 25784, 96\n3, 29924, 95\n4, 81138, 0\n5, 80345, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6763772379136
+  "gpu_csv": "0, 71190, 34\n1, 70934, 34\n2, 70918, 31\n3, 70918, 30\n4, 74737, 0\n5, 74333, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6744537300992
 }

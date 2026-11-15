@@ -1,0 +1,68 @@
+{
+  "observed_at": "2026-11-15T16:11:15.684670+00:00",
+  "scope": "CPU-only verification of four first committed checkpoints; no model generation or optimizer execution",
+  "common_config_exact": true,
+  "source_manifests_exact": true,
+  "runs": [
+    {
+      "environment": "math",
+      "operator": "am",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-am/checkpoint-001",
+      "committed_sha256": "73a4b4f6550a1a753f668780c27daecde2f3cbdfc166885a30f29d7dfb01f11a",
+      "round": 1,
+      "updates": 16,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "scheduler_epoch": 16,
+      "rng_schedule_present": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true
+    },
+    {
+      "environment": "math",
+      "operator": "gm",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-math-gm/checkpoint-001",
+      "committed_sha256": "cfd998f39b8a9f5ee63cb54feaabb50c66fa1712eec09aa2ccf6d7ac3be69ad1",
+      "round": 1,
+      "updates": 16,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "scheduler_epoch": 16,
+      "rng_schedule_present": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true
+    },
+    {
+      "environment": "mixed",
+      "operator": "am",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-am/checkpoint-001",
+      "committed_sha256": "d9f0f52a4ac3fa884e5d3471c17cfa342d8cc456bcd576b821510920d947cf79",
+      "round": 1,
+      "updates": 16,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "scheduler_epoch": 16,
+      "rng_schedule_present": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true
+    },
+    {
+      "environment": "mixed",
+      "operator": "gm",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/formal-mixed-gm/checkpoint-001",
+      "committed_sha256": "c57365d69e6fe267304c04d00c08d3f321c1c8a93e373e9af41097e8f34e5b3e",
+      "round": 1,
+      "updates": 16,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "scheduler_epoch": 16,
+      "rng_schedule_present": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true
+    }
+  ]
+}

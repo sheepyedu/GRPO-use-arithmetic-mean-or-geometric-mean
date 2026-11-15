@@ -1,5 +1,13 @@
 # 项目进展与经验
 
+## 2026-11-16 00:11 · 四份首轮正式检查点已核验
+
+- 四个run均已完成首轮两epoch和各16次AdamW更新，原配对decision-001均stop=false，实际进入第2轮采样。数学首轮从baseline放行到下轮放行约15.6分钟，混合约13.3分钟，包含采样/冻结概率/优化/保存/屏障。该阶段耗时尚不能代表后续全部验证和最终测试总时长。
+- 00:11:15独立CPU读取四份checkpoint-001，每份504个AdamW参数状态、1512个优化器张量、504个LoRA张量全部有限。optimizer step与scheduler last_epoch均16，Python/NumPy/Torch/CUDA RNG及数据调度状态完整。COMMITTED内文件SHA全匹配，原配对ready绑定的COMMITTED SHA匹配，四run共同配置和源码清单相同。只读取现有产物，新增模型生成/优化器执行0。
+- 证据为服务器 `runs/seed17/first-state-verification-v1.json` 和仓库 `reports/pai-seed17/first-state-verification.json`。00:11:47实际原四训练进程身份匹配、第2轮rollout、无FAILURE，GPU0–3利用率34/34/31/30%，显存71190/70934/70918/70918MiB；快照保留该真实时刻。
+- Notion父子页已同步首轮闭环及四份原生状态核验。待办12/18与3/7保持，正式run完成0/4、0/20。继续原四进程训练、共同早停及最终测试，Goal active。当前进展基于提交 `679f38a` 后的真实产物；10:00决策权交接规则保持。
+
+
 ## 2026-11-16 00:02 · 四条件实际优化已推进
 
 - 00:02:40实测，四个当前正式训练PID及UID/start/cmdline身份匹配。各2570题初始验证及首轮512条采样均完成，原数学和混合配对decision-000均stop=false。
