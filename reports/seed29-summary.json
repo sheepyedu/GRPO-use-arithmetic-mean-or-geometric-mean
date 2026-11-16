@@ -1,0 +1,270 @@
+{
+  "seed": 29,
+  "complete_runs": 4,
+  "planned_runs": 20,
+  "common_config": {
+    "model": "/mount-data/Models/Qwen3-8B",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "data": "/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1",
+    "seed": 29,
+    "rounds": 200,
+    "group_size": 8,
+    "prompt_batch": 64,
+    "optimization_epochs": 2,
+    "minibatch_sequences": 64,
+    "microbatch_sequences": 1,
+    "learning_rate": 1e-05,
+    "epsilon": 0.2,
+    "beta": 0.01,
+    "advantage_delta": 1e-06,
+    "max_new_tokens": 2048,
+    "max_model_len": 8192,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "lora_targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "thinking": true,
+    "gradient_clip": 1.0,
+    "validation_every": 10,
+    "vllm_memory_fraction": 0.72,
+    "vllm_max_sequences": 64,
+    "early_stopping": {
+      "min_rounds": 20,
+      "patience": 2,
+      "min_delta": 0.005,
+      "max_pair_hours": 12
+    },
+    "vllm_enforce_eager": false,
+    "checkpoint_free_max_tokens": 1536
+  },
+  "source_manifest_hash": "c3b1300cd0e5392453f2c38f067ad494d63107b01937ff70af1546daced70fec",
+  "runs": [
+    {
+      "environment": "math",
+      "operator": "am",
+      "seed": 29,
+      "rounds": 68,
+      "planned_rounds": 200,
+      "stop_reason": "wall_time",
+      "paired_stop_decision": {
+        "round": 68,
+        "stop": true,
+        "reason": "wall_time",
+        "best": {
+          "am": 0.952,
+          "gm": 0.95
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 43524.333449736994
+      },
+      "primary": 0.9454131918119788,
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.9454131918119788,
+          "mean_tokens": 599.502653525398,
+          "truncation": 0.02350265352539803,
+          "valid": 0.9757391963608795
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.7163299663299664,
+          "mean_tokens": 378.3611111111111,
+          "truncation": 0.0021043771043771043,
+          "valid": 0.7289562289562289
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.8657492354740061,
+          "mean_tokens": 247.5571865443425,
+          "truncation": 0.0009174311926605505,
+          "valid": 0.9886850152905199
+        },
+        "macro": 0.8424974645386505,
+        "mixed_weighted": 0.8682263963569825
+      },
+      "validation_auc_normalized": 0.9380882352941177,
+      "training_generated_tokens": 21719733,
+      "allocated_gpu_hours": 12.362118465039465,
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am"
+    },
+    {
+      "environment": "math",
+      "operator": "gm",
+      "seed": 29,
+      "rounds": 68,
+      "planned_rounds": 200,
+      "stop_reason": "wall_time",
+      "paired_stop_decision": {
+        "round": 68,
+        "stop": true,
+        "reason": "wall_time",
+        "best": {
+          "am": 0.952,
+          "gm": 0.95
+        },
+        "bad_checks": {
+          "am": 0,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 43524.333449736994
+      },
+      "primary": 0.9461713419257013,
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.9461713419257013,
+          "mean_tokens": 582.4162244124336,
+          "truncation": 0.02577710386656558,
+          "valid": 0.9742228961334344
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.7142255892255892,
+          "mean_tokens": 371.10016835016836,
+          "truncation": 0.0016835016835016834,
+          "valid": 0.7264309764309764
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.8574923547400611,
+          "mean_tokens": 238.8782874617737,
+          "truncation": 0.0006116207951070336,
+          "valid": 0.9807339449541285
+        },
+        "macro": 0.8392964286304506,
+        "mixed_weighted": 0.8660151569542632
+      },
+      "validation_auc_normalized": 0.935779411764706,
+      "training_generated_tokens": 21708520,
+      "allocated_gpu_hours": 12.35502315905359,
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm"
+    },
+    {
+      "environment": "mixed",
+      "operator": "am",
+      "seed": 29,
+      "rounds": 79,
+      "planned_rounds": 200,
+      "stop_reason": "wall_time",
+      "paired_stop_decision": {
+        "round": 79,
+        "stop": true,
+        "reason": "wall_time",
+        "best": {
+          "am": 0.9369824561403508,
+          "gm": 0.9377938596491228
+        },
+        "bad_checks": {
+          "am": 1,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 43559.03938889707
+      },
+      "primary": 0.9397771678478497,
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.9393479909021987,
+          "mean_tokens": 614.385140257771,
+          "truncation": 0.030326004548900682,
+          "valid": 0.9696739954510993
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.9831649831649831,
+          "mean_tokens": 386.7457912457912,
+          "truncation": 0.0012626262626262627,
+          "valid": 0.9987373737373737
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.8972477064220183,
+          "mean_tokens": 277.645871559633,
+          "truncation": 0.003669724770642202,
+          "valid": 0.9963302752293578
+        },
+        "macro": 0.9399202268297334,
+        "mixed_weighted": 0.9397771678478497
+      },
+      "validation_auc_normalized": 0.91700138796358,
+      "training_generated_tokens": 20332246,
+      "allocated_gpu_hours": 12.388403535551495,
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am"
+    },
+    {
+      "environment": "mixed",
+      "operator": "gm",
+      "seed": 29,
+      "rounds": 79,
+      "planned_rounds": 200,
+      "stop_reason": "wall_time",
+      "paired_stop_decision": {
+        "round": 79,
+        "stop": true,
+        "reason": "wall_time",
+        "best": {
+          "am": 0.9369824561403508,
+          "gm": 0.9377938596491228
+        },
+        "bad_checks": {
+          "am": 1,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 43559.03938889707
+      },
+      "primary": 0.9378754166833821,
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.9370735405610311,
+          "mean_tokens": 626.035633055345,
+          "truncation": 0.0356330553449583,
+          "valid": 0.9643669446550417
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.9831649831649831,
+          "mean_tokens": 403.85900673400675,
+          "truncation": 0.004208754208754209,
+          "valid": 0.9957912457912458
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.8941896024464832,
+          "mean_tokens": 276.73058103975535,
+          "truncation": 0.004281345565749235,
+          "valid": 0.9954128440366973
+        },
+        "macro": 0.9381427087241657,
+        "mixed_weighted": 0.9378754166833821
+      },
+      "validation_auc_normalized": 0.9176150066622252,
+      "training_generated_tokens": 20171067,
+      "allocated_gpu_hours": 12.393002399603526,
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm"
+    }
+  ],
+  "gm_minus_am": {
+    "math": 0.0007581501137224889,
+    "mixed": -0.0019017511644675578
+  },
+  "statistical_scope": "One paired seed; five-seed confidence intervals remain pending"
+}

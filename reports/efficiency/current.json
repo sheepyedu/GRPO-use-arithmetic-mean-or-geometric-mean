@@ -1,5 +1,5 @@
 {
-  "phase": "seed29_math-am_optimizer68_math-gm_optimizer68_mixed-am_optimizer79_mixed-gm_optimizer79",
+  "phase": "seed29_math-am_complete_math-gm_complete_mixed-am_complete_mixed-gm_complete",
   "ready": true,
   "next_seed": 29,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -29,7 +29,7 @@
     8
   ],
   "full_round_speed_verified": true,
-  "last_observed_at": "2026-11-16T18:40:32.300643+00:00",
+  "last_observed_at": "2026-11-16T19:10:56.869738+00:00",
   "latest_eta_observation": {
     "observed_at": "2026-11-16T08:59:20.132939+00:00",
     "evidence": "reports/pai-seed29/eta-status-20261116T1700.json",

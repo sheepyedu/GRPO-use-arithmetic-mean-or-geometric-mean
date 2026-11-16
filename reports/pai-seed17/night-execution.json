@@ -37,17 +37,17 @@
       9
     ],
     "formal_complete": [
-      4,
+      8,
       20
     ],
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41a5e704-b6a8-81ef-b291-d7042c89fe2f",
     "current_child_todos": [
-      3,
+      7,
       8
     ]
   },
-  "next_action": "Supervise the original seed29 source-v4 four-run campaign through paired stopping, final test and native state acceptance. Reuse the same frozen source for43/71/101 after each seed terminal acceptance and fixed review submission. Never duplicate dispatched or completed runs.",
+  "next_action": "Submit seed29 completed result to fixed review, then launch seed43 once with current four-card idle and frozen source/config checks.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -102,7 +102,7 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "last_observed_at": "2026-11-16T18:40:32.300643+00:00",
+  "last_observed_at": "2026-11-16T19:10:56.869738+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",

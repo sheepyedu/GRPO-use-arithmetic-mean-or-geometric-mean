@@ -1,0 +1,10 @@
+{
+  "pid": 3221541,
+  "start_ticks": 54296966,
+  "uid": 0,
+  "source_sha256": "20672084ae14c1d2480c7c7ea52d0631ac363440a14d584628b6345d5854353e",
+  "original_source_sha256": "b72b7bbd8cd99f7c0dbefc66a1ea4e4c4437858ec998d0ca66a9c7d1967371c4",
+  "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/acceptance-v1",
+  "time": "2026-11-16T19:12:16.091780+00:00",
+  "cuda_visible_devices": ""
+}
