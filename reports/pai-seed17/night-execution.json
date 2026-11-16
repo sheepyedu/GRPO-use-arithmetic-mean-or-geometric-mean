@@ -41,7 +41,11 @@
       20
     ],
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
-    "current_child": "41a5e704-b6a8-81ef-b291-d7042c89fe2f"
+    "current_child": "41a5e704-b6a8-81ef-b291-d7042c89fe2f",
+    "current_child_todos": [
+      3,
+      8
+    ]
   },
   "next_action": "Supervise seed29 original four source-v4 drivers, confirm validation-000/first training round. Reuse same efficiency settings for43/71/101 after each full terminal acceptance, never duplicate dispatched seeds.",
   "constraints": [
@@ -52,32 +56,37 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-16T06:07:46.088219+00:00",
+  "updated_at": "2026-11-16T06:55:37.694645+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
-  "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v2",
+  "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
   "prepared_configs": [
     {
       "seed": 29,
       "path": "configs/pai-seed29.json",
-      "sha256": "24566d3136b99a3bc203d0df5bfa9a532ba3c84c3895d5dc0bb545ffa8f8f93b"
+      "sha256": "f62fc77e7ebb0b1379139044e62e85137e6284cf9dcc485541fb0057618accff",
+      "source": "source-v4"
     },
     {
       "seed": 43,
       "path": "configs/pai-seed43.json",
-      "sha256": "7895849c595abee50f5746d6e571689010d8f2e8f6234eabf79f1d6479a0193e"
+      "sha256": "005241cfb6b150493b02f79b78f2f3b726aaf119dc18bd4dfb80aa0a5ec01f4f",
+      "source": "source-v4"
     },
     {
       "seed": 71,
       "path": "configs/pai-seed71.json",
-      "sha256": "c6b33e5aa6ac8272deca4b0ff60df5d1f57281fccca1866909fa9bf7fc6cd9d1"
+      "sha256": "9c54651ffa92e821d2cbe6f257f46b041fed1ed7172f7a7e5128cf42ad64b63f",
+      "source": "source-v4"
     },
     {
       "seed": 101,
       "path": "configs/pai-seed101.json",
-      "sha256": "8a89f51322d57dc91e2048b707f9af8d2a909b9e1ffecca98a091361bcb1d4e8"
+      "sha256": "106114538f503b933e7c912cef68bc3125bad648561202406aae013e270c4ed7",
+      "source": "source-v4"
     }
   ],
   "efficiency_version": "source-v4",
-  "general_acceleration_skill": "/Users/mac/.codex/skills/inference-training-acceleration/SKILL.md"
+  "general_acceleration_skill": "/Users/mac/.codex/skills/inference-training-acceleration/SKILL.md",
+  "historical_source_v2": "/mount-data/GRPO-Sequence-Ratio/source-v2"
 }
