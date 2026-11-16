@@ -1,3 +1,10 @@
+## 2026-11-16 22:35 · 混合第50轮验证及原成对继续
+
+- 22:35:03门后单次只读投影，数学第44轮epoch1更新689/689，混合第52轮rollout更新816/816，较22:04增加49/48/48/48。四driver及共享controller原身份匹配，无FAILURE和终态，已提交43/43/51/51轮指标均有限，source/config及COMMITTED/ready均匹配。
+- 混合第50轮验证加权AM92.7478%/GM93.2732%，GSM92.9%/93.9%、ARC96.4912%/97.1930%、BoolQ88.7%/88.1%。AM原bad_checks2，GM相对第30轮停止参考+0.8316个百分点、计数重置0，原共同decision继续。数学最新第40轮94.5%/94.2%、bad_checks0/0，第50轮待到达，最终测试尚未执行。
+- GPU0–3利用率96/97/100/99%，显存41640/40292/71900/71900MiB，CPFS4904806514688B，保护其他卡。正式4/20，子3/8、根7/9，Notion已同步。下一门23:05:03.653262，接续ff9f595，无新科学派发或优化器重放。
+- 原30分钟native heartbeat仅校准唤醒锚为每小时05/35分，保留prompt、ID、目标聊天、ACTIVE及1800秒canonical门，已原生update并实际toml回读一致，减少提前9分钟唤醒等待。回执supervision-anchor-alignment.json，源/配置/模型和任务范围保持原合同。证据latest-status、latest-supervision-summary、controller-current及interim-validation-050。
+
 ## 2026-11-16 22:04 · 四组第40轮验证闭合，继续第41/49轮
 
 - 22:04:36门后单次只读投影，数学第41轮优化更新640/641，混合第49轮冻结评分更新768/768，较21:34增加36/39/56/57。四driver及共享controller原身份匹配，无FAILURE和终态，已提交40/40/48/48轮指标均有限，source/config及COMMITTED/ready均匹配，配对继续。

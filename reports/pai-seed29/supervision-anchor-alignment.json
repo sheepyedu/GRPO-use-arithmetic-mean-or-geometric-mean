@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-11-16T14:35:36.708757+00:00",
+  "automation_id": "grpo-h20-30",
+  "status": "ACTIVE",
+  "anchor_minutes": [
+    5,
+    35
+  ],
+  "interval_seconds": 1800,
+  "prompt_sha256": "634912897d6f0ecd8f5bbad1b0068dad97813313d85130ae9d2f02d97f401d00",
+  "config_sha256": "f0fcdafc70421f69082678391855481ae6b467ba91e4f80b641795faac7c8425",
+  "reason": "Align the existing 30-minute wake with the current observation gate to reduce early wake waiting; original scientific scope and canonical gate retained."
+}
