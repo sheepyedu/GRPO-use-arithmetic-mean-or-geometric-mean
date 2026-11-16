@@ -1,3 +1,9 @@
+## 2026-11-16 18:00 · seed29混合第20轮验证及配对等待
+
+- 18:00:54门后单次只读投影，数学第18轮epoch1更新279/278，混合第21轮AM epoch2更新335、GM336在pair_wait，较17:29增加50/49/53/53。四driver与共享controller2800019原身份匹配，FAILURE/终态缺席，已记录17/17/20/21轮指标均有限，source/config和COMMITTED/ready匹配。
+- 混合第20轮验证加权两侧均91.7539%，GSM92.3%、ARC96.3158%、BoolQ86.1%。原bad_checks各1、decision继续，第30轮按既有规则判断。数学最新验证为第10轮，不借用混合轮次。最终测试待停止后执行。
+- GPU0–3利用率97/93/96/0%，显存41120/41476/42668/71888MiB；GM在配对屏障等待AM当前优化，单帧0不判失败。CPFS5638218317824B，其他卡占用保护。正式4/20，子3/8、根7/9，Notion已同步。下一门18:30:54.169128。接续a8ad571，原作业继续，无派发/optimizer重放，证据latest-status、latest-supervision-summary、controller-current和interim-validation-020。
+
 ## 2026-11-16 17:29 · seed29数学第15轮、混合第18轮
 
 - 17:29:50原四driver身份匹配，数学epoch1更新229/229，混合epoch2更新282/283，较16:59增量47/48/58/59。已提交14/14/17/17轮metrics均有限，source/config及COMMITTED/ready匹配，无FAILURE和终态。17:30:29补核两环境共享controller2800019原UID/start/cmdSHA与配置和输出均匹配。
