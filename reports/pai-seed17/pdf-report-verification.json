@@ -1,0 +1,11 @@
+{
+  "pdf": "output/pdf/GRPO首seed实验详报_黑体_20261116.pdf",
+  "sha256": "165720b1b01cb59d7178006a69edf5059cf49a30a6145fbf68c0652e506e8261",
+  "pages": 12,
+  "text_fonts": [
+    "STHeiti"
+  ],
+  "visual_inspection": "All 12 rendered pages reviewed; no overlap, clipping or blank pages",
+  "checker_correction": "Initial 815pt footer cutoff falsely flagged all 12 intentional footers. Corrected to physical page minus15pt; no artifact change required.",
+  "new_finding": "math-am round9 KL258.7117902728277; finite spike, token cause unprovided"
+}

@@ -42,3 +42,7 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 首seed四run执行及汇总已完成，固定审核提交按项目流程办理。后续seed29、43、71、101共16run仍待执行，五seed统计和根项目审核待完成。30分钟监督使用共享时间门，保留原始失败和科学预算。
 
 [Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
+
+## 首seed详细汇报
+
+[黑体PDF报告（12页）](output/pdf/GRPO首seed实验详报_黑体_20261116.pdf)包含完整训练曲线、资源时间、token及归因分析。新增逐轮核查发现数学AM第9轮KL有限尖峰258.71179，具体token成因待定位。报告按实际GRPO目标撰写，DPO未实施。
