@@ -1,0 +1,33 @@
+{
+  "enabled_at": "2026-11-17T00:13:05+08:00",
+  "recorded_at": "2026-11-17T00:13:59.424811+08:00",
+  "timezone": "Asia/Shanghai",
+  "decision_authority_changes_at": "2026-11-18T10:00:00+08:00",
+  "scope": "Complete seed29 then43/71/101, final evaluation and state acceptance, fixed subtask review and five-seed analysis",
+  "current_seed": 29,
+  "formal_complete": [
+    4,
+    20
+  ],
+  "last_training_observed_at": "2026-11-16T16:08:18.538548+00:00",
+  "next_check_not_before": "2026-11-16T16:38:18.538548+00:00",
+  "source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "automation_id": "grpo-h20-30",
+  "automation_status": "ACTIVE",
+  "automation_config_sha256": "b22c5397bfbb54c9dcb806487ae6dab6cdb454d047a5cd5cca8c776903402b80",
+  "scientific_actions_this_enablement": 0,
+  "pending_user_decisions": [],
+  "notion_readback_verified_at": "2026-11-16T16:15:03.504444+00:00",
+  "management_failures": [
+    {
+      "action": "child Notion insert_content initial call",
+      "result": "HTTP400 requires content parameter; corrected call succeeded and parent/child readback confirmed deadline"
+    }
+  ]
+}

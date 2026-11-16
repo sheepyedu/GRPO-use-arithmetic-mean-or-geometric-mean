@@ -1,7 +1,7 @@
 {
   "recorded_at": "2026-11-15T15:51:25.581301+00:00",
   "thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
-  "decision_authority_changes_at": "2026-11-16T10:00:00+08:00",
+  "decision_authority_changes_at": "2026-11-18T10:00:00+08:00",
   "before_change": "Agent autonomously decides and executes within existing authorization",
   "after_change": "Refer questions requiring user judgment to user; continue all other authorized work",
   "goal_continues": false,
@@ -102,5 +102,19 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "last_observed_at": "2026-11-16T16:08:18.538548+00:00"
+  "last_observed_at": "2026-11-16T16:08:18.538548+00:00",
+  "night_sessions_history": [
+    {
+      "enabled_at": "2026-11-15T15:51:25.581301+00:00",
+      "decision_authority_changes_at": "2026-11-16T10:00:00+08:00",
+      "source": "previous night session"
+    }
+  ],
+  "night_mode_enabled_at": "2026-11-17T00:13:05+08:00",
+  "timezone": "Asia/Shanghai",
+  "current_decision_authority": "Agent within existing task authorization until the current session deadline",
+  "night_mode_status": "active",
+  "campaign_status": "active",
+  "management_updated_at": "2026-11-17T00:13:59.424811+08:00",
+  "session_scope": "Complete seed29 then43/71/101, final evaluation and state acceptance, fixed subtask review and five-seed analysis"
 }
