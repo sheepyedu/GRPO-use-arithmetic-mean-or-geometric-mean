@@ -47,7 +47,7 @@
       8
     ]
   },
-  "next_action": "Supervise seed29 original four source-v4 drivers, confirm validation-000/first training round. Reuse same efficiency settings for43/71/101 after each full terminal acceptance, never duplicate dispatched seeds.",
+  "next_action": "Supervise the original seed29 source-v4 four-run campaign through paired stopping, final test and native state acceptance. Reuse the same frozen source for43/71/101 after each seed terminal acceptance and fixed review submission. Never duplicate dispatched or completed runs.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -56,7 +56,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-16T11:32:13.540044+00:00",
+  "updated_at": "2026-11-16T12:02:36.822787+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -102,5 +102,5 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "last_observed_at": "2026-11-16T11:32:13.540044+00:00"
+  "last_observed_at": "2026-11-16T12:02:36.822787+00:00"
 }
