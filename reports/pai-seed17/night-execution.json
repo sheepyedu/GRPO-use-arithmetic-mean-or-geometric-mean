@@ -42,11 +42,11 @@
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41a5e704-b6a8-8134-8eec-eed3ce7e6ebb",
     "current_child_todos": [
-      0,
+      1,
       6
     ]
   },
-  "next_action": "Supervise original seed43 four-run source-v4 campaign, verify initial validation, paired stopping, final test and complete state, submit fixed review then continue71/101.",
+  "next_action": "Supervise original seed43 four-run source-v4 campaign after verified initial validation, then paired stopping, final test and full state acceptance, fixed review and continuation71/101.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -55,7 +55,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-16T19:20:29.116562+00:00",
+  "updated_at": "2026-11-16T19:48:02.488373+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -101,7 +101,7 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "last_observed_at": "2026-11-16T19:17:36.723408+00:00",
+  "last_observed_at": "2026-11-16T19:48:02.488373+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",
