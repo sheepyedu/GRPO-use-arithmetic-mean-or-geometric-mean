@@ -1,3 +1,9 @@
+## 2026-11-17 03:39 · seed29审核通过与seed43监督锚对齐
+
+- 固定审核聊天03:21:07原生评论41a5e704-b6a8-8122-a858-001d708f6ed3对nr-a96f8dc339f6a7ed95c529b39aabdf01出具通过，限seed29终态、测试、保存状态与用量交付；子页Done、8/8，累计正式审核8/20，根7/9保持。独立294份rollout、34份验证及4份测试重评分与tokens均同，保存reports/pai-seed29/review-result.json。
+- 审核指出数学AM第54轮有限KL0.297253、混合GM第63轮有限KL7.454494/loss0.074529。原件保留，报告加入固定审核补充，具体token/机制归因留后续，未据此改科学配置或重跑。原审核版本b0e606b和SHA均保留。
+- 本wake03:36初核早于canonical03:47:36，本机管理0SSH，无新服务器观测，seed43训练/资源仍03:17:36缓存，不冒当前健康或进度。为接续新seed启动锚，原同一30分钟heartbeat原生时刻由05/35调整为18/48，首次03:48晚于当前门，ACTIVE/RRULE/目标与配置SHA已实际回读；canonical间隔1800秒及门未变。证据seed43/supervision-anchor-alignment.json。下一次native03:48直接按门核正式运行，勿重复派发。接续ead0cab。
+
 ## 2026-11-17 03:17 · seed29完整验收并主动续接seed43
 
 - seed29四run原生03:02:16结束，数学68轮各1088更新、混合79轮各1264更新，原12小时soft wall-time在共同屏障停止；两parent真实[0,0]、wrapper0，四driver/controller/wrapper gone。03:10:56资源投影GPU0–3利用率/显存均0，其他卡保留。03:13:32独立CPU完整验收exit0且verifier gone，COMMITTED各文件SHA、四份各504 LoRA/1512 AdamW张量有限、scheduler/RNG/数据调度完整，四份锁定测试各6965题。

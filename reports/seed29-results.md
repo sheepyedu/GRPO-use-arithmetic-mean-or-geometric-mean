@@ -22,3 +22,9 @@
 模型、全部checkpoint和轨迹留在CPFS `/mount-data/GRPO-Sequence-Ratio/runs/seed29`。数学最终LoRA为两侧`checkpoint-068`，混合为两侧`checkpoint-079`，配原始`/mount-data/Models/Qwen3-8B`加载。GPU4–7其他项目未变动。
 
 远端CPU验收为`acceptance-v1/RESULT.json`，SHA256 `ced6c05a06699c24ace29c9176fbbb52c1941b28900bad0b1d9526ac94fa9bb2`。本机小证据为`reports/pai-seed29/final-verification.json`、`reports/pai-seed29/latest-status.json`及`reports/seed29-summary.json`。执行方自查完成，固定子任务审核单另附，根任务仍由杨洋审核。
+
+## 固定审核补充
+
+2026-11-17北京时间03:21，固定审核聊天在Notion原生评论 `41a5e704-b6a8-8122-a858-001d708f6ed3` 对审核单 `nr-a96f8dc339f6a7ed95c529b39aabdf01` 出具通过结论，子项目Done、8/8。独立重评分全部测试与验证、复核调度和tokens的结果与提交一致。
+
+审核另记录数学AM第54轮KL为0.297253，混合GM第63轮KL为7.454494、loss为0.074529。上述指标均有限，优化过程含局部尖峰，具体token及机制归因尚未定位。完整状态与交付验收范围依原审核，整体方法优劣及训练采纳留待后续。独立证据在 `runtime/notion-review-20261117/seed29/AUDIT.json`，保存相对执行版本和原始指标。

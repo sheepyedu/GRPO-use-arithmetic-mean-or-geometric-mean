@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-16T19:38:24.394858+00:00",
+  "reason": "Align native 30-minute wake to seed43 actual startup gate03:47:36, preserving actual interval >=1800seconds and avoiding repeated 11minute early wakes",
+  "previous_rrule": "FREQ=HOURLY;INTERVAL=1;BYMINUTE=5,35;BYSECOND=0",
+  "rrule": "FREQ=HOURLY;INTERVAL=1;BYMINUTE=18,48;BYSECOND=0",
+  "next_native_anchor_bjt": "2026-11-17T03:48:00+08:00",
+  "canonical_next_check_not_before": "2026-11-16T19:47:36.723408+00:00",
+  "config_sha256": "21ab1650385bafe6c81c90a3acb7be994700717285d13993afa8e4ba10fdc8b4",
+  "server_reads_this_wake": 0,
+  "training_observed_at": "2026-11-16T19:17:36.723408+00:00",
+  "status": "ACTIVE"
+}
