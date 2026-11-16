@@ -1,0 +1,56 @@
+{
+  "page_id": "4195e704-b6a8-8130-8564-c2afff182ec4",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "a13f3e6badb1b35d62f739700f8f86889dc0f5cc",
+  "scope": "首seed17四个正式GRPO run的训练、最终测试、完整状态、token核算与显存释放。后续16run及五seed统计留根任务。",
+  "acceptance_criteria": [
+    "PAI GPU0–3四条件从原始Qwen3-8B独立执行，数学AM/GM和混合AM/GM各配对轮次与停止决定一致",
+    "四run COMPLETE、无FAILURE，两pair原生退出码均[0,0]、外层0，最终测试各6965题",
+    "最终LoRA及AdamW/scheduler/RNG/调度状态全有限完整，COMMITTED各文件SHA匹配，汇总器完整检查通过",
+    "逐保存152份训练rollout、20份验证与4份测试预测核算输入输出token，保留thinking与重复输入口径",
+    "已记录wrapper、四driver与8个子进程均缺席，GPU0–3显存0；Node01历史和其他项目保留"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed17-results.md",
+      "version": "a13f3e6badb1b35d62f739700f8f86889dc0f5cc",
+      "supports": "结果、tokens、限制及服务器路径"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/final-verification.json",
+      "version": "SHA256 94af7dad248f4df4e41b0f419c8c0ae25631d2afa21ebacb35ef466fd7a9e037",
+      "supports": "原生汇总器及四最终完整状态、逐token核验"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/latest-status.json",
+      "version": "a13f3e6badb1b35d62f739700f8f86889dc0f5cc",
+      "supports": "四COMPLETE、父退出、driver gone、GPU显存0及当前资源"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/acceptance-v1/RESULT.json",
+      "version": "SHA256 c4aff193fb53e304fd7f0087d1a17d20d153463508f3bdcfb12817600cb494e6",
+      "supports": "远端原始CPU核验结果"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/acceptance-v1/PROCESS_RELEASE.json",
+      "version": "2026-11-16 14:01读取保存",
+      "supports": "原wrapper/driver和已记录8子进程均缺席"
+    }
+  ],
+  "verification": [
+    "PAI实际19项测试通过，原始回执reports/pai-seed17/setup-tests.txt",
+    "原生scripts/summarize_seed.py summarize通过，四份最终AdamW各1512张量与LoRA各504张量实际CPU全finite",
+    "四条件主测试分数为数学93.85898/93.32828、混合加权93.46260/92.75472；各6965题",
+    "训练输出44192411、评测33206608、总输出77399019；按回答输入17715052、合计95114071，已逐保存token数组核对"
+  ],
+  "limitations": [
+    "单seed结果，后续16run与五seed配对统计未完成",
+    "四run起点基线存在差异，HF/vLLM logprob MAE约0.009–0.012，保留数值实现差异",
+    "数学36轮与混合40轮，均原12小时软预算停止，验证AUC和最终测试分别报告",
+    "输入分别按每回答与每prompt计数，实际缓存/prefill工作量及HF重复训练token处理量未测",
+    "本次交付模型为LoRA适配器与完整训练状态，需配原始Qwen3-8B加载；固定审核结论由审核聊天出具"
+  ],
+  "supersedes": null
+}

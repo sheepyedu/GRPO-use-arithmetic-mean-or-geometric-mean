@@ -5,7 +5,7 @@
 - 13:59实际读取确认四run均COMPLETE、无FAILURE，两pair退出码各[0,0]、wrapper0，13:03:58全部结束。数学36轮/576更新、混合40轮/640更新，均wall_time。GPU0–3显存与利用率均0，原wrapper/driver/8子进程当前均缺席。
 - 最终锁定测试各6965题，数学AM/GM GSM8K93.85898%/93.32828%，混合加权93.46260%/92.75472%。保留单seed及不同基线、HF/vLLM数值差异局限。
 - 原生summarize_seed核全部最终文件哈希、配对轮次、停止决定及验证频率通过。四份最终AdamW/LoRA全有限，scheduler/RNG/schedule完整。逐全部保存token数组核算训练输出44192411、验证测试输出33206608、总输出77399019；按回答计输入17715052，输入加输出95114071。所有原始模型/轨迹保留CPFS。
-- 接续Git提交0fb4c76，报告reports/seed17-results.md及seed17-summary.json，CPU核验RESULT SHA c4aff193fb53e304fd7f0087d1a17d20d153463508f3bdcfb12817600cb494e6。固定审核提交及后续seed仍待办理，Goal继续。
+- 接续Git提交0fb4c76，报告reports/seed17-results.md及seed17-summary.json，CPU核验RESULT SHA c4aff193fb53e304fd7f0087d1a17d20d153463508f3bdcfb12817600cb494e6。固定审核已实际送达，review_id nr-1ae2572bf37a500fcee03dc0bc6f0cd6，原生评论41a5e704-b6a8-81c9-9d9e-001df6a38ca1。Notion子19/19待审核、根6/8，正式4/20。后续16run待启动。06:50后例行监督记录间断，本次按原始终态、全部预测和最终检查点补核。
 
 ## 2026-11-16 06:50 · 四条件第20轮验证闭合，补齐实际子进程身份
 
