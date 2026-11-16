@@ -1,0 +1,52 @@
+{
+  "page_id": "41a5e704-b6a8-8184-9e33-ec61883296b1",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+  "scope": "通用推理与训练提速Skill、本机安装、可移植仓库目录、实际事件分析脚本和案例",
+  "acceptance_criteria": [
+    "通用说明按真实瓶颈、数值/梯度/显存与端到端收益选择候选，并保留原任务约束",
+    "H20阈值与加速结果作为参考案例并披露撤回候选、测试范围及数值局限",
+    "事件分析脚本可运行，正确处理区间归属、倒序/非有限及最后事件未观测",
+    "本机Skill与仓库内容一致，结构检查通过，实际四run日志复算和边界检查通过"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/skills/inference-training-acceleration/SKILL.md",
+      "version": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+      "supports": "通用工作流与适用范围"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/skills/inference-training-acceleration/references/qwen3-h20-case.md",
+      "version": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+      "supports": "实测案例和失败候选、收益边界"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/skills/inference-training-acceleration/scripts/profile_events.py",
+      "version": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+      "supports": "确定性事件耗时分析"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/efficiency/skill-validation.json",
+      "version": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+      "supports": "CLI、边界和真实日志复算结果"
+    },
+    {
+      "ref": "/Users/mac/.codex/skills/inference-training-acceleration",
+      "version": "03b028421d06d01e1af0ed87e5d30756f2e38efa",
+      "supports": "已安装可发现的Skill目录"
+    }
+  ],
+  "verification": [
+    "quick_validate.py返回Skill is valid",
+    "profile_events.py在4个实际运行事件流上复算，与原阶段小时结果一致，rel_tol1e-12",
+    "已检查已知区间、next标签、重复时间、空/单事件、倒序/非有限/boolean/缺失字段、CLI结构输出"
+  ],
+  "limitations": [
+    "Skill本身不增加服务器操作或实验许可，实际提速需按任务与设备测量",
+    "H20数字为历史条件，完整训练轮加速仍待当前正式任务实测",
+    "初始生成脚本缺main guard的失败及边界夹具scope文字不准确均已在案例披露"
+  ],
+  "supersedes": null
+}

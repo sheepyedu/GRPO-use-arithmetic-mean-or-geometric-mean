@@ -4,7 +4,7 @@
 
 - 用户要求在继续训练时沉淀通用Skill。已安装~/.codex/skills/inference-training-acceleration并将完整可移植目录保存到仓库skills/。入口覆盖基线/瓶颈、推理训练候选、正确性与显存、预算口径、正式接续，H20参数及结果仅为参考案例。
 - profile_events.py支持前/后事件区间归属、非有限和倒序拒绝、末事件未观测说明。实际四run日志复算与原耗时分解精确一致，边界及CLI检查通过，quick_validate通过。验证reports/efficiency/skill-validation.json。
-- 接续提交408238d。当前seed29由原30分钟定时监督继续，当前仅本机Skill整理，无额外服务器采样或训练派发。Skill交付将按固定Notion子任务审核流程提交。
+- 接续提交408238d。当前seed29由原30分钟定时监督继续，当前仅本机Skill整理，无额外服务器采样或训练派发。Skill已实际提交固定审核，回执reports/efficiency/skill-review-delivery.json。新子任务4/4、待审核，根新增用户交付项后7/9、77.78%，正式4/20独立记录。
 
 ## 2026-11-16 14:39 · 框架提速验证通过，seed29已单次启动
 
