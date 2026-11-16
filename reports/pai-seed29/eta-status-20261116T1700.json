@@ -1,0 +1,157 @@
+{
+  "observed_at": "2026-11-16T08:59:20.132939+00:00",
+  "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
+  "pair": null,
+  "pairs": [
+    {
+      "phase": "formal",
+      "environment": "math",
+      "children": [
+        {
+          "pid": 2800022,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
+          "gpu": 0
+        },
+        {
+          "pid": 2800023,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
+          "gpu": 1
+        }
+      ],
+      "start": 1794811109.343661
+    },
+    {
+      "phase": "formal",
+      "environment": "mixed",
+      "children": [
+        {
+          "pid": 2800024,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
+          "gpu": 2
+        },
+        {
+          "pid": 2800025,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
+          "gpu": 3
+        }
+      ],
+      "start": 1794811109.3494718
+    }
+  ],
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
+      "status": {
+        "time": 1794819549.9523735,
+        "phase": "optimizer",
+        "pid": 2800022,
+        "round": 12,
+        "epoch": 1,
+        "updates": 182,
+        "grad_norm": 0.01756582222878933,
+        "minibatch_offset": 320
+      },
+      "identity": {
+        "pid": 2800022,
+        "uid": 0,
+        "start_ticks": 49774291,
+        "cmdline_sha256": "40a2978acfe8d67d7be29e27fefd63e78b76e7d612443866f8b627c14a53eab9",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false,
+      "last_metric": {
+        "round": 11,
+        "updates": 176,
+        "elapsed": 8056.624190092087
+      },
+      "validations": []
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
+      "status": {
+        "time": 1794819540.9409263,
+        "phase": "optimizer",
+        "pid": 2800023,
+        "round": 12,
+        "epoch": 1,
+        "updates": 181,
+        "grad_norm": 0.01060989499092102,
+        "minibatch_offset": 256
+      },
+      "identity": {
+        "pid": 2800023,
+        "uid": 0,
+        "start_ticks": 49774291,
+        "cmdline_sha256": "c50d856a8ad1d63d5385a4bb5105702e8fd3355a04db7e20459822dccfb751b4",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false,
+      "last_metric": {
+        "round": 11,
+        "updates": 176,
+        "elapsed": 8035.470073699951
+      },
+      "validations": []
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
+      "status": {
+        "time": 1794819483.1768687,
+        "phase": "frozen_scores",
+        "pid": 2800024,
+        "round": 15,
+        "sequences": 512,
+        "updates": 224
+      },
+      "identity": {
+        "pid": 2800024,
+        "uid": 0,
+        "start_ticks": 49774292,
+        "cmdline_sha256": "a97d76d4e0ab5df0bf1dc9200fbd949640a2f3353ecc6727adcf1c5aea3b6bb9",
+        "matches_output": true,
+        "state": "R"
+      },
+      "failure": null,
+      "complete": false,
+      "last_metric": {
+        "round": 14,
+        "updates": 224,
+        "elapsed": 8281.839075565338
+      },
+      "validations": []
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
+      "status": {
+        "time": 1794819481.746826,
+        "phase": "frozen_scores",
+        "pid": 2800025,
+        "round": 15,
+        "sequences": 512,
+        "updates": 224
+      },
+      "identity": {
+        "pid": 2800025,
+        "uid": 0,
+        "start_ticks": 49774292,
+        "cmdline_sha256": "9e2faf4a921b20e729df34b787cd3bac76fba81d475a7a1ada72de4eef121e66",
+        "matches_output": true,
+        "state": "R"
+      },
+      "failure": null,
+      "complete": false,
+      "last_metric": {
+        "round": 14,
+        "updates": 224,
+        "elapsed": 8282.180468320847
+      },
+      "validations": []
+    }
+  ],
+  "gpu_csv": "0, 42272, 93\n1, 41746, 100\n2, 29196, 100\n3, 26524, 99\n4, 81400, 100\n5, 80824, 100\n6, 80824, 100\n7, 79864, 100",
+  "disk_free_bytes": 5808771301376
+}
