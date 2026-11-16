@@ -56,7 +56,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-16T14:35:03.653262+00:00",
+  "updated_at": "2026-11-16T15:07:19.875819+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -102,5 +102,5 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "last_observed_at": "2026-11-16T14:35:03.653262+00:00"
+  "last_observed_at": "2026-11-16T15:07:19.875819+00:00"
 }
