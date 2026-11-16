@@ -486,5 +486,6 @@
   "disk_free_bytes": 5892699324416,
   "formal_complete": 4,
   "planned_runs": 20,
-  "next_check_not_before": "2026-11-16T07:55:46.816282+00:00"
+  "next_check_not_before": "2026-11-16T07:56:54.392655+00:00",
+  "first_state_verification_at": "2026-11-16T07:26:54.392655+00:00"
 }
