@@ -1,6 +1,6 @@
 {
-  "observed_at": "2026-11-16T13:03:42.471809+00:00",
-  "scope": "Seed29 mixed round40 validation complete; math latest round30; final test pending",
+  "observed_at": "2026-11-16T14:04:36.455318+00:00",
+  "scope": "Seed29 all four round40 validation complete; final test pending",
   "runs": [
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
@@ -116,22 +116,53 @@
             "macro": 0.7983391812865497,
             "mixed_weighted": 0.8337543859649122
           }
+        },
+        {
+          "round": 40,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.945,
+              "mean_tokens": 591.878,
+              "truncation": 0.027,
+              "valid": 0.973
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.6192982456140351,
+              "mean_tokens": 391.3421052631579,
+              "truncation": 0.007017543859649123,
+              "valid": 0.6350877192982456
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.849,
+              "mean_tokens": 265.66,
+              "truncation": 0.005,
+              "valid": 0.975
+            },
+            "macro": 0.8044327485380117,
+            "mixed_weighted": 0.8395745614035088
+          }
         }
       ],
       "latest_paired_decision": {
-        "round": 34,
+        "round": 40,
         "stop": false,
         "reason": null,
         "best": {
-          "am": 0.94,
-          "gm": 0.931
+          "am": 0.945,
+          "gm": 0.942
         },
         "bad_checks": {
           "am": 0,
-          "gm": 1
+          "gm": 0
         },
-        "scores": null,
-        "elapsed_seconds": 22712.142938831996
+        "scores": {
+          "am": 0.945,
+          "gm": 0.942
+        },
+        "elapsed_seconds": 26526.04565307795
       }
     },
     {
@@ -248,22 +279,53 @@
             "macro": 0.7841637426900584,
             "mixed_weighted": 0.8216228070175439
           }
+        },
+        {
+          "round": 40,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.942,
+              "mean_tokens": 556.214,
+              "truncation": 0.024,
+              "valid": 0.976
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.6508771929824562,
+              "mean_tokens": 402.61578947368423,
+              "truncation": 0.010526315789473684,
+              "valid": 0.6666666666666666
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.843,
+              "mean_tokens": 261.789,
+              "truncation": 0.006,
+              "valid": 0.962
+            },
+            "macro": 0.8119590643274854,
+            "mixed_weighted": 0.844469298245614
+          }
         }
       ],
       "latest_paired_decision": {
-        "round": 34,
+        "round": 40,
         "stop": false,
         "reason": null,
         "best": {
-          "am": 0.94,
-          "gm": 0.931
+          "am": 0.945,
+          "gm": 0.942
         },
         "bad_checks": {
           "am": 0,
-          "gm": 1
+          "gm": 0
         },
-        "scores": null,
-        "elapsed_seconds": 22712.142938831996
+        "scores": {
+          "am": 0.945,
+          "gm": 0.942
+        },
+        "elapsed_seconds": 26526.04565307795
       }
     },
     {
@@ -411,7 +473,7 @@
         }
       ],
       "latest_paired_decision": {
-        "round": 41,
+        "round": 48,
         "stop": false,
         "reason": null,
         "best": {
@@ -423,7 +485,7 @@
           "gm": 1
         },
         "scores": null,
-        "elapsed_seconds": 23084.449488601007
+        "elapsed_seconds": 26666.143673138053
       }
     },
     {
@@ -571,7 +633,7 @@
         }
       ],
       "latest_paired_decision": {
-        "round": 41,
+        "round": 48,
         "stop": false,
         "reason": null,
         "best": {
@@ -583,7 +645,7 @@
           "gm": 1
         },
         "scores": null,
-        "elapsed_seconds": 23084.449488601007
+        "elapsed_seconds": 26666.143673138053
       }
     }
   ]
