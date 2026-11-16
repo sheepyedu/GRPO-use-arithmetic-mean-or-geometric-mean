@@ -4,7 +4,7 @@
   "decision_authority_changes_at": "2026-11-16T10:00:00+08:00",
   "before_change": "Agent autonomously decides and executes within existing authorization",
   "after_change": "Refer questions requiring user judgment to user; continue all other authorized work",
-  "goal_continues": true,
+  "goal_continues": false,
   "stop_training_at_change": false,
   "scope": {
     "server": "aliyun-pai-h20",
@@ -14,33 +14,35 @@
       2,
       3
     ],
-    "current_seed": 17,
+    "current_seed": null,
     "remaining_seeds": [
       29,
       43,
       71,
       101
-    ]
+    ],
+    "next_seed": 29
   },
-  "active_source": "/mount-data/GRPO-Sequence-Ratio/source-v2",
-  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed17",
+  "active_source": null,
+  "active_output": null,
   "notion": {
     "child": "4195e704-b6a8-8130-8564-c2afff182ec4",
     "parent": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
     "child_todos": [
-      13,
+      19,
       19
     ],
     "parent_todos": [
-      4,
+      6,
       8
     ],
     "formal_complete": [
-      0,
+      4,
       20
-    ]
+    ],
+    "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6"
   },
-  "next_action": "Follow shared 1800-second supervision gate; continue current four run processes, verify committed rounds and paired early stopping, final validation/test and fixed review",
+  "next_action": "After shared next_check_not_before, check current PAI GPU0\u20133 resources, source hashes, unique seed29 output absence and no existing live seed29 dispatch. Create/update direct Notion seed29 child, publish external config changing only seed, then launch exactly once from original Qwen3-8B with frozen source-v2 and all original stopping/budget gates. Never rerun seed17. Continue authorized seeds29/43/71/101.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -49,5 +51,30 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-15T16:43:26.424311+00:00"
+  "updated_at": "2026-11-16T06:07:46.088219+00:00",
+  "first_seed_goal_complete": true,
+  "campaign_continues_under_existing_user_authorization": true,
+  "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v2",
+  "prepared_configs": [
+    {
+      "seed": 29,
+      "path": "configs/pai-seed29.json",
+      "sha256": "24566d3136b99a3bc203d0df5bfa9a532ba3c84c3895d5dc0bb545ffa8f8f93b"
+    },
+    {
+      "seed": 43,
+      "path": "configs/pai-seed43.json",
+      "sha256": "7895849c595abee50f5746d6e571689010d8f2e8f6234eabf79f1d6479a0193e"
+    },
+    {
+      "seed": 71,
+      "path": "configs/pai-seed71.json",
+      "sha256": "c6b33e5aa6ac8272deca4b0ff60df5d1f57281fccca1866909fa9bf7fc6cd9d1"
+    },
+    {
+      "seed": 101,
+      "path": "configs/pai-seed101.json",
+      "sha256": "8a89f51322d57dc91e2048b707f9af8d2a909b9e1ffecca98a091361bcb1d4e8"
+    }
+  ]
 }
