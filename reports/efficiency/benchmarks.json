@@ -250,5 +250,10 @@
     "graph64-exit.json": {
       "code": 0
     }
+  },
+  "notes": {
+    "boundary_fixture": "efficiency-memory-boundary-v3 uses one synthetic total1536 sequence (128 prompt+1408 completion), despite generic raw scope text inherited from eight-saved-sequence benchmark.",
+    "first_generation_failure": "Original generation_bench.py missed multiprocessing main guard, eager32 exit1. r2 version fixed main guard. All original logs retained remotely.",
+    "accepted": "checkpoint policy and graph generation only; padding batch and compiled token statistics rejected."
   }
 }

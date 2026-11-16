@@ -1,0 +1,77 @@
+{
+  "page_id": "4195e704-b6a8-8130-8564-c2afff182ec4",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "0b156e978b182bffa442fd52d650d18fe1031b79",
+  "scope": "首seed17四个正式GRPO run的训练、最终测试、完整状态、token核算与显存释放。后续16run及五seed统计留根任务。 补充用户要求的12页黑体PDF详报、全部训练曲线与归因分析，并披露新发现的数学AM第9轮KL尖峰。",
+  "acceptance_criteria": [
+    "PAI GPU0–3四条件从原始Qwen3-8B独立执行，数学AM/GM和混合AM/GM各配对轮次与停止决定一致",
+    "四run COMPLETE、无FAILURE，两pair原生退出码均[0,0]、外层0，最终测试各6965题",
+    "最终LoRA及AdamW/scheduler/RNG/调度状态全有限完整，COMMITTED各文件SHA匹配，汇总器完整检查通过",
+    "逐保存152份训练rollout、20份验证与4份测试预测核算输入输出token，保留thinking与重复输入口径",
+    "已记录wrapper、四driver与8个子进程均缺席，GPU0–3显存0；Node01历史和其他项目保留",
+    "PDF使用黑体，完整覆盖资源/时间/结果/AM与GM的双环境对比及训练曲线，按实际GRPO解释用户DPO措辞",
+    "归因区分实测、公式推导与未验证假设，保留数学AM第9轮KL有限尖峰及单seed局限"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed17-results.md",
+      "version": "a13f3e6badb1b35d62f739700f8f86889dc0f5cc",
+      "supports": "结果、tokens、限制及服务器路径"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/final-verification.json",
+      "version": "SHA256 94af7dad248f4df4e41b0f419c8c0ae25631d2afa21ebacb35ef466fd7a9e037",
+      "supports": "原生汇总器及四最终完整状态、逐token核验"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/latest-status.json",
+      "version": "a13f3e6badb1b35d62f739700f8f86889dc0f5cc",
+      "supports": "四COMPLETE、父退出、driver gone、GPU显存0及当前资源"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/acceptance-v1/RESULT.json",
+      "version": "SHA256 c4aff193fb53e304fd7f0087d1a17d20d153463508f3bdcfb12817600cb494e6",
+      "supports": "远端原始CPU核验结果"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed17/acceptance-v1/PROCESS_RELEASE.json",
+      "version": "2026-11-16 14:01读取保存",
+      "supports": "原wrapper/driver和已记录8子进程均缺席"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/output/pdf/GRPO首seed实验详报_黑体_20261116.pdf",
+      "version": "SHA256 165720b1b01cb59d7178006a69edf5059cf49a30a6145fbf68c0652e506e8261",
+      "supports": "PDF完整报告、曲线原始数据及字体/渲染核验"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/report-curve-data.json",
+      "version": "SHA256 1fa6ad068317addc7d3f5f122dd3bb43c429fc1f951cd9a215e365ece0d5ecaa",
+      "supports": "PDF完整报告、曲线原始数据及字体/渲染核验"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed17/pdf-report-verification.json",
+      "version": "SHA256 0e4463fea15667b338b493e380f53589e25156b13b3108f14d42ea3481e3c3ed",
+      "supports": "PDF完整报告、曲线原始数据及字体/渲染核验"
+    }
+  ],
+  "verification": [
+    "PAI实际19项测试通过，原始回执reports/pai-seed17/setup-tests.txt",
+    "原生scripts/summarize_seed.py summarize通过，四份最终AdamW各1512张量与LoRA各504张量实际CPU全finite",
+    "四条件主测试分数为数学93.85898/93.32828、混合加权93.46260/92.75472；各6965题",
+    "训练输出44192411、评测33206608、总输出77399019；按回答输入17715052、合计95114071，已逐保存token数组核对",
+    "12页均渲染目视检查，PDF实际文本字体为STHeiti，源数据152轮metrics和20份验证结果均来自远端保存文件"
+  ],
+  "limitations": [
+    "单seed结果，后续16run与五seed配对统计未完成",
+    "四run起点基线存在差异，HF/vLLM logprob MAE约0.009–0.012，保留数值实现差异",
+    "数学36轮与混合40轮，均原12小时软预算停止，验证AUC和最终测试分别报告",
+    "输入分别按每回答与每prompt计数，实际缓存/prefill工作量及HF重复训练token处理量未测",
+    "本次交付模型为LoRA适配器与完整训练状态，需配原始Qwen3-8B加载；固定审核结论由审核聊天出具",
+    "数学AM第9轮KL258.71179/loss2.58693，有限性检查不能证明优化稳定，具体token成因尚未定位",
+    "报告未新增DPO实验，按本次实际GRPO目标撰写",
+    "资源为17帧历史快照，06:50后例行观测间断，CPU/RAM峰值、功耗和实际GPU FLOPs未测"
+  ],
+  "supersedes": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6"
+}

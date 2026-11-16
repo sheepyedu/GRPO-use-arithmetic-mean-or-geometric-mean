@@ -1,0 +1,22 @@
+{
+  "review_id": "nr-e41a20939dcfc64a924d2e980673c48e",
+  "delivery": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a1df5b-8983-7de1-93c6-74eccbbdc62d\"}"
+      }
+    ],
+    "isError": false
+  },
+  "comment": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"result\":{\"status\":\"success\",\"id\":\"41a5e704-b6a8-8173-9bb0-001d2cd26fdd\",\"discussion_id\":\"41a5e704-b6a8-81da-bd71-001c02e28bb4\"}}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}
