@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T06:39:49.110839+00:00",
+  "observed_at": "2026-11-16T06:45:58.231279+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
   "pair": null,
   "pairs": [
@@ -42,11 +42,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
       "status": {
-        "time": 1794811118.5056117,
-        "phase": "initializing",
+        "time": 1794811508.1461785,
+        "phase": "rollout",
         "pid": 2800022,
-        "environment": "math",
-        "operator": "am"
+        "round": 1,
+        "updates": 0
       },
       "identity": {
         "pid": 2800022,
@@ -62,11 +62,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
       "status": {
-        "time": 1794811118.4991677,
-        "phase": "initializing",
+        "time": 1794811507.9905934,
+        "phase": "rollout",
         "pid": 2800023,
-        "environment": "math",
-        "operator": "gm"
+        "round": 1,
+        "updates": 0
       },
       "identity": {
         "pid": 2800023,
@@ -82,11 +82,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
       "status": {
-        "time": 1794811118.4955142,
-        "phase": "initializing",
+        "time": 1794811506.6433105,
+        "phase": "rollout",
         "pid": 2800024,
-        "environment": "mixed",
-        "operator": "am"
+        "round": 1,
+        "updates": 0
       },
       "identity": {
         "pid": 2800024,
@@ -102,11 +102,11 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
       "status": {
-        "time": 1794811118.4971604,
-        "phase": "initializing",
+        "time": 1794811505.876758,
+        "phase": "rollout",
         "pid": 2800025,
-        "environment": "mixed",
-        "operator": "gm"
+        "round": 1,
+        "updates": 0
       },
       "identity": {
         "pid": 2800025,
@@ -120,14 +120,498 @@
       "complete": false
     }
   ],
-  "gpu_csv": "0, 17609, 25\n1, 17609, 23\n2, 17621, 24\n3, 17621, 24\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 6097184227328,
-  "wrapper_exit": null,
-  "validation_complete": {},
-  "log_tails": {
-    "formal-math-am.log": "t/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.35it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.30it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.11it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.20it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.52it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.36it/s]\n(EngineCore_DP0 pid=2800745) \n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.71 seconds\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.478233 seconds\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:21 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:21 [backends.py:976] Dynamo bytecode transform time: 11.58 s\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
-    "formal-mixed-am.log": "t/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.43it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.33it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.33it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:02<00:00,  1.43it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.81it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.59it/s]\n(EngineCore_DP0 pid=2800707) \n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:08 [default_loader.py:293] Loading weights took 3.18 seconds\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:08 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.011593 seconds\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:20 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:20 [backends.py:976] Dynamo bytecode transform time: 11.31 s\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
-    "formal-math-gm.log": "t/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.37it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.29it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.11it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.19it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.51it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.36it/s]\n(EngineCore_DP0 pid=2800727) \n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.71 seconds\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.482649 seconds\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:21 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:21 [backends.py:976] Dynamo bytecode transform time: 11.27 s\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
-    "formal-mixed-gm.log": "t/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.42it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.39it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.18it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.29it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.68it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.48it/s]\n(EngineCore_DP0 pid=2800714) \n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.41 seconds\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.036625 seconds\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:20 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:20 [backends.py:976] Dynamo bytecode transform time: 10.83 s\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n"
+  "gpu_csv": "0, 71103, 98\n1, 71103, 99\n2, 71043, 98\n3, 71043, 98\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6097133895680,
+  "events": {
+    "formal-mixed-gm": [
+      {
+        "time": 1794811118.4971604,
+        "phase": "initializing",
+        "pid": 2800025,
+        "environment": "mixed",
+        "operator": "gm"
+      },
+      {
+        "time": 1794811202.4312453,
+        "phase": "evaluation",
+        "pid": 2800025,
+        "stage": "validation-000",
+        "examples": 2570,
+        "updates": 0
+      },
+      {
+        "time": 1794811504.8507454,
+        "phase": "pair_wait",
+        "pid": 2800025,
+        "round": 0,
+        "updates": 0
+      },
+      {
+        "time": 1794811505.876758,
+        "phase": "rollout",
+        "pid": 2800025,
+        "round": 1,
+        "updates": 0,
+        "prompt_ids": [
+          "arc/train/2057",
+          "gsm8k/train/1038",
+          "gsm8k/train/6465",
+          "gsm8k/train/3488",
+          "arc/train/611",
+          "gsm8k/train/5762",
+          "gsm8k/train/6147",
+          "arc/train/1994",
+          "boolq/train/9410",
+          "gsm8k/train/5028",
+          "gsm8k/train/6379",
+          "gsm8k/train/105",
+          "boolq/train/340",
+          "gsm8k/train/1547",
+          "gsm8k/train/2335",
+          "boolq/train/3394",
+          "gsm8k/train/4119",
+          "arc/train/127",
+          "boolq/train/7962",
+          "arc/train/967",
+          "gsm8k/train/1672",
+          "boolq/train/8691",
+          "arc/train/1026",
+          "arc/train/353",
+          "boolq/train/7985",
+          "gsm8k/train/4296",
+          "arc/train/1648",
+          "gsm8k/train/5230",
+          "arc/train/1668",
+          "gsm8k/train/4645",
+          "boolq/train/6145",
+          "gsm8k/train/4626",
+          "boolq/train/7611",
+          "boolq/train/1756",
+          "gsm8k/train/5508",
+          "boolq/train/9256",
+          "boolq/train/2780",
+          "gsm8k/train/6370",
+          "gsm8k/train/2929",
+          "boolq/train/3218",
+          "gsm8k/train/48",
+          "arc/train/531",
+          "arc/train/987",
+          "gsm8k/train/147",
+          "boolq/train/2715",
+          "gsm8k/train/7125",
+          "arc/train/997",
+          "gsm8k/train/2947",
+          "gsm8k/train/6620",
+          "boolq/train/2664",
+          "gsm8k/train/1491",
+          "gsm8k/train/2070",
+          "gsm8k/train/6444",
+          "boolq/train/778",
+          "arc/train/821",
+          "arc/train/886",
+          "gsm8k/train/3218",
+          "arc/train/826",
+          "gsm8k/train/3343",
+          "boolq/train/7306",
+          "gsm8k/train/2227",
+          "arc/train/373",
+          "gsm8k/train/6760",
+          "gsm8k/train/3524"
+        ]
+      }
+    ],
+    "formal-math-am": [
+      {
+        "time": 1794811118.5056117,
+        "phase": "initializing",
+        "pid": 2800022,
+        "environment": "math",
+        "operator": "am"
+      },
+      {
+        "time": 1794811202.0705142,
+        "phase": "evaluation",
+        "pid": 2800022,
+        "stage": "validation-000",
+        "examples": 2570,
+        "updates": 0
+      },
+      {
+        "time": 1794811507.1187193,
+        "phase": "pair_wait",
+        "pid": 2800022,
+        "round": 0,
+        "updates": 0
+      },
+      {
+        "time": 1794811508.1461785,
+        "phase": "rollout",
+        "pid": 2800022,
+        "round": 1,
+        "updates": 0,
+        "prompt_ids": [
+          "gsm8k/train/5602",
+          "gsm8k/train/4504",
+          "gsm8k/train/2812",
+          "gsm8k/train/6276",
+          "gsm8k/train/4119",
+          "gsm8k/train/2382",
+          "gsm8k/train/2915",
+          "gsm8k/train/6759",
+          "gsm8k/train/2488",
+          "gsm8k/train/5554",
+          "gsm8k/train/5734",
+          "gsm8k/train/2954",
+          "gsm8k/train/204",
+          "gsm8k/train/1621",
+          "gsm8k/train/3798",
+          "gsm8k/train/6766",
+          "gsm8k/train/1763",
+          "gsm8k/train/214",
+          "gsm8k/train/3827",
+          "gsm8k/train/3072",
+          "gsm8k/train/2794",
+          "gsm8k/train/4977",
+          "gsm8k/train/4326",
+          "gsm8k/train/3406",
+          "gsm8k/train/4097",
+          "gsm8k/train/6009",
+          "gsm8k/train/4865",
+          "gsm8k/train/2682",
+          "gsm8k/train/5946",
+          "gsm8k/train/7012",
+          "gsm8k/train/3513",
+          "gsm8k/train/52",
+          "gsm8k/train/5692",
+          "gsm8k/train/4947",
+          "gsm8k/train/4898",
+          "gsm8k/train/5842",
+          "gsm8k/train/1993",
+          "gsm8k/train/7217",
+          "gsm8k/train/1186",
+          "gsm8k/train/3333",
+          "gsm8k/train/2847",
+          "gsm8k/train/7319",
+          "gsm8k/train/972",
+          "gsm8k/train/1205",
+          "gsm8k/train/5024",
+          "gsm8k/train/4038",
+          "gsm8k/train/6071",
+          "gsm8k/train/1187",
+          "gsm8k/train/4404",
+          "gsm8k/train/5055",
+          "gsm8k/train/5940",
+          "gsm8k/train/974",
+          "gsm8k/train/3419",
+          "gsm8k/train/721",
+          "gsm8k/train/2347",
+          "gsm8k/train/5157",
+          "gsm8k/train/443",
+          "gsm8k/train/1844",
+          "gsm8k/train/161",
+          "gsm8k/train/1554",
+          "gsm8k/train/5314",
+          "gsm8k/train/4799",
+          "gsm8k/train/3421",
+          "gsm8k/train/4807"
+        ]
+      }
+    ],
+    "formal-math-gm": [
+      {
+        "time": 1794811118.4991677,
+        "phase": "initializing",
+        "pid": 2800023,
+        "environment": "math",
+        "operator": "gm"
+      },
+      {
+        "time": 1794811202.7571614,
+        "phase": "evaluation",
+        "pid": 2800023,
+        "stage": "validation-000",
+        "examples": 2570,
+        "updates": 0
+      },
+      {
+        "time": 1794811506.9557464,
+        "phase": "pair_wait",
+        "pid": 2800023,
+        "round": 0,
+        "updates": 0
+      },
+      {
+        "time": 1794811507.9905934,
+        "phase": "rollout",
+        "pid": 2800023,
+        "round": 1,
+        "updates": 0,
+        "prompt_ids": [
+          "gsm8k/train/5602",
+          "gsm8k/train/4504",
+          "gsm8k/train/2812",
+          "gsm8k/train/6276",
+          "gsm8k/train/4119",
+          "gsm8k/train/2382",
+          "gsm8k/train/2915",
+          "gsm8k/train/6759",
+          "gsm8k/train/2488",
+          "gsm8k/train/5554",
+          "gsm8k/train/5734",
+          "gsm8k/train/2954",
+          "gsm8k/train/204",
+          "gsm8k/train/1621",
+          "gsm8k/train/3798",
+          "gsm8k/train/6766",
+          "gsm8k/train/1763",
+          "gsm8k/train/214",
+          "gsm8k/train/3827",
+          "gsm8k/train/3072",
+          "gsm8k/train/2794",
+          "gsm8k/train/4977",
+          "gsm8k/train/4326",
+          "gsm8k/train/3406",
+          "gsm8k/train/4097",
+          "gsm8k/train/6009",
+          "gsm8k/train/4865",
+          "gsm8k/train/2682",
+          "gsm8k/train/5946",
+          "gsm8k/train/7012",
+          "gsm8k/train/3513",
+          "gsm8k/train/52",
+          "gsm8k/train/5692",
+          "gsm8k/train/4947",
+          "gsm8k/train/4898",
+          "gsm8k/train/5842",
+          "gsm8k/train/1993",
+          "gsm8k/train/7217",
+          "gsm8k/train/1186",
+          "gsm8k/train/3333",
+          "gsm8k/train/2847",
+          "gsm8k/train/7319",
+          "gsm8k/train/972",
+          "gsm8k/train/1205",
+          "gsm8k/train/5024",
+          "gsm8k/train/4038",
+          "gsm8k/train/6071",
+          "gsm8k/train/1187",
+          "gsm8k/train/4404",
+          "gsm8k/train/5055",
+          "gsm8k/train/5940",
+          "gsm8k/train/974",
+          "gsm8k/train/3419",
+          "gsm8k/train/721",
+          "gsm8k/train/2347",
+          "gsm8k/train/5157",
+          "gsm8k/train/443",
+          "gsm8k/train/1844",
+          "gsm8k/train/161",
+          "gsm8k/train/1554",
+          "gsm8k/train/5314",
+          "gsm8k/train/4799",
+          "gsm8k/train/3421",
+          "gsm8k/train/4807"
+        ]
+      }
+    ],
+    "formal-mixed-am": [
+      {
+        "time": 1794811118.4955142,
+        "phase": "initializing",
+        "pid": 2800024,
+        "environment": "mixed",
+        "operator": "am"
+      },
+      {
+        "time": 1794811201.6137323,
+        "phase": "evaluation",
+        "pid": 2800024,
+        "stage": "validation-000",
+        "examples": 2570,
+        "updates": 0
+      },
+      {
+        "time": 1794811504.6100512,
+        "phase": "pair_wait",
+        "pid": 2800024,
+        "round": 0,
+        "updates": 0
+      },
+      {
+        "time": 1794811506.6433105,
+        "phase": "rollout",
+        "pid": 2800024,
+        "round": 1,
+        "updates": 0,
+        "prompt_ids": [
+          "arc/train/2057",
+          "gsm8k/train/1038",
+          "gsm8k/train/6465",
+          "gsm8k/train/3488",
+          "arc/train/611",
+          "gsm8k/train/5762",
+          "gsm8k/train/6147",
+          "arc/train/1994",
+          "boolq/train/9410",
+          "gsm8k/train/5028",
+          "gsm8k/train/6379",
+          "gsm8k/train/105",
+          "boolq/train/340",
+          "gsm8k/train/1547",
+          "gsm8k/train/2335",
+          "boolq/train/3394",
+          "gsm8k/train/4119",
+          "arc/train/127",
+          "boolq/train/7962",
+          "arc/train/967",
+          "gsm8k/train/1672",
+          "boolq/train/8691",
+          "arc/train/1026",
+          "arc/train/353",
+          "boolq/train/7985",
+          "gsm8k/train/4296",
+          "arc/train/1648",
+          "gsm8k/train/5230",
+          "arc/train/1668",
+          "gsm8k/train/4645",
+          "boolq/train/6145",
+          "gsm8k/train/4626",
+          "boolq/train/7611",
+          "boolq/train/1756",
+          "gsm8k/train/5508",
+          "boolq/train/9256",
+          "boolq/train/2780",
+          "gsm8k/train/6370",
+          "gsm8k/train/2929",
+          "boolq/train/3218",
+          "gsm8k/train/48",
+          "arc/train/531",
+          "arc/train/987",
+          "gsm8k/train/147",
+          "boolq/train/2715",
+          "gsm8k/train/7125",
+          "arc/train/997",
+          "gsm8k/train/2947",
+          "gsm8k/train/6620",
+          "boolq/train/2664",
+          "gsm8k/train/1491",
+          "gsm8k/train/2070",
+          "gsm8k/train/6444",
+          "boolq/train/778",
+          "arc/train/821",
+          "arc/train/886",
+          "gsm8k/train/3218",
+          "arc/train/826",
+          "gsm8k/train/3343",
+          "boolq/train/7306",
+          "gsm8k/train/2227",
+          "arc/train/373",
+          "gsm8k/train/6760",
+          "gsm8k/train/3524"
+        ]
+      }
+    ]
+  },
+  "initial_validation": {
+    "formal-mixed-gm": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.906,
+        "mean_tokens": 680.476,
+        "truncation": 0.068,
+        "valid": 0.927
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.4807017543859649,
+        "mean_tokens": 447.2964912280702,
+        "truncation": 0.021052631578947368,
+        "valid": 0.48771929824561405
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.754,
+        "mean_tokens": 305.761,
+        "truncation": 0.01,
+        "valid": 0.852
+      },
+      "macro": 0.7135672514619884,
+      "mixed_weighted": 0.7616754385964912
+    },
+    "formal-math-am": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.908,
+        "mean_tokens": 687.314,
+        "truncation": 0.073,
+        "valid": 0.926
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.47368421052631576,
+        "mean_tokens": 442.9719298245614,
+        "truncation": 0.014035087719298246,
+        "valid": 0.4807017543859649
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.745,
+        "mean_tokens": 311.726,
+        "truncation": 0.011,
+        "valid": 0.833
+      },
+      "macro": 0.7088947368421054,
+      "mixed_weighted": 0.758671052631579
+    },
+    "formal-math-gm": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.909,
+        "mean_tokens": 688.298,
+        "truncation": 0.069,
+        "valid": 0.928
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.4824561403508772,
+        "mean_tokens": 451.92105263157896,
+        "truncation": 0.01929824561403509,
+        "valid": 0.48947368421052634
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.735,
+        "mean_tokens": 313.327,
+        "truncation": 0.014,
+        "valid": 0.829
+      },
+      "macro": 0.7088187134502925,
+      "mixed_weighted": 0.7588640350877193
+    },
+    "formal-mixed-am": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.906,
+        "mean_tokens": 680.476,
+        "truncation": 0.068,
+        "valid": 0.927
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.4807017543859649,
+        "mean_tokens": 447.2964912280702,
+        "truncation": 0.021052631578947368,
+        "valid": 0.48771929824561405
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.754,
+        "mean_tokens": 305.761,
+        "truncation": 0.01,
+        "valid": 0.852
+      },
+      "macro": 0.7135672514619884,
+      "mixed_weighted": 0.7616754385964912
+    }
   }
 }

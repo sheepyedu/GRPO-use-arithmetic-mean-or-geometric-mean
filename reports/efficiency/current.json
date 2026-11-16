@@ -1,5 +1,5 @@
 {
-  "phase": "seed29_initializing",
+  "phase": "seed29_rollout_1",
   "ready": true,
   "next_seed": 29,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -22,5 +22,11 @@
   "rejected_changes": [
     "padding batch2/4",
     "compiled token statistics"
-  ]
+  ],
+  "initial_validation_verified": true,
+  "current_notion_todos": [
+    3,
+    8
+  ],
+  "full_round_speed_verified": false
 }

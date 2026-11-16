@@ -1,0 +1,26 @@
+[
+  {
+    "name": "formal-mixed-gm",
+    "old_seed17_seconds": 780.5882725715637,
+    "new_seed29_seconds": 302.41950011253357,
+    "ratio": 2.581143981393721
+  },
+  {
+    "name": "formal-math-am",
+    "old_seed17_seconds": 775.9382920265198,
+    "new_seed29_seconds": 305.0482051372528,
+    "ratio": 2.5436579496587943
+  },
+  {
+    "name": "formal-math-gm",
+    "old_seed17_seconds": 789.0039269924164,
+    "new_seed29_seconds": 304.19858503341675,
+    "ratio": 2.593713336653893
+  },
+  {
+    "name": "formal-mixed-am",
+    "old_seed17_seconds": 807.8172619342804,
+    "new_seed29_seconds": 302.9963188171387,
+    "ratio": 2.6660959614555786
+  }
+]

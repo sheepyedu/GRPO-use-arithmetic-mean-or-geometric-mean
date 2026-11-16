@@ -38,3 +38,7 @@
 所有模型、任务、奖励、优势、AM/GM目标、KL、学习率、每轮64×8、16次optimizer、解码长度和最终锁定测试保持原科学设置。后续seed29/43/71/101依次四条件运行，终态后按固定审核流程提交。
 
 原始数据为reports/efficiency/seed17-events.json、seed17-stage-timing.json、benchmarks.json、candidate-tests.txt、source-v4-manifest.json和seed29-preflight.json。远端工程日志保留在项目efficiency-*目录，source-v3为候选试验材料，source-v4为已验证正式源。
+
+## seed29正式入口实测
+
+2026-11-16 14:45四个run各2570题初始验证完成，进入第1轮rollout。原seed17对应775.94/789.00/807.82/780.59秒，新seed29对应305.05/304.20/303.00/302.42秒，约2.54–2.67倍。同一固定验证集与基座，seed与后端版本不同，实际生成长度可以变化。完整训练轮速度仍待首轮保存后核对。
