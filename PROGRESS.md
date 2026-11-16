@@ -1,5 +1,12 @@
 # 项目进展与经验
 
+## 2026-11-16 15:25 · seed29首完整轮提速与检查点实核
+
+- 15:25:46原四driver UID/start/cmdSHA均匹配，数学已提交3轮、当前第4轮epoch2累计58/57次更新，混合已提交4轮、当前第5轮epoch1累计67/67。较14:45增加58/57/67/67，FAILURE缺席，已完成指标有限，最新COMMITTED与ready匹配，配对继续。
+- 首完整rollout到下轮rollout数学676.16–676.81秒，对旧936.53–936.96秒，约1.38–1.39倍；混合595.84–597.18秒，对旧797.30–797.62秒，约1.34倍。旧1.7–2.0为外推，首周期未达到，以实测替代整体收益判断；不同seed/长度与后端差异披露。
+- GPU0–3利用率96/96/94/94%、显存44784/43756/42638/43594MiB，对应优化阶段，CPFS5892699324416B。15:26:54额外必要CPU核四首轮checkpoint文件SHA、504个LoRA与1512个AdamW张量均有限，scheduler16/RNG/调度状态完整。未执行模型或optimizer重放。
+- Notion子3/8、37.5%，根7/9、77.78%，正式4/20保持。接续提交c811479，原始证据reports/pai-seed29/latest-status.json、first-state-verification.json及reports/efficiency/formal-first-round-timing.json。下一例行门15:56:54.392655，继续同source-v4原作业。
+
 ## 2026-11-16 14:51 · 通用推理训练提速Skill
 
 - 用户要求在继续训练时沉淀通用Skill。已安装~/.codex/skills/inference-training-acceleration并将完整可移植目录保存到仓库skills/。入口覆盖基线/瓶颈、推理训练候选、正确性与显存、预算口径、正式接续，H20参数及结果仅为参考案例。

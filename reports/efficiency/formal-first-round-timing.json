@@ -1,0 +1,30 @@
+[
+  {
+    "name": "formal-math-am",
+    "seed17_rollout_to_rollout_seconds": 936.9595437049866,
+    "seed29_rollout_to_rollout_seconds": 676.1580181121826,
+    "speedup": 1.3857109116607915,
+    "scope": "First complete training cycle with commit and adapter wake; different seed and generated sequence lengths, same scientific configuration, efficiency backend differs."
+  },
+  {
+    "name": "formal-math-gm",
+    "seed17_rollout_to_rollout_seconds": 936.5290448665619,
+    "seed29_rollout_to_rollout_seconds": 676.8052592277527,
+    "speedup": 1.383749656341558,
+    "scope": "First complete training cycle with commit and adapter wake; different seed and generated sequence lengths, same scientific configuration, efficiency backend differs."
+  },
+  {
+    "name": "formal-mixed-am",
+    "seed17_rollout_to_rollout_seconds": 797.3024682998657,
+    "seed29_rollout_to_rollout_seconds": 595.8377754688263,
+    "speedup": 1.338120040597493,
+    "scope": "First complete training cycle with commit and adapter wake; different seed and generated sequence lengths, same scientific configuration, efficiency backend differs."
+  },
+  {
+    "name": "formal-mixed-gm",
+    "seed17_rollout_to_rollout_seconds": 797.6238884925842,
+    "seed29_rollout_to_rollout_seconds": 597.1751294136047,
+    "speedup": 1.335661599430321,
+    "scope": "First complete training cycle with commit and adapter wake; different seed and generated sequence lengths, same scientific configuration, efficiency backend differs."
+  }
+]
