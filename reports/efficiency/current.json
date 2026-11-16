@@ -1,7 +1,7 @@
 {
-  "phase": "seed29_math-am_complete_math-gm_complete_mixed-am_complete_mixed-gm_complete",
+  "phase": "seed43_four_runs_initializing",
   "ready": true,
-  "next_seed": 29,
+  "next_seed": 43,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
   "must_validate": [
     "baseline tests",
@@ -9,8 +9,8 @@
     "real H20 timing and memory",
     "candidate full tests"
   ],
-  "active_training": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
-  "notion_child": "41a5e704-b6a8-81ef-b291-d7042c89fe2f",
+  "active_training": "/mount-data/GRPO-Sequence-Ratio/runs/seed43",
+  "notion_child": "41a5e704-b6a8-8134-8eec-eed3ce7e6ebb",
   "tests_passed": 21,
   "validated_changes": [
     "CUDA Graph and64generation slots",
@@ -23,13 +23,13 @@
     "padding batch2/4",
     "compiled token statistics"
   ],
-  "initial_validation_verified": true,
+  "initial_validation_verified": false,
   "current_notion_todos": [
-    3,
-    8
+    0,
+    6
   ],
   "full_round_speed_verified": true,
-  "last_observed_at": "2026-11-16T19:10:56.869738+00:00",
+  "last_observed_at": "2026-11-16T19:17:36.723408+00:00",
   "latest_eta_observation": {
     "observed_at": "2026-11-16T08:59:20.132939+00:00",
     "evidence": "reports/pai-seed29/eta-status-20261116T1700.json",
@@ -43,5 +43,11 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "updated_at": "2026-11-16T16:38:47.395356+00:00"
+  "updated_at": "2026-11-16T19:20:29.116562+00:00",
+  "formal_complete": 8,
+  "current_seed": 43,
+  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed43",
+  "initial_validation_history": {
+    "seed29": true
+  }
 }

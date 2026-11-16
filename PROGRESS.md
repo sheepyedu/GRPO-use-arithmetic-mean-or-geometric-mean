@@ -1,3 +1,12 @@
+## 2026-11-17 03:17 · seed29完整验收并主动续接seed43
+
+- seed29四run原生03:02:16结束，数学68轮各1088更新、混合79轮各1264更新，原12小时soft wall-time在共同屏障停止；两parent真实[0,0]、wrapper0，四driver/controller/wrapper gone。03:10:56资源投影GPU0–3利用率/显存均0，其他卡保留。03:13:32独立CPU完整验收exit0且verifier gone，COMMITTED各文件SHA、四份各504 LoRA/1512 AdamW张量有限、scheduler/RNG/数据调度完整，四份锁定测试各6965题。
+- 最终数学AM94.5413%/GM94.6171%，GM−AM +0.0758pp；混合加权AM93.9777%/GM93.7875%，GM−AM −0.1902pp。训练输出83,931,566、评测48,538,566、总输出132,470,132；按回答输入29,575,140，总计162,045,272；每prompt一次输入15,870,386。四run累计49.499 GPU小时，原始模型/状态/轨迹均留CPFS。两seed的工程版本与训练暴露差异在报告披露，五seed统计未完成。
+- 报告reports/seed29-results.md与seed29-summary.json、CPU证明final-verification.json已保存，结果提交b0e606b。固定审核单nr-a96f8dc339f6a7ed95c529b39aabdf01已写原生评论41a5e704-b6a8-81e0-ab01-001d1a3e7a64并真实送达固定审核聊天。seed29待办8/8、100%，当前正式完整验收8/20，根7/9、77.78%。
+- 按原授权新建同根直接子页seed43（41a5e704-b6a8-8134-8eec-eed3ce7e6ebb）。当前四卡compute-app空、原seed29 owner gone、原source-v4文件及seed43配置SHA/仅seed变化、唯一输出缺席均通过后，03:16:46以O_EXCL claim和owned wrapper单次派发。wrapper3223389/start54324002，controller3223390/start54324007；driver数学AM3223394/start54324017、GM3223396/start54324018、混合AM3223395/start54324017、GM3223397/start54324018，UID0与完整argv SHA均按原入口独立匹配。
+- 03:17:36必要startup实际仍initializing加载/编译，无FAILURE/终态；GPU0–3利用率2/6/1/0%，显存各16873MiB，CPFS4642587017216B。初始2570题验证与optimizer尚未确认，当前seed43待办0/6、0%，不能将启动当完整更新。首次只读reader因初始化阶段source_manifest尚未生成失败，原startup-transport.json保留；R2只改metadata可选字段处理、无模型/optimizer重发，实际成功帧保存在seed43目录。运行时source_matches null为尚未提供，启动前原源逐文件SHA已闭。
+- 原30分钟heartbeat已更新为seed43/71/101剩余12run并回读ACTIVE，时间锚保持05/35；canonical下一门2026-11-17 03:47:36.723408 BJT。只读reader路径与SHA已在supervision.json保存，后续从最新CTX记录取值，勿用旧seed29 helper/PID。Notion根/seed29/seed43均已同步，夜间自主决策截止仍11月18日10:00。接续387f8c3，无新科学配置/额外实验，等待正式运行与后续验收。
+
 ## 2026-11-17 02:40 · 接近原12小时软预算
 
 - 02:40:32门后单次只读实测，数学第68轮epoch1更新1079/1080，混合第79轮epoch1更新1253/1252，较02:10增加51/51/53/52。四原driver及共享controller身份匹配，无FAILURE或终态；已提交67/67/78/78轮指标均有限，source/config及COMMITTED/ready匹配。

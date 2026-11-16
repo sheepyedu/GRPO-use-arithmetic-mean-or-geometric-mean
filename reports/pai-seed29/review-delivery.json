@@ -1,0 +1,13 @@
+{
+  "review_id": "nr-a96f8dc339f6a7ed95c529b39aabdf01",
+  "submission_comment_id": "41a5e704-b6a8-81e0-ab01-001d1a3e7a64",
+  "delivery": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a1df5b-8983-7de1-93c6-74eccbbdc62d\"}"
+      }
+    ],
+    "isError": false
+  }
+}

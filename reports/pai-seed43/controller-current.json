@@ -1,0 +1,45 @@
+{
+  "observed_at": "2026-11-16T19:17:36.723408+00:00",
+  "controllers": [
+    {
+      "path": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-math-control/controller.json",
+      "controller": {
+        "pid": 3223390,
+        "start_ticks": 54324007,
+        "config_sha256": "005241cfb6b150493b02f79b78f2f3b726aaf119dc18bd4dfb80aa0a5ec01f4f",
+        "environment": "math",
+        "seed": 43
+      },
+      "identity": {
+        "pid": 3223390,
+        "uid": 0,
+        "start_ticks": 54324007,
+        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
+        "state": "S",
+        "matches_original_start": true,
+        "matches_config": true,
+        "matches_output": true
+      }
+    },
+    {
+      "path": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-control/controller.json",
+      "controller": {
+        "pid": 3223390,
+        "start_ticks": 54324007,
+        "config_sha256": "005241cfb6b150493b02f79b78f2f3b726aaf119dc18bd4dfb80aa0a5ec01f4f",
+        "environment": "mixed",
+        "seed": 43
+      },
+      "identity": {
+        "pid": 3223390,
+        "uid": 0,
+        "start_ticks": 54324007,
+        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
+        "state": "S",
+        "matches_original_start": true,
+        "matches_config": true,
+        "matches_output": true
+      }
+    }
+  ]
+}

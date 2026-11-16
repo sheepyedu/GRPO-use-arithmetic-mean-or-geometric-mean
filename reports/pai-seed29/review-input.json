@@ -1,0 +1,55 @@
+{
+  "page_id": "41a5e704-b6a8-81ef-b291-d7042c89fe2f",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "b0e606bacb6c6cac9acb0fcde88189059fb8b95d",
+  "scope": "seed29四个正式GRPO run最终训练、锁定测试、完整原生状态、逐token与资源释放验收；其余12run另续。",
+  "acceptance_criteria": [
+    "四run来源为冻结source-v4，Qwen3-8B独立初始化与固定data-v1，数学AM/GM同68轮，混合AM/GM同79轮且原12小时软预算共同停止",
+    "四run COMPLETE无FAILURE，两个parent真实[0,0]、wrapper0，四份最终测试各6965题",
+    "最终LoRA、AdamW/scheduler/RNG/数据调度完整，所有张量有限，COMMITTED文件SHA和原生汇总器通过",
+    "逐294份rollout、34份验证和4份测试预测核算tokens，保留thinking与输入重复口径",
+    "四driver、共享controller与wrapper gone，GPU0–3在03:10:56均0MiB，保护GPU4–7"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed29-results.md",
+      "version": "SHA256 f123e099164e82c3bc3463e1d0f9b9f2e6bf82a9a88654fc552c2a8292bcd307",
+      "supports": "结果、tokens、时间与限制"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed29-summary.json",
+      "version": "SHA256 769d7fc20925a7d0148b6c5cd8364facb3e192d92bd5415e78c83e9064388520",
+      "supports": "原生汇总器返回的配对结果与验证AUC"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed29/final-verification.json",
+      "version": "SHA256 b830819807753d92e3a5bb0695d4f7f25142b8bc69bdb9613b84aedb6a490209",
+      "supports": "完整CPU状态、文件SHA与逐token回执"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed29/latest-status.json",
+      "version": "SHA256 df064e149704c422eecc21997b239150022ec2456ee1c3d2d68a9720be7a9ae1",
+      "supports": "四COMPLETE、两parent、wrapper、gone及GPU释放"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/acceptance-v1/RESULT.json",
+      "version": "SHA256 ced6c05a06699c24ace29c9176fbbb52c1941b28900bad0b1d9526ac94fa9bb2",
+      "supports": "远端原始CPU验收"
+    }
+  ],
+  "verification": [
+    "原冻结效率版本21项测试沿用，当前正式运行未改科学源；source/config逐文件实测同",
+    "独立CPU核验exit0且verifier gone，四份各504 LoRA张量及1512 AdamW张量有限",
+    "主测试数学94.541319/94.617134%，混合加权93.977717/93.787542%；最终测试6965题每run",
+    "训练输出83931566、评测输出48538566、总输出132470132、按回答输入29575140、合计162045272；每prompt一次输入15870386"
+  ],
+  "limitations": [
+    "仅完成前两seed，共8/20；其余43/71/101与五seed统计仍未完成",
+    "seed17为source-v2旧后端36/40轮，seed29为source-v4效率后端68/79轮，时间预算一致但训练暴露与数值轨迹不同",
+    "输入统计分回答与prompt两口径，实际物理缓存/prefill和重复前反向token处理量未测",
+    "交付为LoRA与完整状态，需要配原始Qwen3-8B加载；执行方自查不签发训练采纳结论"
+  ],
+  "supersedes": null
+}

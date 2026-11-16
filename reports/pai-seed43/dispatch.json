@@ -1,0 +1,5 @@
+{
+  "code": 0,
+  "stdout": "{\"wrapper_pid\": 3223389, \"start_ticks\": 54324002, \"uid\": 0, \"time\": 1794856606.451107, \"source\": \"/mount-data/GRPO-Sequence-Ratio/source-v4\", \"config_sha256\": \"005241cfb6b150493b02f79b78f2f3b726aaf119dc18bd4dfb80aa0a5ec01f4f\", \"archive_sha256\": \"65d086a3127f73afbd3f7073e4258d891ea3cc9d34cc823a59cfb30611dc35c2\", \"output\": \"/mount-data/GRPO-Sequence-Ratio/runs/seed43\", \"gpu_scope\": [0, 1, 2, 3], \"state\": \"spawned\", \"wrapper_source_sha256\": \"85c1cab1cac61e72389a9c6e79a4fcb8bbb41c7fb61ae4ca41e60c1c56f00826\", \"claim_path\": \"/mount-data/GRPO-Sequence-Ratio/logs/seed43-launch-v4-claim.json\"}\n",
+  "stderr": ""
+}
