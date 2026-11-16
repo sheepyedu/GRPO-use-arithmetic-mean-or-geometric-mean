@@ -50,3 +50,7 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 ## 效率优化与后续seed
 
 后续seed使用source-v4，开启vLLM CUDA Graph与64请求槽，1536token以内关闭梯度检查点，延迟同步诊断。生成短测约4.46倍，短序列反向耗时下降约31%。21项测试通过，完整正式吞吐待首轮实测。详见[效率报告](docs/efficiency-v4.md)。不同后端版本在跨seed统计中披露。
+
+## 通用推理训练提速Skill
+
+已沉淀[推理与训练提速Skill](skills/inference-training-acceleration/SKILL.md)，包含耗时分解、候选选择、正确性与显存核验、正式入口复测，以及事件分析脚本和H20实测参考。本机已安装到`~/.codex/skills/inference-training-acceleration`，可用`$inference-training-acceleration`调用。

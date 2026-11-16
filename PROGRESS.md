@@ -1,5 +1,11 @@
 # 项目进展与经验
 
+## 2026-11-16 14:51 · 通用推理训练提速Skill
+
+- 用户要求在继续训练时沉淀通用Skill。已安装~/.codex/skills/inference-training-acceleration并将完整可移植目录保存到仓库skills/。入口覆盖基线/瓶颈、推理训练候选、正确性与显存、预算口径、正式接续，H20参数及结果仅为参考案例。
+- profile_events.py支持前/后事件区间归属、非有限和倒序拒绝、末事件未观测说明。实际四run日志复算与原耗时分解精确一致，边界及CLI检查通过，quick_validate通过。验证reports/efficiency/skill-validation.json。
+- 接续提交408238d。当前seed29由原30分钟定时监督继续，当前仅本机Skill整理，无额外服务器采样或训练派发。Skill交付将按固定Notion子任务审核流程提交。
+
 ## 2026-11-16 14:39 · 框架提速验证通过，seed29已单次启动
 
 - 用户新要求先分析并优化再推进后续seed。旧区间占比optimizer35.20%、rollout31.29%、eval20.02%、frozen12.39%，区间口径限制见docs/efficiency-v4.md。

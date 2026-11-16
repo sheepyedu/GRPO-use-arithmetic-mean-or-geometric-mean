@@ -1,0 +1,13 @@
+{
+  "skill": "inference-training-acceleration",
+  "checks": [
+    "known durations",
+    "end-labelled events",
+    "duplicate timestamps",
+    "CLI structured result",
+    "empty and single-event tails",
+    "backward/nonfinite/boolean/missing fields rejected",
+    "four actual event streams reproduce original phase totals"
+  ],
+  "passed": true
+}

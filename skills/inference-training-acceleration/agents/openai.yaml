@@ -1,0 +1,4 @@
+interface:
+  display_name: "推理与训练提速"
+  short_description: "定位模型任务耗时瓶颈，验证正确性并实测推理与训练的优化收益"
+  default_prompt: "使用 $inference-training-acceleration 分析当前模型任务耗时，验证候选优化的正确性、显存和端到端收益，并按现有授权接续任务。"
