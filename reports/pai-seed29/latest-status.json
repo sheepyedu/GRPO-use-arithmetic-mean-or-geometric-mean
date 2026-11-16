@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-16T18:10:07.967392+00:00",
+  "observed_at": "2026-11-16T18:40:32.300643+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
   "pair": null,
   "pairs": [
@@ -42,14 +42,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
       "status": {
-        "time": 1794852598.6229532,
+        "time": 1794854417.6912606,
         "phase": "optimizer",
         "pid": 2800022,
-        "round": 65,
+        "round": 68,
         "epoch": 1,
-        "updates": 1028,
-        "grad_norm": 0.0006338470848277211,
-        "minibatch_offset": 192
+        "updates": 1079,
+        "grad_norm": 0.009358546696603298,
+        "minibatch_offset": 384
       },
       "identity": {
         "pid": 2800022,
@@ -57,7 +57,7 @@
         "start_ticks": 49774291,
         "cmdline_sha256": "40a2978acfe8d67d7be29e27fefd63e78b76e7d612443866f8b627c14a53eab9",
         "matches_output": true,
-        "state": "R"
+        "state": "S"
       },
       "failure": null,
       "complete": false
@@ -65,14 +65,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
       "status": {
-        "time": 1794852602.8114927,
+        "time": 1794854422.1789737,
         "phase": "optimizer",
         "pid": 2800023,
-        "round": 65,
+        "round": 68,
         "epoch": 1,
-        "updates": 1029,
-        "grad_norm": 0.0017670773668214679,
-        "minibatch_offset": 256
+        "updates": 1080,
+        "grad_norm": 0.010672878473997116,
+        "minibatch_offset": 448
       },
       "identity": {
         "pid": 2800023,
@@ -88,11 +88,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
       "status": {
-        "time": 1794852582.3582578,
-        "phase": "rollout",
+        "time": 1794854429.5261226,
+        "phase": "optimizer",
         "pid": 2800024,
-        "round": 76,
-        "updates": 1200
+        "round": 79,
+        "epoch": 1,
+        "updates": 1253,
+        "grad_norm": 0.013707620091736317,
+        "minibatch_offset": 256
       },
       "identity": {
         "pid": 2800024,
@@ -108,11 +111,14 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
       "status": {
-        "time": 1794852581.9160929,
-        "phase": "rollout",
+        "time": 1794854413.1066632,
+        "phase": "optimizer",
         "pid": 2800025,
-        "round": 76,
-        "updates": 1200
+        "round": 79,
+        "epoch": 1,
+        "updates": 1252,
+        "grad_norm": 0.010408713482320309,
+        "minibatch_offset": 192
       },
       "identity": {
         "pid": 2800025,
@@ -126,8 +132,8 @@
       "complete": false
     }
   ],
-  "gpu_csv": "0, 40416, 90\n1, 40278, 100\n2, 71900, 99\n3, 71870, 93\n4, 75488, 100\n5, 74912, 100\n6, 74912, 100\n7, 73952, 100",
-  "disk_free_bytes": 4725621653504,
+  "gpu_csv": "0, 43012, 97\n1, 40946, 93\n2, 43254, 94\n3, 45578, 97\n4, 75488, 97\n5, 74912, 97\n6, 74912, 100\n7, 73952, 97",
+  "disk_free_bytes": 4696701927424,
   "host_identity": {
     "hostname": "dsw-556082-75966ff79-6qp6m",
     "uid": 0,
@@ -208,41 +214,44 @@
         61,
         62,
         63,
-        64
+        64,
+        65,
+        66,
+        67
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.953125,
-        "group_std": 0.0,
-        "zero_advantage_fraction": 1.0,
-        "sampling_scoring_logp_mae": 0.010490453665624955,
-        "tokens": 327567,
-        "truncation": 0.0,
-        "valid": 1.0,
+        "reward": 0.97265625,
+        "group_std": 0.03167911246418953,
+        "zero_advantage_fraction": 0.921875,
+        "sampling_scoring_logp_mae": 0.010342482179112267,
+        "tokens": 311189,
+        "truncation": 0.0234375,
+        "valid": 0.974609375,
         "tasks": {
           "gsm8k": {
             "count": 512,
-            "reward": 0.953125,
-            "mean_tokens": 639.779296875,
-            "truncation": 0.0
+            "reward": 0.97265625,
+            "mean_tokens": 607.791015625,
+            "truncation": 0.0234375
           }
         },
-        "kl": 0.007304755151153586,
+        "kl": 0.005971113968143982,
         "clip_fraction": 0.0,
-        "ratio": 1.0004991259775124,
-        "am_gm_log_gap": 0.0005244976184144434,
-        "entropy": 0.21688193206500728,
-        "loss": 7.304754976544814e-05,
+        "ratio": 1.0005132721853442,
+        "am_gm_log_gap": 0.0005663471202126402,
+        "entropy": 0.1960267461145122,
+        "loss": 2.8284339394168967e-05,
         "ratio_quantiles": {
-          "0.0": 0.9959052205085754,
-          "0.01": 0.9973269104957581,
-          "0.5": 1.0003615617752075,
-          "0.99": 1.0037791728973389,
-          "1.0": 1.0066150426864624
+          "0.0": 0.9951205253601074,
+          "0.01": 0.9968483448028564,
+          "0.5": 1.0004130601882935,
+          "0.99": 1.004504680633545,
+          "1.0": 1.0077979564666748
         },
-        "round": 64,
-        "updates": 1024,
-        "elapsed": 41182.0247592926
+        "round": 67,
+        "updates": 1072,
+        "elapsed": 42901.09546709061
       },
       "validation_metrics": [
         {
@@ -442,10 +451,10 @@
           }
         }
       ],
-      "committed_sha256": "a054d26b92913f06d96b0e7b32bb475770f96717648c115e82f278dd58a7bab1",
+      "committed_sha256": "5c0c9b3023c1818e00d4f833b43c76b2f6b0cd3d82190936e109a602757dcd95",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 64,
+        "round": 67,
         "stop": false,
         "reason": null,
         "best": {
@@ -457,7 +466,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 41202.35414238594
+        "elapsed_seconds": 42911.79374326201
       },
       "source_matches": true,
       "config_matches": true
@@ -528,41 +537,44 @@
         61,
         62,
         63,
-        64
+        64,
+        65,
+        66,
+        67
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.94140625,
-        "group_std": 0.03420157730579376,
-        "zero_advantage_fraction": 0.90625,
-        "sampling_scoring_logp_mae": 0.01046745680832828,
-        "tokens": 329733,
-        "truncation": 0.009765625,
-        "valid": 0.990234375,
+        "reward": 0.982421875,
+        "group_std": 0.018699130043387413,
+        "zero_advantage_fraction": 0.953125,
+        "sampling_scoring_logp_mae": 0.009978684932320903,
+        "tokens": 296040,
+        "truncation": 0.015625,
+        "valid": 0.982421875,
         "tasks": {
           "gsm8k": {
             "count": 512,
-            "reward": 0.94140625,
-            "mean_tokens": 644.009765625,
-            "truncation": 0.009765625
+            "reward": 0.982421875,
+            "mean_tokens": 578.203125,
+            "truncation": 0.015625
           }
         },
-        "kl": 0.004203748907116278,
+        "kl": 0.004006658302330379,
         "clip_fraction": 0.0,
-        "ratio": 1.0000021806918085,
-        "am_gm_log_gap": 0.0005824178979025874,
-        "entropy": 0.19772234785341425,
-        "loss": -2.2786310051703396e-05,
+        "ratio": 0.9998134920024313,
+        "am_gm_log_gap": 0.0005748442950874733,
+        "entropy": 0.17675380031505483,
+        "loss": 2.0960661035740458e-05,
         "ratio_quantiles": {
-          "0.0": 0.9927555322647095,
-          "0.01": 0.996241569519043,
-          "0.5": 1.0,
-          "0.99": 1.0036853551864624,
-          "1.0": 1.0136439800262451
+          "0.0": 0.9920742511749268,
+          "0.01": 0.9960143566131592,
+          "0.5": 0.999912440776825,
+          "0.99": 1.0035154819488525,
+          "1.0": 1.004818320274353
         },
-        "round": 64,
-        "updates": 1024,
-        "elapsed": 41191.6704556942
+        "round": 67,
+        "updates": 1072,
+        "elapsed": 42868.19804549217
       },
       "validation_metrics": [
         {
@@ -762,10 +774,10 @@
           }
         }
       ],
-      "committed_sha256": "a3050cd676fde3cb6a1964d580b74e6647e5267b7bfb59569fbecaf6654e2d0d",
+      "committed_sha256": "43b0eb89413900c90066f9ab0ca66a1854b05831b61586e18ca1abe1e6be28ca",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 64,
+        "round": 67,
         "stop": false,
         "reason": null,
         "best": {
@@ -777,7 +789,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 41202.35414238594
+        "elapsed_seconds": 42911.79374326201
       },
       "source_matches": true,
       "config_matches": true
@@ -859,53 +871,56 @@
         72,
         73,
         74,
-        75
+        75,
+        76,
+        77,
+        78
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.90234375,
-        "group_std": 0.01949772611260414,
-        "zero_advantage_fraction": 0.953125,
-        "sampling_scoring_logp_mae": 0.012558909761992254,
-        "tokens": 259912,
+        "reward": 0.947265625,
+        "group_std": 0.02810882404446602,
+        "zero_advantage_fraction": 0.9375,
+        "sampling_scoring_logp_mae": 0.012946042458679585,
+        "tokens": 261716,
         "truncation": 0.013671875,
-        "valid": 0.984375,
+        "valid": 0.986328125,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.9140625,
-            "mean_tokens": 674.48828125,
+            "reward": 0.9375,
+            "mean_tokens": 668.37109375,
             "truncation": 0.02734375
           },
           "arc": {
             "count": 128,
             "reward": 0.9375,
-            "mean_tokens": 395.3203125,
+            "mean_tokens": 422.6875,
             "truncation": 0.0
           },
           "boolq": {
             "count": 128,
-            "reward": 0.84375,
-            "mean_tokens": 286.265625,
+            "reward": 0.9765625,
+            "mean_tokens": 285.2265625,
             "truncation": 0.0
           }
         },
-        "kl": 0.011066120613975272,
+        "kl": 0.010458419361100368,
         "clip_fraction": 0.0,
-        "ratio": 1.0007246291497722,
-        "am_gm_log_gap": 0.0009076390567059889,
-        "entropy": 0.22832297033892246,
-        "loss": -0.0001096843918575452,
+        "ratio": 1.0007455294253305,
+        "am_gm_log_gap": 0.0007387752985295037,
+        "entropy": 0.25278998903377214,
+        "loss": 5.0106925666426605e-06,
         "ratio_quantiles": {
-          "0.0": 0.9732142090797424,
-          "0.01": 0.9945999979972839,
-          "0.5": 1.0005425214767456,
-          "0.99": 1.0084573030471802,
-          "1.0": 1.0331405401229858
+          "0.0": 0.9937278628349304,
+          "0.01": 0.9956885576248169,
+          "0.5": 1.000596046447754,
+          "0.99": 1.006209135055542,
+          "1.0": 1.0583224296569824
         },
-        "round": 75,
-        "updates": 1200,
-        "elapsed": 41462.31543660164
+        "round": 78,
+        "updates": 1248,
+        "elapsed": 43004.286256313324
       },
       "validation_metrics": [
         {
@@ -1133,10 +1148,10 @@
           }
         }
       ],
-      "committed_sha256": "f0113f96907b17f767863ea1d72026b9f41b35b09fd5714d397218b3a5128714",
+      "committed_sha256": "98d0b47a953c16f80ba41805aec7d5ee2627109779809cf97ed6e18d7256aa53",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 75,
+        "round": 78,
         "stop": false,
         "reason": null,
         "best": {
@@ -1148,7 +1163,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 41472.24141272198
+        "elapsed_seconds": 43014.59262291697
       },
       "source_matches": true,
       "config_matches": true
@@ -1230,53 +1245,56 @@
         72,
         73,
         74,
-        75
+        75,
+        76,
+        77,
+        78
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.888671875,
-        "group_std": 0.024665208533406258,
-        "zero_advantage_fraction": 0.9375,
-        "sampling_scoring_logp_mae": 0.01205703493042165,
-        "tokens": 252914,
-        "truncation": 0.021484375,
-        "valid": 0.978515625,
+        "reward": 0.953125,
+        "group_std": 0.028482431545853615,
+        "zero_advantage_fraction": 0.921875,
+        "sampling_scoring_logp_mae": 0.0122902821281059,
+        "tokens": 251906,
+        "truncation": 0.013671875,
+        "valid": 0.986328125,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.8984375,
-            "mean_tokens": 651.15234375,
-            "truncation": 0.0390625
+            "reward": 0.9453125,
+            "mean_tokens": 619.26171875,
+            "truncation": 0.0234375
           },
           "arc": {
             "count": 128,
-            "reward": 0.9296875,
-            "mean_tokens": 420.96875,
-            "truncation": 0.0078125
+            "reward": 0.9375,
+            "mean_tokens": 439.8515625,
+            "truncation": 0.0
           },
           "boolq": {
             "count": 128,
-            "reward": 0.828125,
-            "mean_tokens": 252.6171875,
-            "truncation": 0.0
+            "reward": 0.984375,
+            "mean_tokens": 289.640625,
+            "truncation": 0.0078125
           }
         },
-        "kl": 0.007444975065681092,
+        "kl": 0.007641882401458133,
         "clip_fraction": 0.0,
-        "ratio": 0.9997728522284888,
-        "am_gm_log_gap": 0.0008049189827232794,
-        "entropy": 0.21259593045033398,
-        "loss": -0.000142640398517635,
+        "ratio": 0.9999507335014641,
+        "am_gm_log_gap": 0.0007036838447405103,
+        "entropy": 0.22465533459399012,
+        "loss": -3.691860322829754e-05,
         "ratio_quantiles": {
-          "0.0": 0.9746105074882507,
-          "0.01": 0.9909459948539734,
-          "0.5": 1.0,
-          "0.99": 1.0051833391189575,
-          "1.0": 1.0349301099777222
+          "0.0": 0.9732770919799805,
+          "0.01": 0.9949396848678589,
+          "0.5": 0.9999920725822449,
+          "0.99": 1.0049901008605957,
+          "1.0": 1.0090460777282715
         },
-        "round": 75,
-        "updates": 1200,
-        "elapsed": 41453.84325361252
+        "round": 78,
+        "updates": 1248,
+        "elapsed": 42988.03842973709
       },
       "validation_metrics": [
         {
@@ -1504,10 +1522,10 @@
           }
         }
       ],
-      "committed_sha256": "991395f5266abdcb1f20060906795d4c105690bbb035cb49b0ab284c6e79e8c3",
+      "committed_sha256": "46aa21ed02ffc8aa3dd2449d55da8538b433767310495032947b3ac9a3eee9ca",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 75,
+        "round": 78,
         "stop": false,
         "reason": null,
         "best": {
@@ -1519,7 +1537,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 41472.24141272198
+        "elapsed_seconds": 43014.59262291697
       },
       "source_matches": true,
       "config_matches": true
