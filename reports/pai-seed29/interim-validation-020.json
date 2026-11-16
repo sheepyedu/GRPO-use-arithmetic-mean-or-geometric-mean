@@ -1,6 +1,6 @@
 {
-  "observed_at": "2026-11-16T10:00:54.169128+00:00",
-  "scope": "Seed29 mixed round20 validation complete; math latest validation round10; final test pending",
+  "observed_at": "2026-11-16T10:31:21.732957+00:00",
+  "scope": "Seed29 math AM and both mixed round20 validation complete; math GM latest validation round10, round20 pending; final test pending",
   "runs": [
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
@@ -60,10 +60,38 @@
             "macro": 0.7707251461988305,
             "mixed_weighted": 0.8092938596491228
           }
+        },
+        {
+          "round": 20,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.934,
+              "mean_tokens": 605.285,
+              "truncation": 0.037,
+              "valid": 0.963
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.6578947368421053,
+              "mean_tokens": 419.39122807017543,
+              "truncation": 0.012280701754385965,
+              "valid": 0.6754385964912281
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.85,
+              "mean_tokens": 284.774,
+              "truncation": 0.006,
+              "valid": 0.976
+            },
+            "macro": 0.8139649122807019,
+            "mixed_weighted": 0.8439736842105264
+          }
         }
       ],
       "latest_paired_decision": {
-        "round": 17,
+        "round": 19,
         "stop": false,
         "reason": null,
         "best": {
@@ -75,7 +103,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 11765.874522419006
+        "elapsed_seconds": 12984.864728114975
       }
     },
     {
@@ -139,7 +167,7 @@
         }
       ],
       "latest_paired_decision": {
-        "round": 17,
+        "round": 19,
         "stop": false,
         "reason": null,
         "best": {
@@ -151,7 +179,7 @@
           "gm": 0
         },
         "scores": null,
-        "elapsed_seconds": 11765.874522419006
+        "elapsed_seconds": 12984.864728114975
       }
     },
     {
@@ -243,7 +271,7 @@
         }
       ],
       "latest_paired_decision": {
-        "round": 20,
+        "round": 24,
         "stop": false,
         "reason": null,
         "best": {
@@ -254,11 +282,8 @@
           "am": 1,
           "gm": 1
         },
-        "scores": {
-          "am": 0.9175394736842106,
-          "gm": 0.9175394736842106
-        },
-        "elapsed_seconds": 11679.802873733046
+        "scores": null,
+        "elapsed_seconds": 13812.750530065037
       }
     },
     {
@@ -350,7 +375,7 @@
         }
       ],
       "latest_paired_decision": {
-        "round": 20,
+        "round": 24,
         "stop": false,
         "reason": null,
         "best": {
@@ -361,11 +386,8 @@
           "am": 1,
           "gm": 1
         },
-        "scores": {
-          "am": 0.9175394736842106,
-          "gm": 0.9175394736842106
-        },
-        "elapsed_seconds": 11679.802873733046
+        "scores": null,
+        "elapsed_seconds": 13812.750530065037
       }
     }
   ]

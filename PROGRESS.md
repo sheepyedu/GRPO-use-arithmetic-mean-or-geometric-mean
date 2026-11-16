@@ -1,3 +1,9 @@
+## 2026-11-16 18:31 · 数学第20轮验证、混合第25轮评分
+
+- 18:31:21门后单次只读投影，数学validation-020、两侧更新320/320，混合第25轮冻结评分、更新384/384，较18:00增加41/42/49/48。四driver及controller原身份匹配，无FAILURE/终态，已记录20/20/24/24轮指标均有限，source/config匹配。
+- 数学AM第20轮GSM93.4%及ready已写，GM第20轮验证/ready本帧未提供，原decision仍19，属于验证屏障在途，未据null误判异常。混合第24轮COMMITTED/ready匹配、decision继续；最新第20轮加权两侧91.7539%、bad_checks各1。最终测试待停止后执行。
+- GPU0–3利用率0/100/96/97%，显存72834/72252/33494/30400MiB，数学AM验证结果已写而另一侧仍验证，单帧0不作停运结论。CPFS5526159097856B，保护其他卡占用。正式4/20，子3/8、根7/9，Notion已同步。下一门19:01:21.732957。接续9e828eb，无新派发或优化器动作，证据latest-status、latest-supervision-summary、controller-current及interim-validation-020。
+
 ## 2026-11-16 18:00 · seed29混合第20轮验证及配对等待
 
 - 18:00:54门后单次只读投影，数学第18轮epoch1更新279/278，混合第21轮AM epoch2更新335、GM336在pair_wait，较17:29增加50/49/53/53。四driver与共享controller2800019原身份匹配，FAILURE/终态缺席，已记录17/17/20/21轮指标均有限，source/config和COMMITTED/ready匹配。
