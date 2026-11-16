@@ -33,21 +33,23 @@ def event(directory, phase, **fields):
     print(json.dumps(value), flush=True)
 
 
-def token_scores(model, ids, prompt_length):
-    # Only materialize completion logits, reducing peak vocabulary activation.
+def token_statistics(logits, targets, compute_entropy=True):
+    logits = logits.float()
+    normalizer = torch.logsumexp(logits, dim=-1)
+    selected = logits.gather(-1, targets.unsqueeze(-1)).squeeze(-1)
+    with torch.no_grad():
+        entropy = (normalizer - (logits.softmax(-1) * logits).sum(-1)).mean() if compute_entropy else logits.new_zeros(())
+    return selected - normalizer, entropy
+
+
+
+def token_scores(model, ids, prompt_length, compute_entropy=True):
     output = model(
         input_ids=ids, use_cache=False, logits_to_keep=ids.shape[1] - prompt_length + 1
     )
-    logits = output.logits[:, :-1, :].float()
+    logits = output.logits[:, :-1, :]
     targets = ids[:, prompt_length:]
-    selected = logits.gather(-1, targets.unsqueeze(-1)).squeeze(-1)
-    log_probabilities = selected - torch.logsumexp(logits, dim=-1)
-    with torch.no_grad():
-        probabilities = logits.softmax(-1)
-        entropy = (
-            torch.logsumexp(logits, -1) - (probabilities * logits).sum(-1)
-        ).mean()
-    return log_probabilities, entropy
+    return token_statistics(logits, targets, compute_entropy)
 
 
 def move_optimizer(optimizer, device):
@@ -104,6 +106,7 @@ class Experiment:
         self.model.gradient_checkpointing_enable(
             gradient_checkpointing_kwargs={"use_reentrant": False}
         )
+        self.checkpointing_enabled = True
         self.model.config.use_cache = False
         self.model.eval()
         self.parameters = [p for p in self.model.parameters() if p.requires_grad]
@@ -131,7 +134,7 @@ class Experiment:
             max_num_seqs=config["vllm_max_sequences"],
             max_num_batched_tokens=4096,
             enable_chunked_prefill=True,
-            enforce_eager=True,
+            enforce_eager=config.get("vllm_enforce_eager", True),
             seed=config["seed"],
             distributed_executor_backend="uni",
             disable_log_stats=True,
@@ -180,6 +183,18 @@ class Experiment:
                 "template_sha": content_hash(self.tokenizer.chat_template),
             },
         )
+
+    def configure_checkpointing(self, sequence_length):
+        limit = self.config.get("checkpoint_free_max_tokens", 0)
+        enabled = sequence_length > limit
+        if enabled != self.checkpointing_enabled:
+            if enabled:
+                self.model.gradient_checkpointing_enable(
+                    gradient_checkpointing_kwargs={"use_reentrant": False}
+                )
+            else:
+                self.model.gradient_checkpointing_disable()
+            self.checkpointing_enabled = enabled
 
     def prompts(self, rows):
         result = []
@@ -289,6 +304,7 @@ class Experiment:
 
     def train_round(self, number, records):
         config = self.config
+        event(self.directory, "sleep_and_offload", round=number, updates=self.updates)
         self.engine.sleep(level=1)
         self.engine_asleep = True
         self.model.to("cuda")
@@ -310,7 +326,7 @@ class Experiment:
                 ids = torch.tensor(
                     [record["prompt_ids"] + record["token_ids"]], device="cuda"
                 )
-                old, _ = token_scores(self.model, ids, len(record["prompt_ids"]))
+                old, _ = token_scores(self.model, ids, len(record["prompt_ids"]), compute_entropy=False)
                 with self.model.disable_adapter():
                     reference, _ = token_scores(
                         self.model, ids, len(record["prompt_ids"])
@@ -348,6 +364,7 @@ class Experiment:
             for task in ("gsm8k", "arc", "boolq")
             if (selected := [r for r in records if r["row"]["task"] == task])
         }
+        event(self.directory, "optimization", round=number, updates=self.updates)
         diagnostics = []
         self.model.train()
         for epoch in range(config["optimization_epochs"]):
@@ -361,6 +378,7 @@ class Experiment:
                     ids = torch.tensor(
                         [record["prompt_ids"] + record["token_ids"]], device="cuda"
                     )
+                    self.configure_checkpointing(ids.shape[1])
                     current, entropy = token_scores(
                         self.model, ids, len(record["prompt_ids"])
                     )
@@ -380,9 +398,9 @@ class Experiment:
                     (loss / len(minibatch)).backward()
                     diagnostics.append(
                         {
-                            **{k: float(v.mean()) for k, v in stats.items()},
-                            "entropy": float(entropy),
-                            "loss": float(loss.detach()),
+                            **{k: v.detach().mean() for k, v in stats.items()},
+                            "entropy": entropy.detach(),
+                            "loss": loss.detach(),
                         }
                     )
                 grad = torch.nn.utils.clip_grad_norm_(
@@ -400,6 +418,7 @@ class Experiment:
                     grad_norm=float(grad),
                     minibatch_offset=offset,
                 )
+        event(self.directory, "checkpoint", round=number, updates=self.updates)
         self.model.eval()
         self.optimizer.zero_grad(set_to_none=True)
         self.model.to("cpu")
@@ -440,9 +459,9 @@ class Experiment:
             },
         )
         for key in diagnostics[0]:
-            summary[key] = sum(d[key] for d in diagnostics) / len(diagnostics)
+            summary[key] = torch.stack([d[key] for d in diagnostics]).double().mean().item()
         summary["ratio_quantiles"] = {
-            str(q): float(torch.tensor([d["ratio"] for d in diagnostics]).quantile(q))
+            str(q): float(torch.stack([d["ratio"] for d in diagnostics]).float().cpu().quantile(q))
             for q in (0.0, 0.01, 0.5, 0.99, 1.0)
         }
         summary.update(
@@ -450,6 +469,7 @@ class Experiment:
         )
         with (self.directory / "metrics.jsonl").open("a") as stream:
             stream.write(json.dumps(summary) + "\n")
+        event(self.directory, "wake_and_adapter", round=number, updates=self.updates)
         self.engine.wake_up()
         self.engine_asleep = False
         return self.adapter(checkpoint)

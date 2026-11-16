@@ -1,0 +1,26 @@
+{
+  "phase": "seed29_initializing",
+  "ready": true,
+  "next_seed": 29,
+  "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
+  "must_validate": [
+    "baseline tests",
+    "batched score/gradient regression",
+    "real H20 timing and memory",
+    "candidate full tests"
+  ],
+  "active_training": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
+  "notion_child": "41a5e704-b6a8-81ef-b291-d7042c89fe2f",
+  "tests_passed": 21,
+  "validated_changes": [
+    "CUDA Graph and64generation slots",
+    "checkpoint free<=1536total tokens",
+    "skip unused frozen entropy",
+    "deferred diagnostics",
+    "phase events"
+  ],
+  "rejected_changes": [
+    "padding batch2/4",
+    "compiled token statistics"
+  ]
+}

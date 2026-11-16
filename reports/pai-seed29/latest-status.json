@@ -1,0 +1,133 @@
+{
+  "observed_at": "2026-11-16T06:39:49.110839+00:00",
+  "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
+  "pair": null,
+  "pairs": [
+    {
+      "phase": "formal",
+      "environment": "math",
+      "children": [
+        {
+          "pid": 2800022,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
+          "gpu": 0
+        },
+        {
+          "pid": 2800023,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
+          "gpu": 1
+        }
+      ],
+      "start": 1794811109.343661
+    },
+    {
+      "phase": "formal",
+      "environment": "mixed",
+      "children": [
+        {
+          "pid": 2800024,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
+          "gpu": 2
+        },
+        {
+          "pid": 2800025,
+          "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
+          "gpu": 3
+        }
+      ],
+      "start": 1794811109.3494718
+    }
+  ],
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-am",
+      "status": {
+        "time": 1794811118.5056117,
+        "phase": "initializing",
+        "pid": 2800022,
+        "environment": "math",
+        "operator": "am"
+      },
+      "identity": {
+        "pid": 2800022,
+        "uid": 0,
+        "start_ticks": 49774291,
+        "cmdline_sha256": "40a2978acfe8d67d7be29e27fefd63e78b76e7d612443866f8b627c14a53eab9",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-math-gm",
+      "status": {
+        "time": 1794811118.4991677,
+        "phase": "initializing",
+        "pid": 2800023,
+        "environment": "math",
+        "operator": "gm"
+      },
+      "identity": {
+        "pid": 2800023,
+        "uid": 0,
+        "start_ticks": 49774291,
+        "cmdline_sha256": "c50d856a8ad1d63d5385a4bb5105702e8fd3355a04db7e20459822dccfb751b4",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-am",
+      "status": {
+        "time": 1794811118.4955142,
+        "phase": "initializing",
+        "pid": 2800024,
+        "environment": "mixed",
+        "operator": "am"
+      },
+      "identity": {
+        "pid": 2800024,
+        "uid": 0,
+        "start_ticks": 49774292,
+        "cmdline_sha256": "a97d76d4e0ab5df0bf1dc9200fbd949640a2f3353ecc6727adcf1c5aea3b6bb9",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed29/formal-mixed-gm",
+      "status": {
+        "time": 1794811118.4971604,
+        "phase": "initializing",
+        "pid": 2800025,
+        "environment": "mixed",
+        "operator": "gm"
+      },
+      "identity": {
+        "pid": 2800025,
+        "uid": 0,
+        "start_ticks": 49774292,
+        "cmdline_sha256": "9e2faf4a921b20e729df34b787cd3bac76fba81d475a7a1ada72de4eef121e66",
+        "matches_output": true,
+        "state": "S"
+      },
+      "failure": null,
+      "complete": false
+    }
+  ],
+  "gpu_csv": "0, 17609, 25\n1, 17609, 23\n2, 17621, 24\n3, 17621, 24\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 6097184227328,
+  "wrapper_exit": null,
+  "validation_complete": {},
+  "log_tails": {
+    "formal-math-am.log": "t/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.35it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.30it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.11it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.20it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.52it/s]\n(EngineCore_DP0 pid=2800745) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.36it/s]\n(EngineCore_DP0 pid=2800745) \n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.71 seconds\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.478233 seconds\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:21 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:21 [backends.py:976] Dynamo bytecode transform time: 11.58 s\n(EngineCore_DP0 pid=2800745) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
+    "formal-mixed-am.log": "t/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.43it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.33it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.33it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:02<00:00,  1.43it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.81it/s]\n(EngineCore_DP0 pid=2800707) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.59it/s]\n(EngineCore_DP0 pid=2800707) \n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:08 [default_loader.py:293] Loading weights took 3.18 seconds\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:08 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.011593 seconds\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:20 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:20 [backends.py:976] Dynamo bytecode transform time: 11.31 s\n(EngineCore_DP0 pid=2800707) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
+    "formal-math-gm.log": "t/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.37it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.29it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.11it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.19it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.51it/s]\n(EngineCore_DP0 pid=2800727) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.36it/s]\n(EngineCore_DP0 pid=2800727) \n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.71 seconds\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.482649 seconds\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:21 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:21 [backends.py:976] Dynamo bytecode transform time: 11.27 s\n(EngineCore_DP0 pid=2800727) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n",
+    "formal-mixed-gm.log": "t/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:02,  1.42it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:02,  1.39it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  60% Completed | 3/5 [00:02<00:01,  1.18it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards:  80% Completed | 4/5 [00:03<00:00,  1.29it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.68it/s]\n(EngineCore_DP0 pid=2800714) \nLoading safetensors checkpoint shards: 100% Completed | 5/5 [00:03<00:00,  1.48it/s]\n(EngineCore_DP0 pid=2800714) \n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [default_loader.py:293] Loading weights took 3.41 seconds\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [punica_selector.py:20] Using PunicaWrapperGPU.\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:09 [gpu_model_runner.py:4364] Model loading took 15.36 GiB memory and 4.036625 seconds\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:20 [backends.py:916] Using cache directory: /mount-data/GRPO-Sequence-Ratio/cache/vllm/torch_compile_cache/a6b09cbe91/rank_0_0/backbone for vLLM's torch.compile\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:20 [backends.py:976] Dynamo bytecode transform time: 10.83 s\n(EngineCore_DP0 pid=2800714) INFO 11-16 14:39:40 [backends.py:350] Cache the graph of compile range (1, 4096) for later use\n"
+  }
+}

@@ -33,11 +33,13 @@
   "gradient_clip": 1.0,
   "validation_every": 10,
   "vllm_memory_fraction": 0.72,
-  "vllm_max_sequences": 32,
+  "vllm_max_sequences": 64,
   "early_stopping": {
     "min_rounds": 20,
     "patience": 2,
     "min_delta": 0.005,
     "max_pair_hours": 12
-  }
+  },
+  "vllm_enforce_eager": false,
+  "checkpoint_free_max_tokens": 1536
 }

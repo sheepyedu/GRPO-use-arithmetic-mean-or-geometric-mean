@@ -46,3 +46,7 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 ## 首seed详细汇报
 
 [黑体PDF报告（12页）](output/pdf/GRPO首seed实验详报_黑体_20261116.pdf)包含完整训练曲线、资源时间、token及归因分析。新增逐轮核查发现数学AM第9轮KL有限尖峰258.71179，具体token成因待定位。报告按实际GRPO目标撰写，DPO未实施。
+
+## 效率优化与后续seed
+
+后续seed使用source-v4，开启vLLM CUDA Graph与64请求槽，1536token以内关闭梯度检查点，延迟同步诊断。生成短测约4.46倍，短序列反向耗时下降约31%。21项测试通过，完整正式吞吐待首轮实测。详见[效率报告](docs/efficiency-v4.md)。不同后端版本在跨seed统计中披露。

@@ -1,0 +1,254 @@
+{
+  "efficiency-v3": {
+    "RESULT.json": {
+      "code": 0,
+      "rows": [
+        {
+          "batch": 1,
+          "scoring_seconds": 1.111247627006378,
+          "forward_backward_seconds": 3.6898360530030914,
+          "peak_allocated_bytes": 19939712000,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "batch": 2,
+          "scoring_seconds": 1.3060637350426987,
+          "forward_backward_seconds": 4.11820736899972,
+          "peak_allocated_bytes": 21893568000,
+          "logp_max_abs_difference": 0.3981361389160156,
+          "logp_mae": 0.0034714614739641547,
+          "gradient_relative_l2_difference": 0.09923039376735687,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "batch": 4,
+          "scoring_seconds": 1.6366029549972154,
+          "forward_backward_seconds": 5.149852955015376,
+          "peak_allocated_bytes": 23480041472,
+          "logp_max_abs_difference": 0.3981361389160156,
+          "logp_mae": 0.0034714614739641547,
+          "gradient_relative_l2_difference": 0.09888826310634613,
+          "sequences": 8,
+          "tokens": 4462
+        }
+      ],
+      "scope": "Engineering benchmark on eight saved sequences, fresh adapter, no optimizer step or scientific results"
+    },
+    "eager32-exit.json": {
+      "code": 1
+    }
+  },
+  "efficiency-fused-v3": {
+    "RESULT.json": {
+      "code": 0,
+      "rows": [
+        {
+          "mode": "eager",
+          "scoring_seconds": 1.0823576689581387,
+          "forward_backward_seconds": 3.7256103759864345,
+          "peak_allocated_bytes": 20675796480,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "compiled",
+          "scoring_seconds": 2.1111975150415674,
+          "forward_backward_seconds": 3.5011511470074765,
+          "peak_allocated_bytes": 18501157376,
+          "logp_max_abs_difference": 3.814697265625e-06,
+          "logp_mae": 2.5694484651062055e-08,
+          "gradient_relative_l2_difference": 0.010602693073451519,
+          "sequences": 8,
+          "tokens": 4462
+        }
+      ],
+      "scope": "Engineering benchmark on eight saved sequences, fresh adapter, no optimizer step or scientific results"
+    }
+  },
+  "efficiency-fused-v3-r2": {
+    "RESULT.json": {
+      "code": 0,
+      "rows": [
+        {
+          "mode": "eager",
+          "scoring_seconds": 1.0782780449953862,
+          "forward_backward_seconds": 3.6976293079787865,
+          "peak_allocated_bytes": 20675796480,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "compiled",
+          "scoring_seconds": 1.0685255649732426,
+          "forward_backward_seconds": 3.4055349359987304,
+          "peak_allocated_bytes": 18501157376,
+          "logp_max_abs_difference": 3.814697265625e-06,
+          "logp_mae": 2.5694484651062055e-08,
+          "gradient_relative_l2_difference": 0.010602693073451519,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "compiled",
+          "scoring_seconds": 1.0221160399960354,
+          "forward_backward_seconds": 3.4281952250166796,
+          "peak_allocated_bytes": 18501157376,
+          "logp_max_abs_difference": 3.814697265625e-06,
+          "logp_mae": 2.5694484651062055e-08,
+          "gradient_relative_l2_difference": 0.010602693073451519,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "eager",
+          "scoring_seconds": 1.044943968008738,
+          "forward_backward_seconds": 3.455448933003936,
+          "peak_allocated_bytes": 20708470784,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        }
+      ],
+      "scope": "Engineering benchmark on eight saved sequences, fresh adapter, no optimizer step or scientific results"
+    }
+  },
+  "efficiency-checkpoint-v3": {
+    "RESULT.json": {
+      "code": 0,
+      "rows": [
+        {
+          "mode": "checkpoint",
+          "scoring_seconds": 1.0840356459957547,
+          "forward_backward_seconds": 3.6620527650229633,
+          "peak_allocated_bytes": 20675796480,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "no_checkpoint",
+          "scoring_seconds": 1.0219665850163437,
+          "forward_backward_seconds": 2.3433420739602298,
+          "peak_allocated_bytes": 34713370624,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "checkpoint",
+          "scoring_seconds": 1.022485246998258,
+          "forward_backward_seconds": 3.421105671033729,
+          "peak_allocated_bytes": 20708470784,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        },
+        {
+          "mode": "no_checkpoint",
+          "scoring_seconds": 1.029567766992841,
+          "forward_backward_seconds": 2.3787206080160104,
+          "peak_allocated_bytes": 34713370624,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 8,
+          "tokens": 4462
+        }
+      ],
+      "scope": "Engineering benchmark on eight saved sequences, fresh adapter, no optimizer step or scientific results"
+    }
+  },
+  "efficiency-memory-boundary-v3": {
+    "RESULT.json": {
+      "code": 0,
+      "rows": [
+        {
+          "mode": "checkpoint",
+          "scoring_seconds": 0.2854341740021482,
+          "forward_backward_seconds": 0.9867738510365598,
+          "peak_allocated_bytes": 21351587840,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 1,
+          "tokens": 1408
+        },
+        {
+          "mode": "no_checkpoint",
+          "scoring_seconds": 0.2843461930169724,
+          "forward_backward_seconds": 0.6514077450265177,
+          "peak_allocated_bytes": 38102560768,
+          "logp_max_abs_difference": 0.0,
+          "logp_mae": 0.0,
+          "gradient_relative_l2_difference": 0.0,
+          "sequences": 1,
+          "tokens": 1408
+        }
+      ],
+      "scope": "Engineering benchmark on eight saved sequences, fresh adapter, no optimizer step or scientific results"
+    }
+  },
+  "efficiency-generation-v3-r2": {
+    "eager32-RESULT.json": {
+      "name": "eager32",
+      "initialization_seconds": 22.564548990048934,
+      "rows": [
+        {
+          "seconds": 11.38614381296793,
+          "output_tokens": 12212,
+          "tokens_per_second": 1072.5316841766466
+        },
+        {
+          "seconds": 10.883694338030182,
+          "output_tokens": 12212,
+          "tokens_per_second": 1122.0454765371724
+        }
+      ],
+      "sleep_wake_passed": true,
+      "scope": "Engineering timing only, 48 fixed saved prompts, greedy capped256, no scientific results"
+    },
+    "graph64-RESULT.json": {
+      "name": "graph64",
+      "initialization_seconds": 71.65971844899468,
+      "rows": [
+        {
+          "seconds": 2.606998864968773,
+          "output_tokens": 12181,
+          "tokens_per_second": 4672.422440868959
+        },
+        {
+          "seconds": 2.389497265976388,
+          "output_tokens": 12215,
+          "tokens_per_second": 5111.953955305636
+        }
+      ],
+      "sleep_wake_passed": true,
+      "scope": "Engineering timing only, 48 fixed saved prompts, greedy capped256, no scientific results"
+    },
+    "eager32-exit.json": {
+      "code": 0
+    },
+    "graph64-exit.json": {
+      "code": 0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "note": "Event interval attribution includes checkpoint/switch overhead in optimizer; first optimizer microbatch falls within frozen_scores. Not a pure CUDA profiler.",
+  "gpu_hours": {
+    "initializing": 0.04771537827120887,
+    "evaluation": 10.617768442498313,
+    "pair_wait": 0.5358423152234819,
+    "rollout": 16.59471521211995,
+    "frozen_scores": 6.571965501639578,
+    "optimizer": 18.668531644410557
+  },
+  "fractions": {
+    "initializing": 0.0008996699186252542,
+    "evaluation": 0.2001972365460247,
+    "pair_wait": 0.010103267114282992,
+    "rollout": 0.3128921246235984,
+    "frozen_scores": 0.12391392214186174,
+    "optimizer": 0.3519937796556069
+  }
+}

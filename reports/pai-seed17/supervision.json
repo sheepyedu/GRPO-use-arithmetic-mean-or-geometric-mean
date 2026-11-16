@@ -5,12 +5,15 @@
   "interval_seconds": 1800,
   "last_observed_at": "2026-11-16T05:59:14.239985+00:00",
   "next_check_not_before": "2026-11-16T06:29:14.239985+00:00",
-  "normal_supervision": "Goal continuations and heartbeat wakes share this gate and the same thread; preserve current runs while waiting",
+  "normal_supervision": "Current seed29 source-v4 only. Initialization confirmation may use necessary bounded reads. Routine gate applies after verified startup.",
   "incident_response": "Use necessary bounded diagnostics and authorized repair in the same wake when evidence shows failure; retain original evidence",
   "decision_authority_changes_at": "2026-11-16T10:00:00+08:00",
-  "goal_continues": true,
+  "goal_continues": false,
   "updated_at": "2026-11-16T05:59:14.344780+00:00",
   "automation_config_sha256": "7df42beeba6b28a5c52d165d7f818f9c7a8d754ad02ab58dd983ac3e0c71a119",
   "automation_verified_active": true,
-  "automation_config_verified_at": "2026-11-15T16:43:26.424923+00:00"
+  "automation_config_verified_at": "2026-11-15T16:43:26.424923+00:00",
+  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed29",
+  "active_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
+  "campaign_continues": true
 }

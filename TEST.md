@@ -23,3 +23,7 @@ AM/GM共享单一配置、训练入口和prompt调度，只有operator及输出�
 新增成对平台期、min_delta、最少轮数、12小时预算、非有限验证值、ABORT及两真实CPU子进程同轮停止测试。结果汇总兼容完整200轮与有共同停止决定的提前终态，拒绝两侧轮数不一致。2026-11-15 PAI隔离环境实际19项全部通过，原始日志见 `reports/pai-seed17/setup-tests.txt`。CPU夹具只验证控制逻辑，正式结果按PAI实际运行及终态回执认定。
 
 四卡入口为 `scripts/run_seed.py --config configs/pai-seed17.json --phase formal --parallel-environments`，输出根通过 `--output` 指定。每个环境有独立成对控制目录、checkpoint屏障及共同STOP_DECISION。Node01原试运行保留原 source 和停止回执。
+
+## 效率版本v4
+
+21项CPU测试通过，新增token_statistics分数/熵/梯度一致性与1536边界检查点切换。H20保存序列反向核验、1536合成边界显存核验、vLLM CUDA Graph与LoRA sleep/wake核验及退出码见reports/efficiency/benchmarks.json。原19项基线通过。原候选padding batch及torch.compile方案未采纳，失败保留。

@@ -1,0 +1,1 @@
+{"host": {"hostname": "dsw-556082-75966ff79-6qp6m", "uid": 0, "cpus": 184, "memory_limit": "1932735283200", "cpfs": "rund:zYyiercu:cpfs-03001u70faecthn4bkib9-000001.cn-beijing.cpfs.aliyuncs.com:/"}, "gpu": "0, 0, 0\n1, 0, 0\n2, 0, 0\n3, 0, 0\n", "source_v2_unchanged": true, "source_v4_matches": true, "seed29_absent": true, "free": 6097314250752}
