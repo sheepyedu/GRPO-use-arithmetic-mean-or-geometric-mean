@@ -1,5 +1,5 @@
 {
-  "phase": "seed29_optimizing",
+  "phase": "seed29_math_frozen10_mixed_optimizer11",
   "ready": true,
   "next_seed": 29,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -29,5 +29,5 @@
     8
   ],
   "full_round_speed_verified": true,
-  "last_observed_at": "2026-11-16T07:57:38.762335+00:00"
+  "last_observed_at": "2026-11-16T08:28:18.030668+00:00"
 }
