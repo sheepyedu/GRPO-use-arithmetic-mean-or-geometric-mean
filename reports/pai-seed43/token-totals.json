@@ -1,0 +1,9 @@
+{
+  "training": 74624796,
+  "validation": 34010995,
+  "test": 10404395,
+  "output": 119040186,
+  "input_per_sequence": 26557860,
+  "input_per_prompt": 14420980,
+  "input_plus_output": 145598046
+}

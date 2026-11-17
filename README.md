@@ -39,7 +39,7 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 
 ## 项目进度
 
-首seed四run执行及汇总已完成，固定审核提交按项目流程办理。后续seed29、43、71、101共16run仍待执行，五seed统计和根项目审核待完成。30分钟监督使用共享时间门，保留原始失败和科学预算。
+seed17、29、43共12个正式run已完成训练、最终锁定测试及完整状态验收。seed29固定审核已通过，seed43正在提交固定审核，接续seed71、101共8run。结果见 `reports/seed17-results.md`、`reports/seed29-results.md` 与 `reports/seed43-results.md`。五seed统计和根项目审核待完成，30分钟监督沿用共享时间门。
 
 [Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
 

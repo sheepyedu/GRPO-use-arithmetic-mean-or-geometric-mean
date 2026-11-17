@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T06:58:46.604837+00:00",
+  "observed_at": "2026-11-17T07:30:12.156340+00:00",
   "controllers": [
     {
       "path": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-math-control/controller.json",
@@ -12,13 +12,7 @@
       },
       "identity": {
         "pid": 3223390,
-        "uid": 0,
-        "start_ticks": 54324007,
-        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     },
     {
@@ -32,13 +26,7 @@
       },
       "identity": {
         "pid": 3223390,
-        "uid": 0,
-        "start_ticks": 54324007,
-        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     }
   ]

@@ -1,0 +1,172 @@
+{
+  "observed_at": "2026-11-17T07:30:48.909348+00:00",
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-am",
+      "complete": {
+        "rounds": 70,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 70,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.9366096491228071,
+            "gm": 0.9331052631578948
+          },
+          "bad_checks": {
+            "am": 3,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.9369824561403509,
+            "gm": 0.9327324561403509
+          },
+          "elapsed_seconds": 42626.422156393994
+        },
+        "updates": 1120,
+        "elapsed_seconds": 43483.41453957558,
+        "metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.9393479909021987,
+            "mean_tokens": 628.2365428354814,
+            "truncation": 0.032600454890068235,
+            "valid": 0.9673995451099318
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.9827441077441077,
+            "mean_tokens": 401.03829966329965,
+            "truncation": 0.003367003367003367,
+            "valid": 0.9966329966329966
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.9,
+            "mean_tokens": 273.72996941896025,
+            "truncation": 0.0027522935779816515,
+            "valid": 0.9972477064220183
+          },
+          "macro": 0.9406973662154354,
+          "mixed_weighted": 0.9403600223871262
+        },
+        "formal": true
+      },
+      "complete_sha256": "0149c6463ba2532b1de307570701455d07cf2f425b5d15a3c30f7b0acfea565b",
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.9393479909021987,
+          "mean_tokens": 628.2365428354814,
+          "truncation": 0.032600454890068235,
+          "valid": 0.9673995451099318
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.9827441077441077,
+          "mean_tokens": 401.03829966329965,
+          "truncation": 0.003367003367003367,
+          "valid": 0.9966329966329966
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.9,
+          "mean_tokens": 273.72996941896025,
+          "truncation": 0.0027522935779816515,
+          "valid": 0.9972477064220183
+        },
+        "macro": 0.9406973662154354,
+        "mixed_weighted": 0.9403600223871262
+      },
+      "test_metrics_sha256": "a42ae029a4d8f3726ed7f26a06050fac34c02c569d6bbee8d24479a62d59d535",
+      "owned_driver_gone": true,
+      "pid": 3223395
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-gm",
+      "complete": {
+        "rounds": 70,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 70,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.9366096491228071,
+            "gm": 0.9331052631578948
+          },
+          "bad_checks": {
+            "am": 3,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.9369824561403509,
+            "gm": 0.9327324561403509
+          },
+          "elapsed_seconds": 42626.422156393994
+        },
+        "updates": 1120,
+        "elapsed_seconds": 43511.27905368805,
+        "metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.931008339651251,
+            "mean_tokens": 628.194086429113,
+            "truncation": 0.04094010614101592,
+            "valid": 0.959059893858984
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.9823232323232324,
+            "mean_tokens": 407.29671717171715,
+            "truncation": 0.003787878787878788,
+            "valid": 0.9962121212121212
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.8963302752293578,
+            "mean_tokens": 296.22140672782876,
+            "truncation": 0.001834862385321101,
+            "valid": 0.998165137614679
+          },
+          "macro": 0.936553949067947,
+          "mixed_weighted": 0.935167546713773
+        },
+        "formal": true
+      },
+      "complete_sha256": "500b94bfd737db229d959849824c79255d01cf6bf715c053928f1cabd0866051",
+      "test_metrics": {
+        "gsm8k": {
+          "count": 1319,
+          "accuracy": 0.931008339651251,
+          "mean_tokens": 628.194086429113,
+          "truncation": 0.04094010614101592,
+          "valid": 0.959059893858984
+        },
+        "arc": {
+          "count": 2376,
+          "accuracy": 0.9823232323232324,
+          "mean_tokens": 407.29671717171715,
+          "truncation": 0.003787878787878788,
+          "valid": 0.9962121212121212
+        },
+        "boolq": {
+          "count": 3270,
+          "accuracy": 0.8963302752293578,
+          "mean_tokens": 296.22140672782876,
+          "truncation": 0.001834862385321101,
+          "valid": 0.998165137614679
+        },
+        "macro": 0.936553949067947,
+        "mixed_weighted": 0.935167546713773
+      },
+      "test_metrics_sha256": "de485dc777fdd4f7d4fb32ad854ab0dbd6d1bf5ecbe13789ef34460abb5bb11d",
+      "owned_driver_gone": true,
+      "pid": 3223397
+    }
+  ],
+  "wrapper_controller_gone": true
+}

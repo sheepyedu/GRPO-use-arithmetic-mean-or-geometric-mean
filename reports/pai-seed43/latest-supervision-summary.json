@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T06:58:46.604837+00:00",
+  "observed_at": "2026-11-17T07:30:12.156340+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed43",
   "pair": null,
   "pairs": [
@@ -54,7 +54,7 @@
       },
       "failure": null,
       "complete": true,
-      "updates_delta": 10,
+      "updates_delta": 0,
       "same_actual_identity": false,
       "expected_terminal_exit": true
     },
@@ -73,63 +73,51 @@
       },
       "failure": null,
       "complete": true,
-      "updates_delta": 10,
+      "updates_delta": 0,
       "same_actual_identity": false,
       "expected_terminal_exit": true
     },
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-am",
       "status": {
-        "time": 1794898718.7825432,
-        "phase": "optimizer",
+        "time": 1794900099.2415717,
+        "phase": "complete",
         "pid": 3223395,
-        "round": 70,
-        "epoch": 2,
-        "updates": 1115,
-        "grad_norm": 0.010422850959002972,
-        "minibatch_offset": 128
+        "rounds": 70,
+        "updates": 1120
       },
       "identity": {
         "pid": 3223395,
-        "uid": 0,
-        "start_ticks": 54324017,
-        "cmdline_sha256": "b0813f006bb1f38f3c866848655759e094b7adfd62682292f6e23fdea3fdf6dc",
-        "matches_output": true,
-        "state": "R"
+        "gone": true
       },
       "failure": null,
-      "complete": false,
-      "updates_delta": 51,
-      "same_actual_identity": true
+      "complete": true,
+      "updates_delta": 5,
+      "same_actual_identity": false,
+      "expected_terminal_exit": true
     },
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-gm",
       "status": {
-        "time": 1794898712.8677583,
-        "phase": "optimizer",
+        "time": 1794900127.2034945,
+        "phase": "complete",
         "pid": 3223397,
-        "round": 70,
-        "epoch": 2,
-        "updates": 1114,
-        "grad_norm": 0.0009195248712785542,
-        "minibatch_offset": 64
+        "rounds": 70,
+        "updates": 1120
       },
       "identity": {
         "pid": 3223397,
-        "uid": 0,
-        "start_ticks": 54324018,
-        "cmdline_sha256": "b0efc5d4a499d1206c83c53ce0cf8b2d91540b9db32a1a7fc09556e614b38dfe",
-        "matches_output": true,
-        "state": "R"
+        "gone": true
       },
       "failure": null,
-      "complete": false,
-      "updates_delta": 50,
-      "same_actual_identity": true
+      "complete": true,
+      "updates_delta": 6,
+      "same_actual_identity": false,
+      "expected_terminal_exit": true
     }
   ],
-  "gpu_csv": "0, 0, 0\n1, 0, 0\n2, 42444, 58\n3, 40868, 68\n4, 84004, 80\n5, 83380, 16\n6, 83356, 90\n7, 82636, 76",
-  "disk_free_bytes": 4544234782720,
+  "gpu_csv": "0, 0, 0\n1, 0, 0\n2, 0, 0\n3, 0, 0\n4, 84016, 71\n5, 83392, 26\n6, 83366, 92\n7, 82646, 63",
+  "disk_free_bytes": 4496847536128,
   "host_identity": {
     "hostname": "dsw-556082-75966ff79-6qp6m",
     "uid": 0,
@@ -138,7 +126,10 @@
     "cpfs": "rund:zYyiercu:cpfs-03001u70faecthn4bkib9-000001.cn-beijing.cpfs.aliyuncs.com:/"
   },
   "terminal_files": {
-    "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-four-complete.json": null,
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-four-complete.json": {
+      "time": 1794900131.194469,
+      "runs": 4
+    },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-math-exit.json": {
       "codes": [
         0,
@@ -146,8 +137,17 @@
       ],
       "time": 1794898275.4963856
     },
-    "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-exit.json": null,
-    "/mount-data/GRPO-Sequence-Ratio/logs/seed43-run-v4-exit.json": null
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed43/formal-mixed-exit.json": {
+      "codes": [
+        0,
+        0
+      ],
+      "time": 1794900131.1781273
+    },
+    "/mount-data/GRPO-Sequence-Ratio/logs/seed43-run-v4-exit.json": {
+      "code": 0,
+      "time": 1794900131.2197032
+    }
   },
   "training_progress": [
     {
@@ -859,53 +859,54 @@
         66,
         67,
         68,
-        69
+        69,
+        70
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.97265625,
-        "group_std": 0.01710078865289688,
-        "zero_advantage_fraction": 0.953125,
-        "sampling_scoring_logp_mae": 0.011624557146660663,
-        "tokens": 235267,
-        "truncation": 0.005859375,
-        "valid": 0.994140625,
+        "reward": 0.962890625,
+        "group_std": 0.007564420811831951,
+        "zero_advantage_fraction": 0.984375,
+        "sampling_scoring_logp_mae": 0.011648133583094022,
+        "tokens": 224101,
+        "truncation": 0.0,
+        "valid": 1.0,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.97265625,
-            "mean_tokens": 595.12109375,
-            "truncation": 0.01171875
+            "reward": 1.0,
+            "mean_tokens": 513.00390625,
+            "truncation": 0.0
           },
           "arc": {
             "count": 128,
             "reward": 1.0,
-            "mean_tokens": 354.1328125,
+            "mean_tokens": 392.6015625,
             "truncation": 0.0
           },
           "boolq": {
             "count": 128,
-            "reward": 0.9453125,
-            "mean_tokens": 293.6484375,
+            "reward": 0.8515625,
+            "mean_tokens": 332.1796875,
             "truncation": 0.0
           }
         },
-        "kl": 0.008440336964156359,
+        "kl": 0.007811067367924807,
         "clip_fraction": 0.0,
-        "ratio": 1.0006878821295686,
-        "am_gm_log_gap": 0.0006388368098413366,
-        "entropy": 0.22150361941021401,
-        "loss": 4.865888353844383e-05,
+        "ratio": 1.0005268842796795,
+        "am_gm_log_gap": 0.00063308720599764,
+        "entropy": 0.22919811294195824,
+        "loss": 5.420265266486979e-05,
         "ratio_quantiles": {
-          "0.0": 0.9890007376670837,
-          "0.01": 0.9960549473762512,
-          "0.5": 1.000501036643982,
-          "0.99": 1.0061804056167603,
-          "1.0": 1.015403389930725
+          "0.0": 0.9901029467582703,
+          "0.01": 0.9952266812324524,
+          "0.5": 1.0004101991653442,
+          "0.99": 1.00602388381958,
+          "1.0": 1.0117881298065186
         },
-        "round": 69,
-        "updates": 1104,
-        "elapsed": 41670.05030322075
+        "round": 70,
+        "updates": 1120,
+        "elapsed": 42223.31905531883
       },
       "validation_metrics": [
         {
@@ -1103,24 +1104,55 @@
             "macro": 0.9312280701754386,
             "mixed_weighted": 0.931671052631579
           }
+        },
+        {
+          "round": 70,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.937,
+              "mean_tokens": 589.775,
+              "truncation": 0.034,
+              "valid": 0.966
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.9719298245614035,
+              "mean_tokens": 424.30877192982456,
+              "truncation": 0.008771929824561403,
+              "valid": 0.9912280701754386
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.902,
+              "mean_tokens": 285.069,
+              "truncation": 0.004,
+              "valid": 0.996
+            },
+            "macro": 0.9369766081871346,
+            "mixed_weighted": 0.9369824561403509
+          }
         }
       ],
-      "committed_sha256": "f43692e023b875774d17d3a90472c18f7d121aa5101a67bcf492314b9f2b55fc",
+      "committed_sha256": "d68ed5758a4c8ccd971530112229a338969b871adaff69370d619da8f0141864",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 69,
-        "stop": false,
-        "reason": null,
+        "round": 70,
+        "stop": true,
+        "reason": "paired_plateau",
         "best": {
           "am": 0.9366096491228071,
           "gm": 0.9331052631578948
         },
         "bad_checks": {
-          "am": 2,
-          "gm": 1
+          "am": 3,
+          "gm": 2
         },
-        "scores": null,
-        "elapsed_seconds": 41699.61249929597
+        "scores": {
+          "am": 0.9369824561403509,
+          "gm": 0.9327324561403509
+        },
+        "elapsed_seconds": 42626.422156393994
       },
       "source_matches": true,
       "config_matches": true
@@ -1196,53 +1228,54 @@
         66,
         67,
         68,
-        69
+        69,
+        70
       ],
       "metrics_all_finite": true,
       "latest_metrics": {
-        "reward": 0.978515625,
-        "group_std": 0.015502449125051498,
-        "zero_advantage_fraction": 0.953125,
-        "sampling_scoring_logp_mae": 0.01146696417390558,
-        "tokens": 234757,
-        "truncation": 0.009765625,
-        "valid": 0.98828125,
+        "reward": 0.96875,
+        "group_std": 0.010334965772926807,
+        "zero_advantage_fraction": 0.96875,
+        "sampling_scoring_logp_mae": 0.011932068128771789,
+        "tokens": 228258,
+        "truncation": 0.001953125,
+        "valid": 0.998046875,
         "tasks": {
           "gsm8k": {
             "count": 256,
-            "reward": 0.96484375,
-            "mean_tokens": 586.41015625,
-            "truncation": 0.01953125
+            "reward": 0.99609375,
+            "mean_tokens": 521.9375,
+            "truncation": 0.00390625
           },
           "arc": {
             "count": 128,
             "reward": 1.0,
-            "mean_tokens": 353.546875,
+            "mean_tokens": 402.328125,
             "truncation": 0.0
           },
           "boolq": {
             "count": 128,
-            "reward": 0.984375,
-            "mean_tokens": 307.671875,
+            "reward": 0.8828125,
+            "mean_tokens": 337.0625,
             "truncation": 0.0
           }
         },
-        "kl": 0.006849672863097567,
+        "kl": 0.006536960892503885,
         "clip_fraction": 0.0,
-        "ratio": 0.9999485343578272,
-        "am_gm_log_gap": 0.0006663335492902434,
-        "entropy": 0.20888116936475853,
-        "loss": 2.4913678624338687e-05,
+        "ratio": 0.9998286115587689,
+        "am_gm_log_gap": 0.0006948961996755543,
+        "entropy": 0.22156174596602796,
+        "loss": -2.2803440785867934e-05,
         "ratio_quantiles": {
-          "0.0": 0.9918011426925659,
-          "0.01": 0.9944465160369873,
+          "0.0": 0.9884056448936462,
+          "0.01": 0.9940712451934814,
           "0.5": 1.0,
-          "0.99": 1.0054192543029785,
-          "1.0": 1.009418249130249
+          "0.99": 1.005204439163208,
+          "1.0": 1.0274198055267334
         },
-        "round": 69,
-        "updates": 1104,
-        "elapsed": 41689.42322969437
+        "round": 70,
+        "updates": 1120,
+        "elapsed": 42238.62110090256
       },
       "validation_metrics": [
         {
@@ -1440,24 +1473,55 @@
             "macro": 0.9323918128654971,
             "mixed_weighted": 0.9325438596491229
           }
+        },
+        {
+          "round": 70,
+          "metrics": {
+            "gsm8k": {
+              "count": 1000,
+              "accuracy": 0.932,
+              "mean_tokens": 588.614,
+              "truncation": 0.043,
+              "valid": 0.957
+            },
+            "arc": {
+              "count": 570,
+              "accuracy": 0.9719298245614035,
+              "mean_tokens": 421.0578947368421,
+              "truncation": 0.014035087719298246,
+              "valid": 0.9859649122807017
+            },
+            "boolq": {
+              "count": 1000,
+              "accuracy": 0.895,
+              "mean_tokens": 318.866,
+              "truncation": 0.008,
+              "valid": 0.992
+            },
+            "macro": 0.9329766081871345,
+            "mixed_weighted": 0.9327324561403509
+          }
         }
       ],
-      "committed_sha256": "817c0ce79bec995d4b210005a23cf97498f47864a28112bfb502794deb687870",
+      "committed_sha256": "32a7679b555ac6d9f4be62db299cf5257000f2ab1cbf6e6988cf646c7a564823",
       "ready_matches_committed": true,
       "latest_paired_decision": {
-        "round": 69,
-        "stop": false,
-        "reason": null,
+        "round": 70,
+        "stop": true,
+        "reason": "paired_plateau",
         "best": {
           "am": 0.9366096491228071,
           "gm": 0.9331052631578948
         },
         "bad_checks": {
-          "am": 2,
-          "gm": 1
+          "am": 3,
+          "gm": 2
         },
-        "scores": null,
-        "elapsed_seconds": 41699.61249929597
+        "scores": {
+          "am": 0.9369824561403509,
+          "gm": 0.9327324561403509
+        },
+        "elapsed_seconds": 42626.422156393994
       },
       "source_matches": true,
       "config_matches": true
@@ -1475,13 +1539,7 @@
       },
       "identity": {
         "pid": 3223390,
-        "uid": 0,
-        "start_ticks": 54324007,
-        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     },
     {
@@ -1495,21 +1553,15 @@
       },
       "identity": {
         "pid": 3223390,
-        "uid": 0,
-        "start_ticks": 54324007,
-        "cmdline_sha256": "684986edc267691db22abd19dd8d8b58d1a4599a729d9f89df814e140efeea35",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     }
   ],
-  "previous_observed_at": "2026-11-17T06:28:20.682710+00:00",
+  "previous_observed_at": "2026-11-17T06:58:46.604837+00:00",
   "formal_complete": 8,
   "planned_runs": 20,
-  "next_check_not_before": "2026-11-17T07:29:42.065496+00:00",
-  "current_seed_execution_terminal": 2,
-  "campaign_execution_terminal": 10,
-  "terminal_supplement": "reports/pai-seed43/math-terminal.json"
+  "next_check_not_before": "2026-11-17T08:00:48.909348+00:00",
+  "current_seed_execution_terminal": 4,
+  "campaign_execution_terminal": 12,
+  "terminal_supplement": "reports/pai-seed43/mixed-terminal.json"
 }

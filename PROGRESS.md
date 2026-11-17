@@ -1,3 +1,9 @@
+## 2026-11-17 15:36 · seed43四run完整验收12/20
+
+- 15:30:12例行读取，数学60轮/960更新、混合70轮/1120更新均成对plateau终态，四份各6965题最终测试。两parent[0,0]、wrapper0，四driver与controller/wrapper均gone，GPU0–3显存0MiB，GPU4–7保护。混合终态补核15:30:48闭合。
+- 15:33:32 CPU验收exit0，四LoRA各504张量和AdamW各1512张量有限，scheduler/RNG/数据调度/COMMITTED文件SHA通过。逐260份rollout、30份验证和4份测试，输出119040186、按回答输入26557860、合计145598046 token。完整验收12/20，根7/9，子5/6待固定审核提交。结果数学AM94.8446%/GM94.5413%，混合AM94.0360%/GM93.5168%，五seed结论待余8run。
+- 18科学源码同、seed71配置仅seed改变，15:36:59必要续接检查GPU0–3无compute-app、新output/claim缺席。终态KL管理glob误含control目录造成exit1，改为四明确目录后完成，原错误不影响科学终态。报告记录四组KL最大值与后端差异。接续d96d195，下一提交固定审核并按已授权单次启动seed71。
+
 ## 2026-11-17 14:59 · seed43数学两run训练与最终测试终态
 
 - 14:58:46例行实测，数学两组第60轮按paired_plateau停止，各960更新，COMPLETE=true且原driver3223394/3223396均gone，原数学parent真实codes[0,0]。GPU0/1显存0MiB与预期正常结束一致。14:59:42同wake必要终态补核确认两组formal COMPLETE、共享STOP_DECISION一致、各test-final指标与COMPLETE一致，分母1319+2376+3270=6965。完整AdamW/scheduler/RNG/LoRA及逐token验收待四组终态后执行，完整验收仍8/20。
