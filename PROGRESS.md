@@ -1,3 +1,10 @@
+## 2026-11-18 04:55 · seed101第6轮，首状态CPU核验完成
+
+- 04:54:33门后单次实际，数学第6轮frozen_scores各80更新，混合第6轮epoch2各90更新，较03:50增加80/80/90/90。原四driver/controller PID/start/UID/fullcmd同，source/config及COMMITTED/ready匹配，5轮连续metrics有限，无FAILURE，原第5轮共同decision继续。
+- 04:55:02按既有启动门唯一CPU读取四个checkpoint001，所有COMMITTED SHA通过，LoRA各504/AdamW各1512张量有限，scheduler16、完整Python/NumPy/Torch/CUDA RNG及数据调度存在。CUDA不可见，无生成或optimizer重放；first-state-verification.json与transport原件已存，此门闭合后不重复直到最终状态验收。
+- GPU0–3 util88/98/64/52%，显存24956/27654/40612/40726MiB，CPFS3482828406784B无资源门异常。第10轮验证尚未生成，原初始指标保留，不推新能力结论。正式完整验收16/20，seed101子1/6、16.67%，根7/9、77.78%保持。
+- 原每小时heartbeat锚自主对齐56分并回读ACTIVE，下一门按此次CPU读取received+3600为2026-11-17T21:55:02.708032+00:00。night固定Nov18 10:00决策权交接尚未到，后续继续既有授权原运行和监督。接续f12b3ec。
+
 ## 2026-11-18 03:50 · seed71审核通过，最后seed101已进入正式采样
 
 - seed71固定审核nr-3fb8865c93a9b44c1d6e861448ba0164于03:46:52原生评论41b5e704-b6a8-8132-a4d3-001dcdd6dc74通过，Done6/6。独立重评27860测试、71960验证预测、全部完整状态与tokens/61×2配对decisions通过，KL7359.608/loss73.596和浮点边界局限保留。提交版本6b8f14b，不新增科学运行，正式16/20。

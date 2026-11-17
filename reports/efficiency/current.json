@@ -29,7 +29,7 @@
     6
   ],
   "full_round_speed_verified": false,
-  "last_observed_at": "2026-11-17T19:50:21.518296+00:00",
+  "last_observed_at": "2026-11-17T20:54:33.021851+00:00",
   "latest_eta_observation": {
     "observed_at": "2026-11-17T07:48:28.535642+00:00",
     "current_seed_remaining_hours": [
@@ -42,7 +42,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "updated_at": "2026-11-17T19:50:21.518296+00:00",
+  "updated_at": "2026-11-17T20:55:02.320058+00:00",
   "formal_complete": 16,
   "current_seed": 101,
   "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
@@ -54,7 +54,7 @@
   },
   "last_necessary_terminal_observed_at": "2026-11-17T19:39:42.222813+00:00",
   "execution_terminal": 16,
-  "current_seed_first_state_verified": false,
-  "last_state_verification_at": null,
+  "current_seed_first_state_verified": true,
+  "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
   "supervision_interval_seconds": 3600
 }

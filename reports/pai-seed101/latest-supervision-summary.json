@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-17T19:50:21.518296+00:00",
-  "received_at": "2026-11-17T19:50:21.529438+00:00",
+  "observed_at": "2026-11-17T20:54:33.021851+00:00",
+  "received_at": "2026-11-17T20:55:02.708032+00:00",
   "current_seed": 101,
-  "phase": "training_round1_rollout",
+  "phase": "training_round6",
   "formal_complete": 16,
   "planned_runs": 20,
   "current_seed_execution_terminal": 0,
@@ -12,26 +12,26 @@
     6
   ],
   "updates": [
-    0,
-    0,
-    0,
-    0
+    80,
+    80,
+    90,
+    90
   ],
   "update_deltas": [
-    0,
-    0,
-    0,
-    0
+    80,
+    80,
+    90,
+    90
   ],
-  "delta_scope": "New seed101, no cross-seed subtraction",
+  "delta_scope": "Compared with seed101 03:50 original startup snapshot",
   "recorded_rounds": [
-    0,
-    0,
-    0,
-    0
+    5,
+    5,
+    5,
+    5
   ],
   "initial_validation_verified": true,
-  "current_seed_first_state_verified": false,
+  "current_seed_first_state_verified": true,
   "identity_matches": true,
   "source_matches": [
     true,
@@ -51,8 +51,10 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-17T20:50:21.529438+00:00",
-  "gpu_csv": "0, 71329, 99\n1, 71329, 100\n2, 71303, 97\n3, 71303, 100\n4, 3, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3547005452288,
-  "supervision_interval_seconds": 3600
+  "next_check_not_before": "2026-11-17T21:55:02.708032+00:00",
+  "gpu_csv": "0, 24956, 88\n1, 27654, 98\n2, 40612, 64\n3, 40726, 52\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3482828406784,
+  "supervision_interval_seconds": 3600,
+  "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
+  "first_state_source_sha256": "6d47f178c547af0cef8df43bad20792bc7d34dbddee477f6a05815842b06b1b2"
 }
