@@ -1,3 +1,9 @@
+## 2026-11-17 15:41 · seed43审核已送达，seed71单次启动
+
+- seed43完整报告提交8656826，固定审核单nr-a81766f0d0af27bb944a7890ffb61920实际送达，原生提交评论41b5e704-b6a8-815d-8733-001d9c3d658e。子6/6、100%待审核，累计12/20、根7/9，未代签审核。
+- 15:40:42单次O_EXCL发布seed71，wrapper3623275/start58787560，15:41:17实际四driver3623282/84/83/85/start58787578与共享controller3623277/start58787568、UID0和对应argv匹配，当前initializing无FAILURE。初始2570验证尚未完成，子0/6，不把dispatch当训练更新。仅seed改变，source-v4科学源冻结，GPU0–3范围和其他项目保护。Notion子41b5e704-b6a8-816a-9084-dfc24febba52，直接根关系已确认。
+- canonical/current/night三记录切至71，原同一heartbeat已原生更新并回读ACTIVE，门暂为16:11:17.989056。准备必要初始验证核验，正常监督1800秒。管理Notion进度文字controller误写为3623276，已按actual精确更正为3623277。接续8656826。
+
 ## 2026-11-17 15:36 · seed43四run完整验收12/20
 
 - 15:30:12例行读取，数学60轮/960更新、混合70轮/1120更新均成对plateau终态，四份各6965题最终测试。两parent[0,0]、wrapper0，四driver与controller/wrapper均gone，GPU0–3显存0MiB，GPU4–7保护。混合终态补核15:30:48闭合。

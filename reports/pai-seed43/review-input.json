@@ -1,0 +1,71 @@
+{
+  "page_id": "41a5e704-b6a8-8134-8eec-eed3ce7e6ebb",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "86568261eda191b25821263a7b04c9a41ebb1a13",
+  "scope": "seed43四个正式GRPO run的训练、锁定测试、完整状态、逐token与资源释放验收，剩余seed71/101继续。",
+  "acceptance_criteria": [
+    "冻结source-v4和固定data-v1，独立原始Qwen3-8B，数学两侧60轮960更新、混合70轮1120更新，原paired_plateau停止",
+    "四run COMPLETE无FAILURE，parent各[0,0]和wrapper0，四份锁定最终测试各6965题",
+    "COMMITTED文件SHA、完整AdamW/scheduler/RNG/LoRA及数据调度核验，所有张量有限",
+    "逐260训练rollout、30验证和4测试预测核算tokens，包含thinking，区分输入计数口径",
+    "原四driver、controller/wrapper gone，15:30及15:36 GPU0–3释放，其他项目保护"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed43-results.md",
+      "version": "SHA256 e9f0b60595d8327dc086f6ba048abade794fc89377aec983c6cbfe3866675cfc",
+      "supports": "结果、时间、token、KL与限制"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed43-summary.json",
+      "version": "SHA256 b13793cb0c6548391f4921cd737420a04173fc3defa7baa872ba15e55a99c5aa",
+      "supports": "原生配对汇总"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed43/final-verification.json",
+      "version": "SHA256 4d45d7daddb16b58f92e72ca1b206c5ae607295556887beb8b02ac62dd86ccd5",
+      "supports": "完整状态与逐token CPU验收"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed43/final-verification-receipt.json",
+      "version": "SHA256 6099c7ef171c33da2d9f2d210f531598a875474b9a11d653ffa95bed6375e1af",
+      "supports": "远端RESULT SHA与exit0/gone"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed43/latest-status.json",
+      "version": "SHA256 19d7a402f9ed4ec506406a238647521ea493a3408dc3fb9f6c6879234392d435",
+      "supports": "终态、parent与GPU释放"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed43/mixed-terminal.json",
+      "version": "SHA256 8d10f2df2f564c2db67f2849926232c69487eb3b41cdbd6b704d83cec0350ba4",
+      "supports": "mixed终态独立补核"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed43/terminal-source-resource-check.json",
+      "version": "SHA256 e11e99c6553bf168f2d7bc0af5ee6881a62eb408cd66bb2bdd47baaf417602fc",
+      "supports": "源同、资源释放与后续配置差异"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed43/acceptance-v1/RESULT.json",
+      "version": "SHA256 4d45d7daddb16b58f92e72ca1b206c5ae607295556887beb8b02ac62dd86ccd5",
+      "supports": "远端原始CPU验收"
+    }
+  ],
+  "verification": [
+    "CPU验收15:33:32 exit0，四LoRA各504和AdamW各1512张量有限，scheduler960/1120与updates同，RNG与数据调度存在",
+    "数学主测试94.844579/94.541319%，混合加权94.036002/93.516755%，每run测试6965题",
+    "训练输出74624796、验证34010995、测试10404395、总输出119040186、按回答输入26557860、总计145598046",
+    "18科学源码SHA同，科学框架未改，沿用已通过21项测试；KL最大值已入报告"
+  ],
+  "limitations": [
+    "完整验收12/20，其余seed71/101及五seed统计待完成",
+    "首seed17为source-v2，后续source-v4，后端及同时间预算训练暴露差异需披露",
+    "物理缓存/prefill与HF重复前反向token处理未测",
+    "初始化metadata只读失败和本次KL glob管理exit1保留，不是科学重试",
+    "交付LoRA与完整状态配原始Qwen3-8B加载，执行方自查不签发训练采纳"
+  ],
+  "supersedes": null
+}

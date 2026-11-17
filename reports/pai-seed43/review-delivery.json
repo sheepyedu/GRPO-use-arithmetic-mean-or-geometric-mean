@@ -1,0 +1,21 @@
+{
+  "comment": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"result\":{\"status\":\"success\",\"id\":\"41b5e704-b6a8-815d-8733-001d9c3d658e\",\"discussion_id\":\"41b5e704-b6a8-815e-9356-001c33b5e1ab\"}}"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  },
+  "delivery": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a1df5b-8983-7de1-93c6-74eccbbdc62d\"}"
+      }
+    ],
+    "isError": false
+  }
+}

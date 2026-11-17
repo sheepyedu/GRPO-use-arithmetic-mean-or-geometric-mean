@@ -1,0 +1,35 @@
+{
+  "observed_at": "2026-11-17T07:41:17.989056+00:00",
+  "phase": "initializing",
+  "formal_complete": 12,
+  "planned_runs": 20,
+  "current_seed": 71,
+  "current_seed_execution_terminal": 0,
+  "campaign_execution_terminal": 12,
+  "notion_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
+  "todos": [
+    0,
+    6
+  ],
+  "source_matches": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "config_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "failures": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "identity_matches": true,
+  "next_check_not_before": "2026-11-17T08:11:17.989056+00:00",
+  "note": "Unique dispatch and actual live identities confirmed; initial validation and first optimizer state pending."
+}
