@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-11-17T11:23:30.274910+00:00",
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-am",
+      "validation": {
+        "round": 20,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.916,
+            "mean_tokens": 637.303,
+            "truncation": 0.059,
+            "valid": 0.941
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.9666666666666667,
+            "mean_tokens": 436.45438596491226,
+            "truncation": 0.015789473684210527,
+            "valid": 0.9842105263157894
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.876,
+            "mean_tokens": 290.14,
+            "truncation": 0.007,
+            "valid": 0.993
+          },
+          "macro": 0.9195555555555556,
+          "mixed_weighted": 0.9186666666666666
+        }
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-gm",
+      "validation": {
+        "round": 20,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.918,
+            "mean_tokens": 649.055,
+            "truncation": 0.054,
+            "valid": 0.945
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.9754385964912281,
+            "mean_tokens": 437.1175438596491,
+            "truncation": 0.014035087719298246,
+            "valid": 0.9859649122807017
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.868,
+            "mean_tokens": 300.804,
+            "truncation": 0.009,
+            "valid": 0.991
+          },
+          "macro": 0.9204795321637427,
+          "mixed_weighted": 0.919859649122807
+        }
+      }
+    }
+  ]
+}
