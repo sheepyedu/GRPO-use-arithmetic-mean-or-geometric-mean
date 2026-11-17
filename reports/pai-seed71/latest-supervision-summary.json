@@ -1,6 +1,6 @@
 {
-  "observed_at": "2026-11-17T07:48:28.535642+00:00",
-  "phase": "round1_rollout",
+  "observed_at": "2026-11-17T08:18:51.246421+00:00",
+  "phase": "math_round3_optimizer_mixed_round4_rollout",
   "formal_complete": 12,
   "planned_runs": 20,
   "current_seed": 71,
@@ -30,8 +30,29 @@
     null
   ],
   "identity_matches": true,
-  "next_check_not_before": "2026-11-17T08:18:28.535642+00:00",
-  "note": "Four initial validations complete, round1rollout; optimizer updates0 and first complete optimizer state pending.",
+  "next_check_not_before": "2026-11-17T08:50:14.958441+00:00",
+  "note": "Original four identities/config/source and latest committed-ready match. First checkpoint CPU finite LoRA/AdamW/scheduler/RNG/schedule verified once. No final-test execution yet.",
   "initial_validation_verified": true,
-  "initial_validation_count_per_run": 2570
+  "initial_validation_count_per_run": 2570,
+  "updates": [
+    41,
+    41,
+    48,
+    48
+  ],
+  "update_deltas": [
+    41,
+    41,
+    48,
+    48
+  ],
+  "committed_rounds": [
+    2,
+    2,
+    3,
+    3
+  ],
+  "metrics_all_finite": true,
+  "current_seed_first_state_verified": true,
+  "first_state_verified_at": "2026-11-17T08:20:14.958441+00:00"
 }

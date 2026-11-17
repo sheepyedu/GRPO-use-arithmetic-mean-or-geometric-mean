@@ -1,3 +1,10 @@
+## 2026-11-17 16:20 · seed71已实际更新，四份首轮完整状态通过
+
+- 16:18:51门后实际，数学第3轮epoch2各41更新、混合第4轮rollout各48更新，较15:48增加41/41/48/48。原四driver/controller身份匹配、无FAILURE；已提交2/2/3/3轮metrics有限，source/config和COMMITTED/ready同，两对共同decision继续。新验证尚未到，原初始结果保持。
+- 16:20:14同wake一次必要CPU首状态核验，四checkpoint001全部文件SHA、各504 LoRA/1512 AdamW张量有限、scheduler16、Python/NumPy/Torch/CUDA RNG和数据调度齐全，无推理或optimizer重放。首完整状态已闭合，后续终态再按原门验收。
+- GPU0–3 util89/94/83/99%，显存41100/41308/71874/71858MiB，CPFS4438794174464B，无资源门异常；GPU4–7保护。seed71子1/6、16.67%，根7/9、77.78%，正式12/20。canonical下一门16:50:14.958441，原1800秒监督继续。
+- seed43固定审核已通过，原生结果评论41b5e704-b6a8-812f-9f27-001dd8d18f5d，Done6/6，独立重评分/配对停止/调度/状态与逐token一致，未据此作五seed或通用训练采纳结论。接续834a968。
+
 ## 2026-11-17 15:48 · seed71初始验证完成，进入首轮采样
 
 - 必要启动确认15:48:28实测四组原身份及source/config匹配，均完成初始2570题验证并进入round1 rollout，updates0、无FAILURE。初始GSM90.6%/ARC48.0702%/BoolQ75.4%四组相同。0到3卡util100/99/98/99%，显存71327/71329/71329/71329MiB，CPFS4463188246528B。原mixedGM raw cmdline SHA在初始化间变化，当前完整argv、PID/start/config/output精确匹配，原帧与必要argv核验均保存。
