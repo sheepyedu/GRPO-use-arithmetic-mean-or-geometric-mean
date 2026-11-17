@@ -1,3 +1,11 @@
+## 2026-11-17 14:59 · seed43数学两run训练与最终测试终态
+
+- 14:58:46例行实测，数学两组第60轮按paired_plateau停止，各960更新，COMPLETE=true且原driver3223394/3223396均gone，原数学parent真实codes[0,0]。GPU0/1显存0MiB与预期正常结束一致。14:59:42同wake必要终态补核确认两组formal COMPLETE、共享STOP_DECISION一致、各test-final指标与COMPLETE一致，分母1319+2376+3270=6965。完整AdamW/scheduler/RNG/LoRA及逐token验收待四组终态后执行，完整验收仍8/20。
+- 数学第60轮验证GSM8K AM95.0%/GM94.8%，相对原参考提升0.4/下降0.3pp，bad_checks2/2触发原停止。最终锁定GSM8K AM94.8446%/GM94.5413%，GM−AM约−0.3033pp，本seed部分结果保留，未作五seed结论。证据math-terminal.json及interim-validation-060.json。
+- 混合第70轮epoch2更新1115/1114，较14:28四组更新增量10/10/51/50。原混合driver与共享controller身份匹配，无FAILURE，已提交69/69轮，最新COMMITTED/ready及source/config匹配；第70轮验证尚未生成。GPU2/3利用率58/68%，显存42444/40868MiB，CPFS4544234782720B。保护GPU4–7及其他项目，未提前占空闲0/1启动下一seed。
+- 数学两项训练与最终测试待办已立即勾选并同步Notion，子3/6、50%，当前执行终态2/4、累计执行终态10/20与完整验收8/20分别记录；根7/9、77.78%保持。原同一automation提示已更新并回读ACTIVE，继续混合后四组验收、固定审核及原授权71/101。
+- 初核早约498秒，有界等待后例行读取，无提前SSH。补核为当前终态必要只读，最新门按该实测后1800秒更新为2026-11-17 15:29:42.065496 BJT，接续68a9609，原夜间授权保持，不重复派发或optimizer。
+
 ## 2026-11-17 14:28 · seed43数学60轮与混合67轮在途
 
 - 14:28:20门后单次只读实测，数学第60轮epoch1更新950/950，混合第67轮epoch1更新1064/1064，较13:57增加43/44/53/53。四原driver及共享controller身份匹配，无FAILURE或终态；59/59/66/66轮指标均有限，source/config及最新COMMITTED/ready匹配，两对原共同decision继续。数学第60轮验证尚未生成，最新数学第50轮与混合第60轮质量原证据保持。
