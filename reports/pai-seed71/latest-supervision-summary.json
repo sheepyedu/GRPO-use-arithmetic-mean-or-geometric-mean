@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T09:21:14.396114+00:00",
+  "observed_at": "2026-11-17T09:51:47.161130+00:00",
   "current_seed": 71,
   "phase": "training",
   "formal_complete": 12,
@@ -11,22 +11,22 @@
     6
   ],
   "updates": [
-    129,
-    130,
-    144,
-    144
+    171,
+    171,
+    189,
+    189
   ],
   "update_deltas": [
-    41,
     42,
-    48,
-    48
+    41,
+    45,
+    45
   ],
   "recorded_rounds": [
-    8,
-    8,
-    9,
-    9
+    10,
+    10,
+    11,
+    11
   ],
   "initial_validation_verified": true,
   "current_seed_first_state_verified": true,
@@ -49,7 +49,7 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-17T09:51:14.396114+00:00",
-  "gpu_csv": "0, 39666, 94\n1, 40762, 97\n2, 22986, 79\n3, 22986, 87\n4, 55636, 100\n5, 55060, 100\n6, 55066, 100\n7, 54106, 100",
-  "disk_free_bytes": 4225274740736
+  "next_check_not_before": "2026-11-17T10:21:47.161130+00:00",
+  "gpu_csv": "0, 42482, 94\n1, 41774, 97\n2, 40814, 90\n3, 39718, 92\n4, 75942, 100\n5, 75366, 100\n6, 75372, 100\n7, 74412, 100",
+  "disk_free_bytes": 4198200508416
 }

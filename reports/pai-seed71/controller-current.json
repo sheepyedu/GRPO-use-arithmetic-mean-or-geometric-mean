@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T09:21:14.396114+00:00",
+  "observed_at": "2026-11-17T09:51:47.161130+00:00",
   "driver_identities": {
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-am": {
       "pid": 3623282,
@@ -7,7 +7,7 @@
       "start_ticks": 58787578,
       "cmdline_sha256": "93fc17d635bc5cddf85823779aa07abefcc7ca3ff8c449f2a0fe63181b7eff1d",
       "matches_output": true,
-      "state": "R"
+      "state": "S"
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-gm": {
       "pid": 3623284,
@@ -15,7 +15,7 @@
       "start_ticks": 58787578,
       "cmdline_sha256": "501fec4a1944524e5b3098a823838cb2efe1c8fde1cb5864317f3e2bd763722f",
       "matches_output": true,
-      "state": "R"
+      "state": "S"
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-am": {
       "pid": 3623283,
@@ -23,7 +23,7 @@
       "start_ticks": 58787578,
       "cmdline_sha256": "f96ef7f8485a274499754e4ab4e9d265df38c3d0baee1596e59ee238a2ed96e6",
       "matches_output": true,
-      "state": "R"
+      "state": "S"
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-gm": {
       "pid": 3623285,
