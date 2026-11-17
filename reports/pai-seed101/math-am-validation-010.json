@@ -1,0 +1,31 @@
+{
+  "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am",
+  "validation": {
+    "round": 10,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.924,
+        "mean_tokens": 604.894,
+        "truncation": 0.051,
+        "valid": 0.948
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.5491228070175439,
+        "mean_tokens": 423.4894736842105,
+        "truncation": 0.015789473684210527,
+        "valid": 0.5561403508771929
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.833,
+        "mean_tokens": 289.804,
+        "truncation": 0.009,
+        "valid": 0.943
+      },
+      "macro": 0.7687076023391812,
+      "mixed_weighted": 0.807530701754386
+    }
+  }
+}

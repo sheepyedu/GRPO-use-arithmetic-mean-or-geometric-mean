@@ -1,3 +1,10 @@
+## 2026-11-18 05:57 · seed101第10轮验证与第11轮训练
+
+- 05:57:26门后单次actual，数学AM原第10轮pair_wait/GM validation010，两组160更新；混合第11轮epoch2各171更新，较04:54增加80/80/81/81。四driver/controller原PID/start/UID/fullcmd匹配，10轮连续metrics有限，source/config一致，无FAILURE。数学GM ready未提供是原验证在途，AM/混合COMMITTED与ready匹配；原数学第9轮、混合第10轮共同decision继续。
+- 混合第10轮加权AM91.5667%/GM91.6978%，GSM91.9%/91.5%、ARC96.6667%/96.4912%、BoolQ85.8%/87.3%，原停止参考更新且bad_checks0/0。数学AM第10轮GSM92.4%，GM同轮验证指标尚未生成，不借初始成绩冒第10轮结果。原mixed-validation-010.json和math-am-validation-010.json分别保留。
+- GPU0–3 util0/94/100/95%，显存72188/72138/40358/40482MiB。GPU0当前math AM正常pair_wait等待同对GM验证，原身份live且显存驻留，无停运故障证据。CPFS3467263344640B，无资源门异常。首状态CPU门已闭合未重复，正式完整验收16/20、子1/6、根7/9保持。
+- 下一例行门2026-11-17T22:57:26.752662+00:00，原每小时56分锚保持，门后检查。原night固定Nov18 10:00决策权交接尚未到，继续原科学预算和运行，其他项目保护。接续3b99987。
+
 ## 2026-11-18 04:55 · seed101第6轮，首状态CPU核验完成
 
 - 04:54:33门后单次实际，数学第6轮frozen_scores各80更新，混合第6轮epoch2各90更新，较03:50增加80/80/90/90。原四driver/controller PID/start/UID/fullcmd同，source/config及COMMITTED/ready匹配，5轮连续metrics有限，无FAILURE，原第5轮共同decision继续。
