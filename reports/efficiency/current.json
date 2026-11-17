@@ -1,5 +1,5 @@
 {
-  "phase": "seed43_math-am_checkpoint33_math-gm_pair_wait33_mixed-am_optimizer38_mixed-gm_optimizer38",
+  "phase": "seed43_math-am_pair_wait36_math-gm_optimizer36_mixed-am_optimizer41_mixed-gm_optimizer41",
   "ready": true,
   "next_seed": 43,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -29,7 +29,7 @@
     6
   ],
   "full_round_speed_verified": true,
-  "last_observed_at": "2026-11-17T01:25:10.776000+00:00",
+  "last_observed_at": "2026-11-17T01:55:30.115910+00:00",
   "latest_eta_observation": {
     "observed_at": "2026-11-16T08:59:20.132939+00:00",
     "evidence": "reports/pai-seed29/eta-status-20261116T1700.json",
@@ -43,7 +43,7 @@
     ],
     "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
   },
-  "updated_at": "2026-11-17T01:25:10.776000+00:00",
+  "updated_at": "2026-11-17T01:55:30.115910+00:00",
   "formal_complete": 8,
   "current_seed": 43,
   "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed43",
