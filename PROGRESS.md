@@ -1,3 +1,10 @@
+## 2026-11-18 06:57 · seed101数学第15轮、混合第17轮
+
+- 初核06:55早于最新门06:57:26约132秒，本机状态和Notion核对后60/60秒有界等门，06:57:48原metadata单次实际，无提前SSH。数学第15轮epoch1更新231/232，混合第17轮epoch1各259更新，较05:57增加71/72/88/88。四driver/controller原身份匹配，14/14/16/16轮metrics连续有限，source/config及COMMITTED/ready匹配，无FAILURE，原共同decision继续。
+- 原数学GM第10轮验证现已完成，GSM AM92.4%/GM91.3%，各原bad_checks0/0；上次AM等待已推进计算。完整两侧指标保存math-validation-010.json，不覆盖原AM单侧快照。混合最新第10轮加权91.5667%/91.6978%、计数0/0保持。第20轮尚未生成，未增加评测或重放optimizer。
+- GPU0–3 util65/76/58/51%，显存42108/40956/40898/43660MiB，CPFS3458262368256B无资源门异常。首状态CPU门已闭合不重复。正式完整验收16/20，子1/6、16.67%，根7/9、77.78%保持，其他项目保护。
+- 下一例行门2026-11-17T23:57:48.759440+00:00，原每小时56分锚保持，门后核验。原night固定Nov18 10:00决策权交接尚未到。接续4181fce。
+
 ## 2026-11-18 05:57 · seed101第10轮验证与第11轮训练
 
 - 05:57:26门后单次actual，数学AM原第10轮pair_wait/GM validation010，两组160更新；混合第11轮epoch2各171更新，较04:54增加80/80/81/81。四driver/controller原PID/start/UID/fullcmd匹配，10轮连续metrics有限，source/config一致，无FAILURE。数学GM ready未提供是原验证在途，AM/混合COMMITTED与ready匹配；原数学第9轮、混合第10轮共同decision继续。
