@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T18:36:33.381835+00:00",
+  "observed_at": "2026-11-17T19:36:50.204653+00:00",
   "root": "/mount-data/GRPO-Sequence-Ratio/runs/seed71",
   "pair": null,
   "pairs": [
@@ -42,44 +42,34 @@
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-am",
       "status": {
-        "time": 1794940271.6540506,
-        "phase": "evaluation",
+        "time": 1794941046.4874785,
+        "phase": "complete",
         "pid": 3623282,
-        "stage": "test-final",
-        "examples": 6965,
+        "rounds": 60,
         "updates": 960
       },
       "identity": {
         "pid": 3623282,
-        "uid": 0,
-        "start_ticks": 58787578,
-        "cmdline_sha256": "93fc17d635bc5cddf85823779aa07abefcc7ca3ff8c449f2a0fe63181b7eff1d",
-        "matches_output": true,
-        "state": "S"
+        "gone": true
       },
       "failure": null,
-      "complete": false
+      "complete": true
     },
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-gm",
       "status": {
-        "time": 1794940272.1942627,
-        "phase": "evaluation",
+        "time": 1794940993.0173857,
+        "phase": "complete",
         "pid": 3623284,
-        "stage": "test-final",
-        "examples": 6965,
+        "rounds": 60,
         "updates": 960
       },
       "identity": {
         "pid": 3623284,
-        "uid": 0,
-        "start_ticks": 58787578,
-        "cmdline_sha256": "501fec4a1944524e5b3098a823838cb2efe1c8fde1cb5864317f3e2bd763722f",
-        "matches_output": true,
-        "state": "S"
+        "gone": true
       },
       "failure": null,
-      "complete": false
+      "complete": true
     },
     {
       "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-am",
@@ -114,8 +104,8 @@
       "complete": true
     }
   ],
-  "gpu_csv": "0, 72616, 88\n1, 73430, 100\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3577825198080,
+  "gpu_csv": "0, 0, 0\n1, 0, 0\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3553145913344,
   "host_identity": {
     "hostname": "dsw-556082-75966ff79-6qp6m",
     "uid": 0,
@@ -124,8 +114,17 @@
     "cpfs": "rund:zYyiercu:cpfs-03001u70faecthn4bkib9-000001.cn-beijing.cpfs.aliyuncs.com:/"
   },
   "terminal_files": {
-    "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-four-complete.json": null,
-    "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-exit.json": null,
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-four-complete.json": {
+      "time": 1794941051.7410624,
+      "runs": 4
+    },
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-exit.json": {
+      "codes": [
+        0,
+        0
+      ],
+      "time": 1794941051.7215016
+    },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-exit.json": {
       "codes": [
         0,
@@ -133,7 +132,10 @@
       ],
       "time": 1794936649.2965806
     },
-    "/mount-data/GRPO-Sequence-Ratio/logs/seed71-run-v4-exit.json": null
+    "/mount-data/GRPO-Sequence-Ratio/logs/seed71-run-v4-exit.json": {
+      "code": 0,
+      "time": 1794941051.7782762
+    }
   },
   "training_progress": [
     {
@@ -1449,13 +1451,7 @@
       },
       "identity": {
         "pid": 3623277,
-        "uid": 0,
-        "start_ticks": 58787568,
-        "cmdline_sha256": "ca0bd60d68b617efc4940c3c9011d0398d026a425709c49793f951affd9acd6f",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     },
     {
@@ -1469,13 +1465,7 @@
       },
       "identity": {
         "pid": 3623277,
-        "uid": 0,
-        "start_ticks": 58787568,
-        "cmdline_sha256": "ca0bd60d68b617efc4940c3c9011d0398d026a425709c49793f951affd9acd6f",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     }
   ]

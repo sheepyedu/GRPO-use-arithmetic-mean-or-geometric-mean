@@ -1,0 +1,5 @@
+{
+  "code": 0,
+  "stdout": "{\"pid\": 3921674, \"start_ticks\": 63089017, \"uid\": 0, \"cmdline_sha256\": \"1d1de9e8678362fd132bf05efc201af43fe23f1c65f7dc33ea7516fb8c79194f\", \"source_sha256\": \"210cc2af4f11b070e1c76f3e1108e7de2007908344cc9277c986fa8bf45eeb6d\", \"original_source_sha256\": \"8383ff6875fbe90db1a1ebeac25b5f2a781eeffad6c5f0c7cb1d144b94349214\", \"output\": \"/mount-data/GRPO-Sequence-Ratio/runs/seed71/acceptance-v1\", \"time\": \"2026-11-17T19:37:36.599984+00:00\", \"cuda_visible_devices\": \"\"}\n",
+  "stderr": ""
+}

@@ -35,13 +35,13 @@
       9
     ],
     "formal_complete": [
-      12,
+      16,
       20
     ],
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
     "current_child_todos": [
-      3,
+      5,
       6
     ]
   },
@@ -54,7 +54,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-17T18:36:33.381835+00:00",
+  "updated_at": "2026-11-17T19:39:42.222813+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -99,7 +99,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "last_observed_at": "2026-11-17T18:36:33.381835+00:00",
+  "last_observed_at": "2026-11-17T19:36:50.204653+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",
@@ -117,14 +117,15 @@
   "completed_seeds": [
     17,
     29,
-    43
+    43,
+    71
   ],
-  "last_necessary_terminal_observed_at": "2026-11-17T17:35:57.654985+00:00",
-  "execution_terminal": 14,
-  "formal_complete": 12,
+  "last_necessary_terminal_observed_at": "2026-11-17T19:39:42.222813+00:00",
+  "execution_terminal": 16,
+  "formal_complete": 16,
   "current_seed_first_state_verified": true,
   "last_state_verification_at": "2026-11-17T08:20:14.958441+00:00",
   "supervision_interval_seconds": 3600,
   "current_seed": 71,
-  "execution_phase": "seed71_math_final_test_mixed_complete"
+  "execution_phase": "seed71_accepted_review_submission"
 }

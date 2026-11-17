@@ -1,15 +1,15 @@
 {
-  "observed_at": "2026-11-17T18:36:33.381835+00:00",
-  "necessary_terminal_observed_at": "2026-11-17T17:35:57.654985+00:00",
+  "observed_at": "2026-11-17T19:36:50.204653+00:00",
+  "necessary_terminal_observed_at": "2026-11-17T19:39:42.222813+00:00",
   "received_at": "2026-11-17T18:36:33.419001+00:00",
   "current_seed": 71,
-  "phase": "math_final_test_mixed_execution_complete",
-  "formal_complete": 12,
+  "phase": "complete_accepted_review_pending",
+  "formal_complete": 16,
   "planned_runs": 20,
-  "current_seed_execution_terminal": 2,
-  "campaign_execution_terminal": 14,
+  "current_seed_execution_terminal": 4,
+  "campaign_execution_terminal": 16,
   "todos": [
-    3,
+    5,
     6
   ],
   "updates": [
@@ -19,8 +19,8 @@
     960
   ],
   "update_deltas": [
-    85,
-    85,
+    0,
+    0,
     0,
     0
   ],
@@ -52,8 +52,8 @@
     null
   ],
   "next_check_not_before": "2026-11-17T19:36:33.419001+00:00",
-  "gpu_csv": "0, 72616, 88\n1, 73430, 100\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3577825198080,
+  "gpu_csv": "0, 0, 0\n1, 0, 0\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3551841484800,
   "supervision_interval_seconds": 3600,
   "mixed_parent_codes": [
     0,
@@ -63,13 +63,21 @@
     0.9322082857132954,
     0.9359694229824941
   ],
-  "final_state_acceptance": "Pending all four run execution terminals",
+  "final_state_acceptance": {
+    "result_sha256": "4cce712d72ea239e09816ffb54b579f4976619f7e1a32d9492ba2613ef923e98",
+    "verified_at": "2026-11-17T19:38:59.361594+00:00",
+    "exit": {
+      "code": 0,
+      "time": "2026-11-17T19:38:59.371121+00:00"
+    },
+    "verifier_gone": true
+  },
   "math_stop_reason": "paired_plateau",
   "math_bad_checks": {
     "am": 4,
     "gm": 2
   },
-  "math_final_test": "inflight",
+  "math_final_test": "complete",
   "math_validation60": [
     0.933,
     0.946

@@ -1,21 +1,13 @@
 {
-  "observed_at": "2026-11-17T18:36:33.381835+00:00",
+  "observed_at": "2026-11-17T19:36:50.204653+00:00",
   "driver_identities": {
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-am": {
       "pid": 3623282,
-      "uid": 0,
-      "start_ticks": 58787578,
-      "cmdline_sha256": "93fc17d635bc5cddf85823779aa07abefcc7ca3ff8c449f2a0fe63181b7eff1d",
-      "matches_output": true,
-      "state": "S"
+      "gone": true
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-math-gm": {
       "pid": 3623284,
-      "uid": 0,
-      "start_ticks": 58787578,
-      "cmdline_sha256": "501fec4a1944524e5b3098a823838cb2efe1c8fde1cb5864317f3e2bd763722f",
-      "matches_output": true,
-      "state": "S"
+      "gone": true
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed71/formal-mixed-am": {
       "pid": 3623283,
@@ -38,13 +30,7 @@
       },
       "identity": {
         "pid": 3623277,
-        "uid": 0,
-        "start_ticks": 58787568,
-        "cmdline_sha256": "ca0bd60d68b617efc4940c3c9011d0398d026a425709c49793f951affd9acd6f",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     },
     {
@@ -58,13 +44,7 @@
       },
       "identity": {
         "pid": 3623277,
-        "uid": 0,
-        "start_ticks": 58787568,
-        "cmdline_sha256": "ca0bd60d68b617efc4940c3c9011d0398d026a425709c49793f951affd9acd6f",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     }
   ],
@@ -89,5 +69,7 @@
     "claim_path": "/mount-data/GRPO-Sequence-Ratio/logs/seed71-launch-v4-claim.json",
     "preflight_source_files": 18
   },
-  "wrapper_identity_verified_at": "2026-11-17T17:35:57.654985+00:00"
+  "wrapper_identity_verified_at": "2026-11-17T17:35:57.654985+00:00",
+  "wrapper_terminal_verified_gone": true,
+  "terminal_identity_check_at": "2026-11-17T19:39:42.222813+00:00"
 }
