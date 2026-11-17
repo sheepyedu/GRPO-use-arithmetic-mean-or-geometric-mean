@@ -1,0 +1,112 @@
+{
+  "observed_at": "2026-11-17T19:50:21.518296+00:00",
+  "driver_identities": {
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am": {
+      "pid": 3924234,
+      "uid": 0,
+      "start_ticks": 63125653,
+      "cmdline_sha256": "0f391da9d9f8e9c7cdf6be18ede0a344b3dc92d509bcb96d604e1dcb27a71516",
+      "matches_output": true,
+      "state": "S"
+    },
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm": {
+      "pid": 3924236,
+      "uid": 0,
+      "start_ticks": 63125654,
+      "cmdline_sha256": "ccec6ed2704097b412a5c14d96b5b7f1611e9bc19e2839e1d147dc0056787d76",
+      "matches_output": true,
+      "state": "S"
+    },
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am": {
+      "pid": 3924235,
+      "uid": 0,
+      "start_ticks": 63125653,
+      "cmdline_sha256": "5774a8fedd41d27a7ac7d648f7f6d22c6620d2aed40ee85ae9b326e9b9c4f139",
+      "matches_output": true,
+      "state": "S"
+    },
+    "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm": {
+      "pid": 3924237,
+      "uid": 0,
+      "start_ticks": 63125654,
+      "cmdline_sha256": "397418bb0169bc10cc2bf451e99f05fad20859238d23a7fe7817ea1741693cbd",
+      "matches_output": true,
+      "state": "S"
+    }
+  },
+  "controllers": [
+    {
+      "path": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-control/controller.json",
+      "controller": {
+        "pid": 3924230,
+        "start_ticks": 63125646,
+        "config_sha256": "106114538f503b933e7c912cef68bc3125bad648561202406aae013e270c4ed7",
+        "environment": "math",
+        "seed": 101
+      },
+      "identity": {
+        "pid": 3924230,
+        "uid": 0,
+        "start_ticks": 63125646,
+        "cmdline_sha256": "e3dba1eb9f3d20313b3f038ff384e41c34f5f4ea0a5e758965b7ba0e209853b3",
+        "state": "S",
+        "matches_original_start": true,
+        "matches_config": true,
+        "matches_output": true
+      }
+    },
+    {
+      "path": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-control/controller.json",
+      "controller": {
+        "pid": 3924230,
+        "start_ticks": 63125646,
+        "config_sha256": "106114538f503b933e7c912cef68bc3125bad648561202406aae013e270c4ed7",
+        "environment": "mixed",
+        "seed": 101
+      },
+      "identity": {
+        "pid": 3924230,
+        "uid": 0,
+        "start_ticks": 63125646,
+        "cmdline_sha256": "e3dba1eb9f3d20313b3f038ff384e41c34f5f4ea0a5e758965b7ba0e209853b3",
+        "state": "S",
+        "matches_original_start": true,
+        "matches_config": true,
+        "matches_output": true
+      }
+    }
+  ],
+  "wrapper": {
+    "wrapper_pid": 3924228,
+    "start_ticks": 63125643,
+    "uid": 0,
+    "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
+    "time": "2026-11-17T19:43:42.854985+00:00",
+    "source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
+    "config_sha256": "106114538f503b933e7c912cef68bc3125bad648561202406aae013e270c4ed7",
+    "archive_sha256": "65d086a3127f73afbd3f7073e4258d891ea3cc9d34cc823a59cfb30611dc35c2",
+    "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
+    "gpu_scope": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "state": "spawned",
+    "wrapper_source_sha256": "855df3590a3244cf2546f47894a83b5a094a7347cdfd7202ac7b4704aa77a6d3",
+    "claim_path": "/mount-data/GRPO-Sequence-Ratio/logs/seed101-launch-v4-claim.json",
+    "preflight_source_files": 18
+  },
+  "wrapper_actual_identity": {
+    "pid": 3924228,
+    "uid": 0,
+    "start_ticks": 63125643,
+    "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
+    "argv": [
+      "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+      "-u",
+      "/mount-data/GRPO-Sequence-Ratio/logs/seed101-run-v4-wrapper.py"
+    ]
+  },
+  "wrapper_actual_identity_observed_at": "2026-11-17T19:48:55.913211+00:00"
+}

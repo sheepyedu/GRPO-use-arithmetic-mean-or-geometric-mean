@@ -1,0 +1,76 @@
+{
+  "page_id": "41b5e704-b6a8-816a-9084-dfc24febba52",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "6b8f14b254395b53ad7fbc398faaac198dbbb564",
+  "scope": "seed71四个正式GRPO run的训练、锁定测试、完整状态、逐token与资源释放验收，后续seed101及五seed汇总继续。",
+  "acceptance_criteria": [
+    "冻结source-v4和data-v1，原始Qwen3-8B独立初始化，数学与混合各60轮/960更新，原paired_plateau共同停止",
+    "四run COMPLETE无FAILURE，两parent均[0,0]及wrapper0，各6965题锁定最终测试完成",
+    "COMMITTED全SHA、完整LoRA/AdamW/scheduler/RNG/数据调度实际CPU读取有限，原owner和CPU verifier gone",
+    "240训练rollout、28验证及4最终测试预测逐token核算，输出含thinking，输入口径明确",
+    "数学GM第32轮KL7359.608/loss73.596与原数学40轮浮点阈值局限如实披露，不据有限状态声称优化平稳"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed71-results.md",
+      "version": "SHA256 32c75b5af44cada397e20de3776f7ac250e9436e4928175c7c0d1d6ebe400cc0",
+      "supports": "结果、时间、token、KL与原浮点阈值实现局限"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed71-summary.json",
+      "version": "SHA256 153911dcb0b88254978157961b88fc3fd99090b90bd8d018dfcec90b202d1c2d",
+      "supports": "原生四组汇总"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/final-verification.json",
+      "version": "SHA256 4cce712d72ea239e09816ffb54b579f4976619f7e1a32d9492ba2613ef923e98",
+      "supports": "完整状态与逐token CPU验收"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/final-verification-receipt.json",
+      "version": "SHA256 bb82992232aa4dc9b199a7608086884cc05704ea9e33084c3de41cbd0b275e3f",
+      "supports": "原RESULT SHA、exit0与verifier gone"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/latest-status.json",
+      "version": "SHA256 8ef4ad784c02d44e356786ef5eae49305578c79e0137e0c63d44bfc96407cbd1",
+      "supports": "四run/两parent/wrapper终态与资源释放"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/terminal-source-resource-check.json",
+      "version": "SHA256 e1c7423f3391b0f5f998a3291fa29bc94d76a117ecebfe87e914210137e3d3e3",
+      "supports": "18科学源同、旧owner gone、GPU0–3空闲和101配置差异"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/math-gm-kl-spike-context.json",
+      "version": "SHA256 4c94a8e42794c4ea6cf74016be669127be2e02f2533b9f7022fda607e478b2c4",
+      "supports": "数学GM31/32/33原metrics与KL异常"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed71/math040-threshold-boundary.json",
+      "version": "SHA256 6079ebb8f18e0a7c9170ca2435c32dbc13282089800427dcf923d3c7254377e3",
+      "supports": "数学40轮浮点阈值边界原证据"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed71/acceptance-v1/RESULT.json",
+      "version": "SHA256 4cce712d72ea239e09816ffb54b579f4976619f7e1a32d9492ba2613ef923e98",
+      "supports": "远端CPU原始验收"
+    }
+  ],
+  "verification": [
+    "2026-11-18 03:38:59CPU验收exit0，四LoRA各504和AdamW各1512张量有限，scheduler960/RNG/数据调度与COMMITTED全SHA闭合",
+    "数学主测试93.707354/94.541319%，混合加权93.220829/93.596942%，每run测试6965题",
+    "训练输出70438976、验证31691788、测试10496614、总输出112627378、输入24829276、合计137456654 token",
+    "原driver/controller/wrapper/verifier均gone，03:36及03:39 GPU0–3显存0/compute-app空，18科学源码同，原21项测试复用"
+  ],
+  "limitations": [
+    "正式完整验收16/20，seed101与五seed统计待完成",
+    "数学GM第32轮原有限KL7359.608/loss73.596尖峰，具体token和机制尚未定位，需与最终成绩共同解释",
+    "数学第40轮AM名义提升0.5pp因原Python浮点previous+delta边界未重置计数，原decision与科学源冻结保真",
+    "seed17 source-v2与后续source-v4的后端及训练暴露差异需在五seed统计披露",
+    "物理缓存/prefill及HF重复前反向token处理量未测，执行方自查不签发训练采纳"
+  ],
+  "supersedes": null
+}

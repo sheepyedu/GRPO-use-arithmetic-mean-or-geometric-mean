@@ -1,0 +1,114 @@
+{
+  "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am": {
+    "round": 0,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.906,
+        "mean_tokens": 680.476,
+        "truncation": 0.068,
+        "valid": 0.927
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.4807017543859649,
+        "mean_tokens": 447.2964912280702,
+        "truncation": 0.021052631578947368,
+        "valid": 0.48771929824561405
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.754,
+        "mean_tokens": 305.761,
+        "truncation": 0.01,
+        "valid": 0.852
+      },
+      "macro": 0.7135672514619884,
+      "mixed_weighted": 0.7616754385964912
+    }
+  },
+  "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm": {
+    "round": 0,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.906,
+        "mean_tokens": 680.476,
+        "truncation": 0.068,
+        "valid": 0.927
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.4807017543859649,
+        "mean_tokens": 447.2964912280702,
+        "truncation": 0.021052631578947368,
+        "valid": 0.48771929824561405
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.754,
+        "mean_tokens": 305.761,
+        "truncation": 0.01,
+        "valid": 0.852
+      },
+      "macro": 0.7135672514619884,
+      "mixed_weighted": 0.7616754385964912
+    }
+  },
+  "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am": {
+    "round": 0,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.908,
+        "mean_tokens": 687.314,
+        "truncation": 0.073,
+        "valid": 0.926
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.47368421052631576,
+        "mean_tokens": 442.9719298245614,
+        "truncation": 0.014035087719298246,
+        "valid": 0.4807017543859649
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.745,
+        "mean_tokens": 311.726,
+        "truncation": 0.011,
+        "valid": 0.833
+      },
+      "macro": 0.7088947368421054,
+      "mixed_weighted": 0.758671052631579
+    }
+  },
+  "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm": {
+    "round": 0,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.908,
+        "mean_tokens": 687.314,
+        "truncation": 0.073,
+        "valid": 0.926
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.47368421052631576,
+        "mean_tokens": 442.9719298245614,
+        "truncation": 0.014035087719298246,
+        "valid": 0.4807017543859649
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.745,
+        "mean_tokens": 311.726,
+        "truncation": 0.011,
+        "valid": 0.833
+      },
+      "macro": 0.7088947368421054,
+      "mixed_weighted": 0.758671052631579
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-17T19:50:21.518296+00:00",
+  "received_at": "2026-11-17T19:50:21.529438+00:00",
+  "current_seed": 101,
+  "phase": "training_round1_rollout",
+  "formal_complete": 16,
+  "planned_runs": 20,
+  "current_seed_execution_terminal": 0,
+  "campaign_execution_terminal": 16,
+  "todos": [
+    1,
+    6
+  ],
+  "updates": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "update_deltas": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "delta_scope": "New seed101, no cross-seed subtraction",
+  "recorded_rounds": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "initial_validation_verified": true,
+  "current_seed_first_state_verified": false,
+  "identity_matches": true,
+  "source_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "config_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "failures": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "next_check_not_before": "2026-11-17T20:50:21.529438+00:00",
+  "gpu_csv": "0, 71329, 99\n1, 71329, 100\n2, 71303, 97\n3, 71303, 100\n4, 3, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3547005452288,
+  "supervision_interval_seconds": 3600
+}

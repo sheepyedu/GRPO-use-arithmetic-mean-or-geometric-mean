@@ -1,5 +1,5 @@
 {
-  "phase": "seed71_accepted_review_submission",
+  "phase": "seed101_training",
   "ready": true,
   "next_seed": 101,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -9,8 +9,8 @@
     "real H20 timing and memory",
     "candidate full tests"
   ],
-  "active_training": "/mount-data/GRPO-Sequence-Ratio/runs/seed71",
-  "notion_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
+  "active_training": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
+  "notion_child": "41b5e704-b6a8-8108-911b-dab774d58c0a",
   "tests_passed": 21,
   "validated_changes": [
     "CUDA Graph and64generation slots",
@@ -25,11 +25,11 @@
   ],
   "initial_validation_verified": true,
   "current_notion_todos": [
-    5,
+    1,
     6
   ],
   "full_round_speed_verified": false,
-  "last_observed_at": "2026-11-17T19:36:50.204653+00:00",
+  "last_observed_at": "2026-11-17T19:50:21.518296+00:00",
   "latest_eta_observation": {
     "observed_at": "2026-11-17T07:48:28.535642+00:00",
     "current_seed_remaining_hours": [
@@ -42,18 +42,19 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "updated_at": "2026-11-17T19:39:42.222813+00:00",
+  "updated_at": "2026-11-17T19:50:21.518296+00:00",
   "formal_complete": 16,
-  "current_seed": 71,
-  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed71",
+  "current_seed": 101,
+  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
   "initial_validation_history": {
     "seed29": true,
     "seed43": true,
-    "seed71": true
+    "seed71": true,
+    "seed101": true
   },
   "last_necessary_terminal_observed_at": "2026-11-17T19:39:42.222813+00:00",
   "execution_terminal": 16,
-  "current_seed_first_state_verified": true,
-  "last_state_verification_at": "2026-11-17T08:20:14.958441+00:00",
+  "current_seed_first_state_verified": false,
+  "last_state_verification_at": null,
   "supervision_interval_seconds": 3600
 }

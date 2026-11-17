@@ -1,0 +1,21 @@
+{
+  "wrapper_pid": 3924228,
+  "start_ticks": 63125643,
+  "uid": 0,
+  "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
+  "time": "2026-11-17T19:43:42.854985+00:00",
+  "source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
+  "config_sha256": "106114538f503b933e7c912cef68bc3125bad648561202406aae013e270c4ed7",
+  "archive_sha256": "65d086a3127f73afbd3f7073e4258d891ea3cc9d34cc823a59cfb30611dc35c2",
+  "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
+  "gpu_scope": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "state": "spawned",
+  "wrapper_source_sha256": "855df3590a3244cf2546f47894a83b5a094a7347cdfd7202ac7b4704aa77a6d3",
+  "claim_path": "/mount-data/GRPO-Sequence-Ratio/logs/seed101-launch-v4-claim.json",
+  "preflight_source_files": 18
+}

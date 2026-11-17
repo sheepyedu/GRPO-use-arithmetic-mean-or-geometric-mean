@@ -14,15 +14,14 @@
       2,
       3
     ],
-    "current_seed": 71,
+    "current_seed": 101,
     "remaining_seeds": [
-      71,
       101
     ],
-    "next_seed": 101
+    "next_seed": null
   },
   "active_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
-  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed71",
+  "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
   "notion": {
     "child": "4195e704-b6a8-8130-8564-c2afff182ec4",
     "parent": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
@@ -39,13 +38,13 @@
       20
     ],
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
-    "current_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
+    "current_child": "41b5e704-b6a8-8108-911b-dab774d58c0a",
     "current_child_todos": [
-      5,
+      1,
       6
     ]
   },
-  "next_action": "Supervise original seed71 paired training, validation, terminal test and full acceptance; submit fixed review then continue101 and five-seed analysis.",
+  "next_action": "Verify seed101 original startup and initial validation then hourly paired supervision; full final acceptance and five-seed analysis after terminal.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -54,7 +53,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-17T19:39:42.222813+00:00",
+  "updated_at": "2026-11-17T19:50:21.518296+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -99,7 +98,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "last_observed_at": "2026-11-17T19:36:50.204653+00:00",
+  "last_observed_at": "2026-11-17T19:50:21.518296+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",
@@ -123,9 +122,9 @@
   "last_necessary_terminal_observed_at": "2026-11-17T19:39:42.222813+00:00",
   "execution_terminal": 16,
   "formal_complete": 16,
-  "current_seed_first_state_verified": true,
-  "last_state_verification_at": "2026-11-17T08:20:14.958441+00:00",
+  "current_seed_first_state_verified": false,
+  "last_state_verification_at": null,
   "supervision_interval_seconds": 3600,
-  "current_seed": 71,
-  "execution_phase": "seed71_accepted_review_submission"
+  "current_seed": 101,
+  "execution_phase": "seed101_training"
 }

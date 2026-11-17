@@ -1,0 +1,122 @@
+{
+  "observed_at": "2026-11-17T19:48:55.913211+00:00",
+  "processes": [
+    {
+      "pid": 3924228,
+      "uid": 0,
+      "start_ticks": 63125643,
+      "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "/mount-data/GRPO-Sequence-Ratio/logs/seed101-run-v4-wrapper.py"
+      ]
+    },
+    {
+      "pid": 3924230,
+      "uid": 0,
+      "start_ticks": 63125646,
+      "cmdline_sha256": "e3dba1eb9f3d20313b3f038ff384e41c34f5f4ea0a5e758965b7ba0e209853b3",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "scripts/run_seed.py",
+        "--config",
+        "configs/pai-seed101.json",
+        "--output",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
+        "--phase",
+        "formal",
+        "--parallel-environments"
+      ]
+    },
+    {
+      "pid": 3924234,
+      "uid": 0,
+      "start_ticks": 63125653,
+      "cmdline_sha256": "0f391da9d9f8e9c7cdf6be18ede0a344b3dc92d509bcb96d604e1dcb27a71516",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "-m",
+        "src.train",
+        "--config",
+        "/mount-data/GRPO-Sequence-Ratio/source-v4/configs/pai-seed101.json",
+        "--environment",
+        "math",
+        "--operator",
+        "am",
+        "--output",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am",
+        "--pair-control",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-control"
+      ]
+    },
+    {
+      "pid": 3924236,
+      "uid": 0,
+      "start_ticks": 63125654,
+      "cmdline_sha256": "ccec6ed2704097b412a5c14d96b5b7f1611e9bc19e2839e1d147dc0056787d76",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "-m",
+        "src.train",
+        "--config",
+        "/mount-data/GRPO-Sequence-Ratio/source-v4/configs/pai-seed101.json",
+        "--environment",
+        "math",
+        "--operator",
+        "gm",
+        "--output",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm",
+        "--pair-control",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-control"
+      ]
+    },
+    {
+      "pid": 3924235,
+      "uid": 0,
+      "start_ticks": 63125653,
+      "cmdline_sha256": "5774a8fedd41d27a7ac7d648f7f6d22c6620d2aed40ee85ae9b326e9b9c4f139",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "-m",
+        "src.train",
+        "--config",
+        "/mount-data/GRPO-Sequence-Ratio/source-v4/configs/pai-seed101.json",
+        "--environment",
+        "mixed",
+        "--operator",
+        "am",
+        "--output",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am",
+        "--pair-control",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-control"
+      ]
+    },
+    {
+      "pid": 3924237,
+      "uid": 0,
+      "start_ticks": 63125654,
+      "cmdline_sha256": "397418bb0169bc10cc2bf451e99f05fad20859238d23a7fe7817ea1741693cbd",
+      "argv": [
+        "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
+        "-u",
+        "-m",
+        "src.train",
+        "--config",
+        "/mount-data/GRPO-Sequence-Ratio/source-v4/configs/pai-seed101.json",
+        "--environment",
+        "mixed",
+        "--operator",
+        "gm",
+        "--output",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm",
+        "--pair-control",
+        "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-control"
+      ]
+    }
+  ]
+}
