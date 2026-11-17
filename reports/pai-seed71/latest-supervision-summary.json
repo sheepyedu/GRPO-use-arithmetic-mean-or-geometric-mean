@@ -1,32 +1,34 @@
 {
-  "observed_at": "2026-11-17T15:29:39.791423+00:00",
+  "observed_at": "2026-11-17T17:35:36.467692+00:00",
+  "necessary_terminal_observed_at": "2026-11-17T17:35:57.654985+00:00",
+  "received_at": "2026-11-17T17:35:57.672400+00:00",
   "current_seed": 71,
-  "phase": "training",
+  "phase": "math_training_mixed_execution_complete",
   "formal_complete": 12,
   "planned_runs": 20,
-  "current_seed_execution_terminal": 0,
-  "campaign_execution_terminal": 12,
+  "current_seed_execution_terminal": 2,
+  "campaign_execution_terminal": 14,
   "todos": [
-    1,
+    3,
     6
   ],
   "updates": [
-    684,
-    685,
-    775,
-    775
+    875,
+    875,
+    960,
+    960
   ],
   "update_deltas": [
-    44,
-    45,
-    57,
-    57
+    191,
+    190,
+    185,
+    185
   ],
   "recorded_rounds": [
-    42,
-    42,
-    48,
-    48
+    54,
+    54,
+    60,
+    60
   ],
   "initial_validation_verified": true,
   "current_seed_first_state_verified": true,
@@ -49,8 +51,17 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-17T16:29:39.791423+00:00",
-  "gpu_csv": "0, 41150, 100\n1, 41020, 97\n2, 42974, 96\n3, 42976, 97\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3994617380864,
-  "supervision_interval_seconds": 3600
+  "next_check_not_before": "2026-11-17T18:35:57.672400+00:00",
+  "gpu_csv": "0, 41012, 92\n1, 41912, 96\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3787678810112,
+  "supervision_interval_seconds": 3600,
+  "mixed_parent_codes": [
+    0,
+    0
+  ],
+  "mixed_test_weighted": [
+    0.9322082857132954,
+    0.9359694229824941
+  ],
+  "final_state_acceptance": "Pending all four run execution terminals"
 }

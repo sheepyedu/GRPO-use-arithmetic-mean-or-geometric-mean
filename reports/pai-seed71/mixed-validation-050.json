@@ -1,0 +1,58 @@
+{
+  "formal-mixed-am": {
+    "round": 50,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.932,
+        "mean_tokens": 599.206,
+        "truncation": 0.036,
+        "valid": 0.964
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.9701754385964912,
+        "mean_tokens": 431.45087719298243,
+        "truncation": 0.012280701754385965,
+        "valid": 0.987719298245614
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.895,
+        "mean_tokens": 283.948,
+        "truncation": 0.005,
+        "valid": 0.995
+      },
+      "macro": 0.9323918128654971,
+      "mixed_weighted": 0.9322938596491228
+    }
+  },
+  "formal-mixed-gm": {
+    "round": 50,
+    "metrics": {
+      "gsm8k": {
+        "count": 1000,
+        "accuracy": 0.929,
+        "mean_tokens": 584.995,
+        "truncation": 0.039,
+        "valid": 0.96
+      },
+      "arc": {
+        "count": 570,
+        "accuracy": 0.9666666666666667,
+        "mean_tokens": 443.3263157894737,
+        "truncation": 0.015789473684210527,
+        "valid": 0.9842105263157894
+      },
+      "boolq": {
+        "count": 1000,
+        "accuracy": 0.878,
+        "mean_tokens": 297.802,
+        "truncation": 0.006,
+        "valid": 0.987
+      },
+      "macro": 0.9245555555555556,
+      "mixed_weighted": 0.9256666666666667
+    }
+  }
+}
