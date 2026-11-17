@@ -41,11 +41,11 @@
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
     "current_child_todos": [
-      0,
+      1,
       6
     ]
   },
-  "next_action": "Confirm seed71 initial validation and first optimizer state, supervise original paired training, final evaluation and full acceptance, submit fixed review, continue101 and five-seed analysis.",
+  "next_action": "Supervise original seed71 after verified initial validation and round1rollout. Confirm first optimizer state at next routine gate, then paired stopping/final test/acceptance and submit review, continue101.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -54,7 +54,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-17T07:41:17.989056+00:00",
+  "updated_at": "2026-11-17T07:48:28.535642+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -88,19 +88,18 @@
   "general_acceleration_skill": "/Users/mac/.codex/skills/inference-training-acceleration/SKILL.md",
   "historical_source_v2": "/mount-data/GRPO-Sequence-Ratio/source-v2",
   "latest_eta_observation": {
-    "observed_at": "2026-11-16T08:59:20.132939+00:00",
-    "evidence": "reports/pai-seed29/eta-status-20261116T1700.json",
+    "observed_at": "2026-11-17T07:48:28.535642+00:00",
     "current_seed_remaining_hours": [
-      10,
-      11
+      11,
+      13
     ],
     "campaign_remaining_hours": [
-      48,
-      52
+      24,
+      26
     ],
-    "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
+    "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "last_observed_at": "2026-11-17T07:41:17.989056+00:00",
+  "last_observed_at": "2026-11-17T07:48:28.535642+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",

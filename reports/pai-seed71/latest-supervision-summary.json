@@ -1,6 +1,6 @@
 {
-  "observed_at": "2026-11-17T07:41:17.989056+00:00",
-  "phase": "initializing",
+  "observed_at": "2026-11-17T07:48:28.535642+00:00",
+  "phase": "round1_rollout",
   "formal_complete": 12,
   "planned_runs": 20,
   "current_seed": 71,
@@ -8,14 +8,14 @@
   "campaign_execution_terminal": 12,
   "notion_child": "41b5e704-b6a8-816a-9084-dfc24febba52",
   "todos": [
-    0,
+    1,
     6
   ],
   "source_matches": [
-    null,
-    null,
-    null,
-    null
+    true,
+    true,
+    true,
+    true
   ],
   "config_matches": [
     true,
@@ -30,6 +30,8 @@
     null
   ],
   "identity_matches": true,
-  "next_check_not_before": "2026-11-17T08:11:17.989056+00:00",
-  "note": "Unique dispatch and actual live identities confirmed; initial validation and first optimizer state pending."
+  "next_check_not_before": "2026-11-17T08:18:28.535642+00:00",
+  "note": "Four initial validations complete, round1rollout; optimizer updates0 and first complete optimizer state pending.",
+  "initial_validation_verified": true,
+  "initial_validation_count_per_run": 2570
 }

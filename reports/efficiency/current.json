@@ -1,5 +1,5 @@
 {
-  "phase": "seed71_initializing",
+  "phase": "seed71_round1_rollout",
   "ready": true,
   "next_seed": 71,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -23,33 +23,33 @@
     "padding batch2/4",
     "compiled token statistics"
   ],
-  "initial_validation_verified": false,
+  "initial_validation_verified": true,
   "current_notion_todos": [
-    0,
+    1,
     6
   ],
   "full_round_speed_verified": false,
-  "last_observed_at": "2026-11-17T07:41:17.989056+00:00",
+  "last_observed_at": "2026-11-17T07:48:28.535642+00:00",
   "latest_eta_observation": {
-    "observed_at": "2026-11-16T08:59:20.132939+00:00",
-    "evidence": "reports/pai-seed29/eta-status-20261116T1700.json",
+    "observed_at": "2026-11-17T07:48:28.535642+00:00",
     "current_seed_remaining_hours": [
-      10,
-      11
+      11,
+      13
     ],
     "campaign_remaining_hours": [
-      48,
-      52
+      24,
+      26
     ],
-    "assumption": "12-hour soft budget per environment plus final evaluation and acceptance; paired early stopping can finish sooner"
+    "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "updated_at": "2026-11-17T07:41:17.989056+00:00",
+  "updated_at": "2026-11-17T07:48:28.535642+00:00",
   "formal_complete": 12,
   "current_seed": 71,
   "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed71",
   "initial_validation_history": {
     "seed29": true,
-    "seed43": true
+    "seed43": true,
+    "seed71": true
   },
   "last_necessary_terminal_observed_at": "2026-11-17T07:30:48.909348+00:00",
   "execution_terminal": 12
