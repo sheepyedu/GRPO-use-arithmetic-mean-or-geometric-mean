@@ -1,7 +1,7 @@
 {
-  "observed_at": "2026-11-17T14:59:12.318530+00:00",
+  "observed_at": "2026-11-17T15:29:39.791423+00:00",
   "current_seed": 71,
-  "phase": "math_validation040_mixed45_optimizer",
+  "phase": "training",
   "formal_complete": 12,
   "planned_runs": 20,
   "current_seed_execution_terminal": 0,
@@ -11,22 +11,22 @@
     6
   ],
   "updates": [
-    640,
-    640,
-    718,
-    718
+    684,
+    685,
+    775,
+    775
   ],
   "update_deltas": [
     44,
-    43,
-    62,
-    62
+    45,
+    57,
+    57
   ],
   "recorded_rounds": [
-    40,
-    40,
-    44,
-    44
+    42,
+    42,
+    48,
+    48
   ],
   "initial_validation_verified": true,
   "current_seed_first_state_verified": true,
@@ -49,7 +49,8 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-17T15:29:12.318530+00:00",
-  "gpu_csv": "0, 72388, 92\n1, 73276, 89\n2, 39924, 94\n3, 41786, 78\n4, 75942, 100\n5, 75366, 100\n6, 75372, 100\n7, 74412, 100",
-  "disk_free_bytes": 4122086473728
+  "next_check_not_before": "2026-11-17T16:29:39.791423+00:00",
+  "gpu_csv": "0, 41150, 100\n1, 41020, 97\n2, 42974, 96\n3, 42976, 97\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3994617380864,
+  "supervision_interval_seconds": 3600
 }

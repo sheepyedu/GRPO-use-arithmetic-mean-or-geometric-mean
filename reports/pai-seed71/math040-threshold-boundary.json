@@ -1,0 +1,13 @@
+{
+  "score": 0.942,
+  "previous": 0.937,
+  "min_delta": 0.005,
+  "threshold_actual": 0.9420000000000001,
+  "comparison_result": false,
+  "native_bad_checks": {
+    "am": 2,
+    "gm": 0
+  },
+  "source": "src/early_stop.py uses score >= previous + delta",
+  "scope": "Local arithmetic documentary check, no model or optimizer action"
+}

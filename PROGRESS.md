@@ -1,3 +1,9 @@
+## 2026-11-17 23:29 · seed71数学第40轮结果及用户改为每小时监督
+
+- 23:29:39门后单次实际，数学第43轮epoch2更新684/685、混合第49轮epoch1各775更新，较22:59增加44/45/57/57。原四driver/controller身份匹配，无FAILURE；42/42/48/48轮metrics有限，source/config及COMMITTED/ready匹配，原共同decision继续。GPU0–3 util100/97/96/97%，显存41150/41020/42974/42976MiB，CPFS3994617380864B，高于资源门限，其他项目保护。
+- 数学40轮GSM AM94.2%/GM94.3%，原bad_checks2/0。AM名义较原93.7%参考提升0.5pp，但原源码比较score>=previous+delta时0.937+0.005=0.9420000000000001，实际0.942未通过，计数继续2。GM+0.6pp计数0使原成对规则继续。该真实浮点边界存math040-threshold-boundary.json，完整验证存math-validation-040.json，保原科学源与原生decision作为实现局限。无模型或optimizer重放。
+- 完整验收12/20，子1/6、16.67%，根7/9、77.78%，Notion已同步。用户在本wake明确后续1h检查，原同一automation已改3600秒/每小时30分并回读ACTIVE，canonical门依据最新actual+3600为2026-11-18 00:29:39.791423。当前文档及三状态同步，必要真实故障与终态续接沿既有授权。初核早约216秒，有界等门后读取，接续da4f11b。
+
 ## 2026-11-17 22:59 · seed71数学第40轮验证在途
 
 - 22:59:12门后单次实际，数学validation-040各640更新，混合第45轮epoch2各718更新，较22:28增加44/43/62/62。四driver/controller原身份匹配，无FAILURE；40/40/44/44轮metrics有限，source/config匹配。数学验证在途ready为null、共同decision仍第39轮，混合COMMITTED/ready匹配、共同第44轮继续。
