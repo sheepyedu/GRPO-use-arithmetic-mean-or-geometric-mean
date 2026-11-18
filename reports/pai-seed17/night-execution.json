@@ -53,7 +53,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-18T03:06:28.581468+00:00",
+  "updated_at": "2026-11-18T04:08:27.687162+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -98,7 +98,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "last_observed_at": "2026-11-18T03:06:28.581468+00:00",
+  "last_observed_at": "2026-11-18T04:08:27.687162+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",

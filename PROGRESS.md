@@ -1,3 +1,10 @@
+## 2026-11-18 12:08 · seed101数学第44轮及第40轮验证
+
+- 12:08:27门后原metadata单次实际，数学第44轮rollout各688更新，较11:06增加90/89，混合共同30轮480更新已完成，增量0/0。数学两driver/controller原身份匹配，混合原两driver gone/父[0,0]保持。43/43/30/30轮metrics连续有限，source/config及COMMITTED/ready匹配，无FAILURE。
+- 数学第40轮GSM AM94.1%/GM93.5%，原bad_checks2/1，GM尚未连续两次故保持原成对规则，未人为暂停。完整两侧验证保存math-validation-040.json。混合最终加权92.0844%/92.1972%保持，无新增评测或optimizer动作。首状态门已闭合不重复，四终态后一次完整CPU状态与逐token最终验收。
+- GPU0–3 util100/0/0/0%，显存71838/71748/0/0MiB；GPU1原rollout身份/显存驻留且更新推进，单帧0无停运证据，具体瞬时等待原因未提供。GPU2/3正常完成释放。CPFS3343556542464B无资源门异常，保护其他项目。执行终态18/20、完整验收16/20，子3/6、50%，根7/9、77.78%，Notion已同步。
+- canonical下一门2026-11-18T05:08:27.719258+00:00，同一每小时heartbeat锚对齐09分并回读ACTIVE，不提前SSH。10点后新增需人工判断事项交用户，现pending为空，既有训练继续。接续a787b48。
+
 ## 2026-11-18 11:06 · seed101数学第38轮，混合终态保持
 
 - 11:06:28门后原metadata单次实际，数学第38轮optimizer更新598/599，较10:01增加102/103，混合共同30轮480更新已完成，增量0/0。数学两driver/controller原PID/start/UID/fullcmd匹配，混合原两driver gone/父[0,0]保持。37/37/30/30轮metrics连续有限，source/config及COMMITTED/ready匹配，无FAILURE。
