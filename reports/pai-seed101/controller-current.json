@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-17T23:59:29.441335+00:00",
+  "observed_at": "2026-11-18T00:59:49.880752+00:00",
   "driver_identities": {
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am": {
       "pid": 3924234,
@@ -15,7 +15,7 @@
       "start_ticks": 63125654,
       "cmdline_sha256": "ccec6ed2704097b412a5c14d96b5b7f1611e9bc19e2839e1d147dc0056787d76",
       "matches_output": true,
-      "state": "S"
+      "state": "R"
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am": {
       "pid": 3924235,
@@ -31,7 +31,7 @@
       "start_ticks": 63125654,
       "cmdline_sha256": "397418bb0169bc10cc2bf451e99f05fad20859238d23a7fe7817ea1741693cbd",
       "matches_output": true,
-      "state": "S"
+      "state": "R"
     }
   },
   "controllers": [
