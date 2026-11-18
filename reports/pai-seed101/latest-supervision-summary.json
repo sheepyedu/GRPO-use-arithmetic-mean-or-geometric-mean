@@ -1,32 +1,32 @@
 {
-  "observed_at": "2026-11-18T05:08:46.174241+00:00",
-  "received_at": "2026-11-18T05:08:46.223622+00:00",
+  "observed_at": "2026-11-18T06:10:02.664762+00:00",
+  "received_at": "2026-11-18T06:10:02.702504+00:00",
   "current_seed": 101,
-  "phase": "math_training49_mixed_complete30",
-  "formal_complete": 16,
+  "phase": "seed101_cpu_accepted",
+  "formal_complete": 20,
   "planned_runs": 20,
-  "current_seed_execution_terminal": 2,
-  "campaign_execution_terminal": 18,
+  "current_seed_execution_terminal": 4,
+  "campaign_execution_terminal": 20,
   "todos": [
-    3,
+    5,
     6
   ],
   "updates": [
-    783,
-    782,
+    800,
+    800,
     480,
     480
   ],
   "update_deltas": [
-    95,
-    94,
+    17,
+    18,
     0,
     0
   ],
-  "delta_scope": "Compared with seed101 12:08 metadata observation",
+  "delta_scope": "Compared with seed101 13:08 metadata observation",
   "recorded_rounds": [
-    48,
-    48,
+    50,
+    50,
     30,
     30
   ],
@@ -51,9 +51,9 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-18T06:08:46.223622+00:00",
-  "gpu_csv": "0, 40254, 100\n1, 39516, 83\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3307615551488,
+  "next_check_not_before": "2026-11-18T07:12:07.231136+00:00",
+  "gpu_csv": "0, 3, 0\n1, 3, 0\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3274568630272,
   "supervision_interval_seconds": 3600,
   "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
   "first_state_source_sha256": "6d47f178c547af0cef8df43bad20792bc7d34dbddee477f6a05815842b06b1b2",
@@ -63,10 +63,12 @@
     true,
     true
   ],
-  "last_necessary_terminal_observed_at": "2026-11-18T02:05:43.604852+00:00",
-  "last_necessary_terminal_received_at": "2026-11-18T02:05:43.623888+00:00",
+  "last_necessary_terminal_observed_at": "2026-11-18T06:12:06.783601+00:00",
+  "last_necessary_terminal_received_at": "2026-11-18T06:12:07.231136+00:00",
   "mixed_final_primary": {
     "am": 0.920844410473708,
     "gm": 0.921971789476189
-  }
+  },
+  "final_state_verification_at": "2026-11-18T06:11:39.480551+00:00",
+  "final_verification_sha256": "37ba68577860982a9858b493053cd06fe7f83bf5fbb251d5f01001e4a8379a5b"
 }

@@ -1,21 +1,13 @@
 {
-  "observed_at": "2026-11-18T05:08:46.174241+00:00",
+  "observed_at": "2026-11-18T06:10:02.664762+00:00",
   "driver_identities": {
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am": {
       "pid": 3924234,
-      "uid": 0,
-      "start_ticks": 63125653,
-      "cmdline_sha256": "0f391da9d9f8e9c7cdf6be18ede0a344b3dc92d509bcb96d604e1dcb27a71516",
-      "matches_output": true,
-      "state": "R"
+      "gone": true
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm": {
       "pid": 3924236,
-      "uid": 0,
-      "start_ticks": 63125654,
-      "cmdline_sha256": "ccec6ed2704097b412a5c14d96b5b7f1611e9bc19e2839e1d147dc0056787d76",
-      "matches_output": true,
-      "state": "S"
+      "gone": true
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am": {
       "pid": 3924235,
@@ -38,13 +30,7 @@
       },
       "identity": {
         "pid": 3924230,
-        "uid": 0,
-        "start_ticks": 63125646,
-        "cmdline_sha256": "e3dba1eb9f3d20313b3f038ff384e41c34f5f4ea0a5e758965b7ba0e209853b3",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     },
     {
@@ -58,13 +44,7 @@
       },
       "identity": {
         "pid": 3924230,
-        "uid": 0,
-        "start_ticks": 63125646,
-        "cmdline_sha256": "e3dba1eb9f3d20313b3f038ff384e41c34f5f4ea0a5e758965b7ba0e209853b3",
-        "state": "S",
-        "matches_original_start": true,
-        "matches_config": true,
-        "matches_output": true
+        "gone": true
       }
     }
   ],
@@ -91,10 +71,7 @@
   },
   "wrapper_actual_identity": {
     "pid": 3924228,
-    "uid": 0,
-    "start_ticks": 63125643,
-    "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
-    "cmdline": "/mount-data/GRPO-Sequence-Ratio/env/bin/python -u /mount-data/GRPO-Sequence-Ratio/logs/seed101-run-v4-wrapper.py "
+    "gone": true
   },
-  "wrapper_actual_identity_observed_at": "2026-11-18T02:05:43.604852+00:00"
+  "wrapper_actual_identity_observed_at": "2026-11-18T06:10:51.520225+00:00"
 }

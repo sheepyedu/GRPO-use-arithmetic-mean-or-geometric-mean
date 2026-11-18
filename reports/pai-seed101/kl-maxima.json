@@ -1,0 +1,50 @@
+{
+  "formal-math-am": {
+    "round": 26,
+    "updates": 416,
+    "elapsed": 19108.114193201065,
+    "reward": 0.951171875,
+    "kl": 0.0932050206730537,
+    "loss": 0.0006453703611652983,
+    "clip_fraction": 0.0,
+    "zero_advantage_fraction": 0.890625,
+    "am_gm_log_gap": 0.0008839928929802454,
+    "tokens": 298568
+  },
+  "formal-math-gm": {
+    "round": 27,
+    "updates": 432,
+    "elapsed": 19772.768741607666,
+    "reward": 0.953125,
+    "kl": 0.29163294791970884,
+    "loss": 0.002833612597327839,
+    "clip_fraction": 0.0,
+    "zero_advantage_fraction": 0.890625,
+    "am_gm_log_gap": 0.0007615455838987373,
+    "tokens": 324250
+  },
+  "formal-mixed-am": {
+    "round": 22,
+    "updates": 352,
+    "elapsed": 15272.35612988472,
+    "reward": 0.84765625,
+    "kl": 0.03553305811306018,
+    "loss": -5.127947427396862e-05,
+    "clip_fraction": 0.0,
+    "zero_advantage_fraction": 0.71875,
+    "am_gm_log_gap": 0.0011052539469460498,
+    "tokens": 290674
+  },
+  "formal-mixed-gm": {
+    "round": 2,
+    "updates": 32,
+    "elapsed": 1734.1656408309937,
+    "reward": 0.81640625,
+    "kl": 0.049633953906436545,
+    "loss": -0.00046273065407254066,
+    "clip_fraction": 0.0,
+    "zero_advantage_fraction": 0.671875,
+    "am_gm_log_gap": 0.001409316699735541,
+    "tokens": 280618
+  }
+}

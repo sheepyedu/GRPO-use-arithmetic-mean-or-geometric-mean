@@ -1,0 +1,462 @@
+{
+  "verified_at": "2026-11-18T06:11:39.480551+00:00",
+  "summary": {
+    "seed": 101,
+    "complete_runs": 4,
+    "planned_runs": 20,
+    "common_config": {
+      "model": "/mount-data/Models/Qwen3-8B",
+      "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "data": "/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1",
+      "seed": 101,
+      "rounds": 200,
+      "group_size": 8,
+      "prompt_batch": 64,
+      "optimization_epochs": 2,
+      "minibatch_sequences": 64,
+      "microbatch_sequences": 1,
+      "learning_rate": 1e-05,
+      "epsilon": 0.2,
+      "beta": 0.01,
+      "advantage_delta": 1e-06,
+      "max_new_tokens": 2048,
+      "max_model_len": 8192,
+      "lora_rank": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.0,
+      "lora_targets": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "thinking": true,
+      "gradient_clip": 1.0,
+      "validation_every": 10,
+      "vllm_memory_fraction": 0.72,
+      "vllm_max_sequences": 64,
+      "early_stopping": {
+        "min_rounds": 20,
+        "patience": 2,
+        "min_delta": 0.005,
+        "max_pair_hours": 12
+      },
+      "vllm_enforce_eager": false,
+      "checkpoint_free_max_tokens": 1536
+    },
+    "source_manifest_hash": "c3b1300cd0e5392453f2c38f067ad494d63107b01937ff70af1546daced70fec",
+    "runs": [
+      {
+        "environment": "math",
+        "operator": "am",
+        "seed": 101,
+        "rounds": 50,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 50,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.94,
+            "gm": 0.949
+          },
+          "bad_checks": {
+            "am": 3,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.944,
+            "gm": 0.944
+          },
+          "elapsed_seconds": 34931.083541929955
+        },
+        "primary": 0.9401061410159212,
+        "test_metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.9401061410159212,
+            "mean_tokens": 614.7088703563305,
+            "truncation": 0.029567854435178165,
+            "valid": 0.9704321455648218
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.7327441077441077,
+            "mean_tokens": 378.1973905723906,
+            "truncation": 0.003787878787878788,
+            "valid": 0.7445286195286195
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.8495412844036697,
+            "mean_tokens": 254.2165137614679,
+            "truncation": 0.0015290519877675841,
+            "valid": 0.9761467889908257
+          },
+          "macro": 0.840797177721233,
+          "mixed_weighted": 0.8656244185449049
+        },
+        "validation_auc_normalized": 0.9338,
+        "training_generated_tokens": 16481969,
+        "allocated_gpu_hours": 9.898742799494002,
+        "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am"
+      },
+      {
+        "environment": "math",
+        "operator": "gm",
+        "seed": 101,
+        "rounds": 50,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 50,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.94,
+            "gm": 0.949
+          },
+          "bad_checks": {
+            "am": 3,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.944,
+            "gm": 0.944
+          },
+          "elapsed_seconds": 34931.083541929955
+        },
+        "primary": 0.9385898407884761,
+        "test_metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.9385898407884761,
+            "mean_tokens": 615.1569370735406,
+            "truncation": 0.027293404094010616,
+            "valid": 0.9727065959059894
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.7655723905723906,
+            "mean_tokens": 385.5513468013468,
+            "truncation": 0.0025252525252525255,
+            "valid": 0.7781986531986532
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.8483180428134557,
+            "mean_tokens": 261.3097859327217,
+            "truncation": 0.0021406727828746177,
+            "valid": 0.9663608562691132
+          },
+          "macro": 0.8508267580581075,
+          "mixed_weighted": 0.8727675287406996
+        },
+        "validation_auc_normalized": 0.9312,
+        "training_generated_tokens": 16361390,
+        "allocated_gpu_hours": 9.899517542454932,
+        "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm"
+      },
+      {
+        "environment": "mixed",
+        "operator": "am",
+        "seed": 101,
+        "rounds": 30,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 30,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.9156666666666667,
+            "gm": 0.9169780701754386
+          },
+          "bad_checks": {
+            "am": 2,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.9197938596491229,
+            "gm": 0.9166008771929826
+          },
+          "elapsed_seconds": 20078.951995229
+        },
+        "primary": 0.920844410473708,
+        "test_metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.9166034874905231,
+            "mean_tokens": 662.2168309325247,
+            "truncation": 0.05913570887035633,
+            "valid": 0.9408642911296436
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.9776936026936027,
+            "mean_tokens": 418.55555555555554,
+            "truncation": 0.008838383838383838,
+            "valid": 0.9903198653198653
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.8724770642201835,
+            "mean_tokens": 289.70244648318044,
+            "truncation": 0.00672782874617737,
+            "valid": 0.9917431192660551
+          },
+          "macro": 0.922258051468103,
+          "mixed_weighted": 0.920844410473708
+        },
+        "validation_auc_normalized": 0.8911052631578948,
+        "training_generated_tokens": 8138230,
+        "allocated_gpu_hours": 5.798870312902663,
+        "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am"
+      },
+      {
+        "environment": "mixed",
+        "operator": "gm",
+        "seed": 101,
+        "rounds": 30,
+        "planned_rounds": 200,
+        "stop_reason": "paired_plateau",
+        "paired_stop_decision": {
+          "round": 30,
+          "stop": true,
+          "reason": "paired_plateau",
+          "best": {
+            "am": 0.9156666666666667,
+            "gm": 0.9169780701754386
+          },
+          "bad_checks": {
+            "am": 2,
+            "gm": 2
+          },
+          "scores": {
+            "am": 0.9197938596491229,
+            "gm": 0.9166008771929826
+          },
+          "elapsed_seconds": 20078.951995229
+        },
+        "primary": 0.921971789476189,
+        "test_metrics": {
+          "gsm8k": {
+            "count": 1319,
+            "accuracy": 0.9188779378316907,
+            "mean_tokens": 686.8074298711144,
+            "truncation": 0.0576194086429113,
+            "valid": 0.9423805913570887
+          },
+          "arc": {
+            "count": 2376,
+            "accuracy": 0.9764309764309764,
+            "mean_tokens": 428.63930976430976,
+            "truncation": 0.011784511784511785,
+            "valid": 0.9873737373737373
+          },
+          "boolq": {
+            "count": 3270,
+            "accuracy": 0.8737003058103976,
+            "mean_tokens": 290.8605504587156,
+            "truncation": 0.005504587155963303,
+            "valid": 0.9935779816513761
+          },
+          "macro": 0.9230030733576883,
+          "mixed_weighted": 0.921971789476189
+        },
+        "validation_auc_normalized": 0.8881286549707602,
+        "training_generated_tokens": 8192484,
+        "allocated_gpu_hours": 5.800314862993028,
+        "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm"
+      }
+    ],
+    "gm_minus_am": {
+      "math": -0.0015163002274450887,
+      "mixed": 0.0011273790024809438
+    },
+    "statistical_scope": "One paired seed; five-seed confidence intervals remain pending"
+  },
+  "state_checks": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am/checkpoint-050",
+      "round": 50,
+      "updates": 800,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true,
+      "scheduler_epoch": 800,
+      "rng_schedule_present": true
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm/checkpoint-050",
+      "round": 50,
+      "updates": 800,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true,
+      "scheduler_epoch": 800,
+      "rng_schedule_present": true
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am/checkpoint-030",
+      "round": 30,
+      "updates": 480,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true,
+      "scheduler_epoch": 480,
+      "rng_schedule_present": true
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm",
+      "checkpoint": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm/checkpoint-030",
+      "round": 30,
+      "updates": 480,
+      "optimizer_parameters": 504,
+      "optimizer_tensors": 1512,
+      "optimizer_finite": true,
+      "adapter_tensors": 504,
+      "adapter_finite": true,
+      "scheduler_epoch": 480,
+      "rng_schedule_present": true
+    }
+  ],
+  "token_usage": [
+    {
+      "environment": "math",
+      "operator": "am",
+      "phases": {
+        "training": {
+          "files": 50,
+          "sequences": 25600,
+          "input_tokens_per_sequence": 2500472,
+          "input_tokens_per_prompt": 312559,
+          "output_tokens": 16481969
+        },
+        "validation": {
+          "files": 6,
+          "sequences": 15420,
+          "input_tokens_per_sequence": 1838136,
+          "input_tokens_per_prompt": 1838136,
+          "output_tokens": 6743470
+        },
+        "test": {
+          "files": 1,
+          "sequences": 6965,
+          "input_tokens_per_sequence": 874115,
+          "input_tokens_per_prompt": 874115,
+          "output_tokens": 2540686
+        }
+      },
+      "input_tokens_per_sequence": 5212723,
+      "input_tokens_per_prompt": 3024810,
+      "output_tokens": 25766125
+    },
+    {
+      "environment": "math",
+      "operator": "gm",
+      "phases": {
+        "training": {
+          "files": 50,
+          "sequences": 25600,
+          "input_tokens_per_sequence": 2500472,
+          "input_tokens_per_prompt": 312559,
+          "output_tokens": 16361390
+        },
+        "validation": {
+          "files": 6,
+          "sequences": 15420,
+          "input_tokens_per_sequence": 1838136,
+          "input_tokens_per_prompt": 1838136,
+          "output_tokens": 6758369
+        },
+        "test": {
+          "files": 1,
+          "sequences": 6965,
+          "input_tokens_per_sequence": 874115,
+          "input_tokens_per_prompt": 874115,
+          "output_tokens": 2581945
+        }
+      },
+      "input_tokens_per_sequence": 5212723,
+      "input_tokens_per_prompt": 3024810,
+      "output_tokens": 25701704
+    },
+    {
+      "environment": "mixed",
+      "operator": "am",
+      "phases": {
+        "training": {
+          "files": 30,
+          "sequences": 15360,
+          "input_tokens_per_sequence": 1665184,
+          "input_tokens_per_prompt": 208148,
+          "output_tokens": 8138230
+        },
+        "validation": {
+          "files": 4,
+          "sequences": 10280,
+          "input_tokens_per_sequence": 1225424,
+          "input_tokens_per_prompt": 1225424,
+          "output_tokens": 4817325
+        },
+        "test": {
+          "files": 1,
+          "sequences": 6965,
+          "input_tokens_per_sequence": 874115,
+          "input_tokens_per_prompt": 874115,
+          "output_tokens": 2815279
+        }
+      },
+      "input_tokens_per_sequence": 3764723,
+      "input_tokens_per_prompt": 2307687,
+      "output_tokens": 15770834
+    },
+    {
+      "environment": "mixed",
+      "operator": "gm",
+      "phases": {
+        "training": {
+          "files": 30,
+          "sequences": 15360,
+          "input_tokens_per_sequence": 1665184,
+          "input_tokens_per_prompt": 208148,
+          "output_tokens": 8192484
+        },
+        "validation": {
+          "files": 4,
+          "sequences": 10280,
+          "input_tokens_per_sequence": 1225424,
+          "input_tokens_per_prompt": 1225424,
+          "output_tokens": 4888451
+        },
+        "test": {
+          "files": 1,
+          "sequences": 6965,
+          "input_tokens_per_sequence": 874115,
+          "input_tokens_per_prompt": 874115,
+          "output_tokens": 2875460
+        }
+      },
+      "input_tokens_per_sequence": 3764723,
+      "input_tokens_per_prompt": 2307687,
+      "output_tokens": 15956395
+    }
+  ],
+  "token_scope": "Exact lengths from every saved formal rollout, validation and final test prediction. Sequence input counts repeat each training prompt for its eight completions. Prompt input counts once per generation request prompt, without claiming physical cache/prefill work. Outputs include thinking. HF forward/backward repeated token processing and historical Node01 pilots are excluded."
+}

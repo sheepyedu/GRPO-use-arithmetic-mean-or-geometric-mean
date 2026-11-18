@@ -15,9 +15,7 @@
       3
     ],
     "current_seed": 101,
-    "remaining_seeds": [
-      101
-    ],
+    "remaining_seeds": [],
     "next_seed": null
   },
   "active_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -34,17 +32,17 @@
       9
     ],
     "formal_complete": [
-      16,
+      20,
       20
     ],
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41b5e704-b6a8-8108-911b-dab774d58c0a",
     "current_child_todos": [
-      3,
+      5,
       6
     ]
   },
-  "next_action": "Hourly supervise original seed101 training, validation and terminal testing; then once final complete-state/token acceptance, fixed review and five-seed analysis.",
+  "next_action": "Submit seed101 fixed review and deliver five-seed analysis. No new science runs.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -53,7 +51,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-18T05:08:46.174241+00:00",
+  "updated_at": "2026-11-18T06:12:06.783601+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": true,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -98,7 +96,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "last_observed_at": "2026-11-18T05:08:46.174241+00:00",
+  "last_observed_at": "2026-11-18T06:10:02.664762+00:00",
   "night_sessions_history": [
     {
       "enabled_at": "2026-11-15T15:51:25.581301+00:00",
@@ -117,16 +115,17 @@
     17,
     29,
     43,
-    71
+    71,
+    101
   ],
-  "last_necessary_terminal_observed_at": "2026-11-18T02:05:43.604852+00:00",
-  "execution_terminal": 18,
-  "formal_complete": 16,
+  "last_necessary_terminal_observed_at": "2026-11-18T06:12:06.783601+00:00",
+  "execution_terminal": 20,
+  "formal_complete": 20,
   "current_seed_first_state_verified": true,
   "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
   "supervision_interval_seconds": 3600,
   "current_seed": 101,
-  "execution_phase": "seed101_math_training_mixed_complete",
+  "execution_phase": "seed101_cpu_accepted",
   "decision_authority_returned_recorded_at": "2026-11-18T02:01:37.020773+00:00",
   "pending_user_decisions": []
 }

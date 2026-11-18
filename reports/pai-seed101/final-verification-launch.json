@@ -1,0 +1,11 @@
+{
+  "pid": 4022135,
+  "start_ticks": 66888509,
+  "uid": 0,
+  "cmdline_sha256": "d45a6cbee0ef0115676381a0e920d2768581889e8452b4d00ea39ed5bda0bbea",
+  "source_sha256": "2ad6dbd52c6ee4eebdd8fb0e0d1edc08af2eb984696fed67e7ced6e70b7c9be6",
+  "original_source_sha256": "210cc2af4f11b070e1c76f3e1108e7de2007908344cc9277c986fa8bf45eeb6d",
+  "output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/acceptance-v1",
+  "time": "2026-11-18T06:10:51.520225+00:00",
+  "cuda_visible_devices": ""
+}
