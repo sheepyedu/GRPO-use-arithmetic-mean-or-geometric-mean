@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-11-17T22:57:48.735184+00:00",
-  "received_at": "2026-11-17T22:57:48.759440+00:00",
+  "observed_at": "2026-11-17T23:59:29.441335+00:00",
+  "received_at": "2026-11-17T23:59:29.479439+00:00",
   "current_seed": 101,
-  "phase": "math_training15_mixed_training17",
+  "phase": "math_validation20_mixed_training23",
   "formal_complete": 16,
   "planned_runs": 20,
   "current_seed_execution_terminal": 0,
@@ -12,23 +12,23 @@
     6
   ],
   "updates": [
-    231,
-    232,
-    259,
-    259
+    320,
+    320,
+    352,
+    352
   ],
   "update_deltas": [
-    71,
-    72,
+    89,
     88,
-    88
+    93,
+    93
   ],
-  "delta_scope": "Compared with seed101 05:57 metadata observation",
+  "delta_scope": "Compared with seed101 06:57 metadata observation",
   "recorded_rounds": [
-    14,
-    14,
-    16,
-    16
+    20,
+    20,
+    22,
+    22
   ],
   "initial_validation_verified": true,
   "current_seed_first_state_verified": true,
@@ -51,15 +51,15 @@
     null,
     null
   ],
-  "next_check_not_before": "2026-11-17T23:57:48.759440+00:00",
-  "gpu_csv": "0, 42108, 65\n1, 40956, 76\n2, 40898, 58\n3, 43660, 51\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
-  "disk_free_bytes": 3458262368256,
+  "next_check_not_before": "2026-11-18T00:59:29.479439+00:00",
+  "gpu_csv": "0, 72176, 94\n1, 72130, 85\n2, 72568, 100\n3, 72550, 98\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0",
+  "disk_free_bytes": 3415694376960,
   "supervision_interval_seconds": 3600,
   "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
   "first_state_source_sha256": "6d47f178c547af0cef8df43bad20792bc7d34dbddee477f6a05815842b06b1b2",
   "ready_matches_committed": [
-    true,
-    true,
+    null,
+    null,
     true,
     true
   ]
