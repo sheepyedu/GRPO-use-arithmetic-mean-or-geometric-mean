@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-18T00:59:49.880752+00:00",
+  "observed_at": "2026-11-18T02:01:37.835506+00:00",
   "driver_identities": {
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am": {
       "pid": 3924234,
@@ -7,7 +7,7 @@
       "start_ticks": 63125653,
       "cmdline_sha256": "0f391da9d9f8e9c7cdf6be18ede0a344b3dc92d509bcb96d604e1dcb27a71516",
       "matches_output": true,
-      "state": "S"
+      "state": "R"
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm": {
       "pid": 3924236,
@@ -19,19 +19,11 @@
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am": {
       "pid": 3924235,
-      "uid": 0,
-      "start_ticks": 63125653,
-      "cmdline_sha256": "5774a8fedd41d27a7ac7d648f7f6d22c6620d2aed40ee85ae9b326e9b9c4f139",
-      "matches_output": true,
-      "state": "S"
+      "gone": true
     },
     "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm": {
       "pid": 3924237,
-      "uid": 0,
-      "start_ticks": 63125654,
-      "cmdline_sha256": "397418bb0169bc10cc2bf451e99f05fad20859238d23a7fe7817ea1741693cbd",
-      "matches_output": true,
-      "state": "R"
+      "gone": true
     }
   },
   "controllers": [
@@ -102,11 +94,7 @@
     "uid": 0,
     "start_ticks": 63125643,
     "cmdline_sha256": "bf2e18a91a7ae22d69776825ad52e844c69d4cce853b7402e3cd5fc56bdcf2ff",
-    "argv": [
-      "/mount-data/GRPO-Sequence-Ratio/env/bin/python",
-      "-u",
-      "/mount-data/GRPO-Sequence-Ratio/logs/seed101-run-v4-wrapper.py"
-    ]
+    "cmdline": "/mount-data/GRPO-Sequence-Ratio/env/bin/python -u /mount-data/GRPO-Sequence-Ratio/logs/seed101-run-v4-wrapper.py "
   },
-  "wrapper_actual_identity_observed_at": "2026-11-17T19:48:55.913211+00:00"
+  "wrapper_actual_identity_observed_at": "2026-11-18T02:05:43.604852+00:00"
 }

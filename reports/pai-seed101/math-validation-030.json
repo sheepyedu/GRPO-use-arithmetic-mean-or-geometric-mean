@@ -1,0 +1,99 @@
+{
+  "observed_at": "2026-11-18T02:01:37.835506+00:00",
+  "environment": "math",
+  "round": 30,
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-am",
+      "validation": {
+        "round": 30,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.939,
+            "mean_tokens": 605.475,
+            "truncation": 0.034,
+            "valid": 0.966
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.7263157894736842,
+            "mean_tokens": 409.059649122807,
+            "truncation": 0.0035087719298245615,
+            "valid": 0.7456140350877193
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.855,
+            "mean_tokens": 281.069,
+            "truncation": 0.005,
+            "valid": 0.98
+          },
+          "macro": 0.8401052631578948,
+          "mixed_weighted": 0.8648289473684211
+        }
+      },
+      "paired_decision": {
+        "round": 31,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.94,
+          "gm": 0.949
+        },
+        "bad_checks": {
+          "am": 1,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 22578.112228921033
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-math-gm",
+      "validation": {
+        "round": 30,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.949,
+            "mean_tokens": 557.287,
+            "truncation": 0.019,
+            "valid": 0.981
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.6491228070175439,
+            "mean_tokens": 410.76140350877193,
+            "truncation": 0.008771929824561403,
+            "valid": 0.6684210526315789
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.825,
+            "mean_tokens": 271.569,
+            "truncation": 0.002,
+            "valid": 0.947
+          },
+          "macro": 0.8077076023391813,
+          "mixed_weighted": 0.8430307017543859
+        }
+      },
+      "paired_decision": {
+        "round": 31,
+        "stop": false,
+        "reason": null,
+        "best": {
+          "am": 0.94,
+          "gm": 0.949
+        },
+        "bad_checks": {
+          "am": 1,
+          "gm": 0
+        },
+        "scores": null,
+        "elapsed_seconds": 22578.112228921033
+      }
+    }
+  ]
+}

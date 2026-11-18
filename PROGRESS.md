@@ -1,3 +1,10 @@
+## 2026-11-18 10:05 · seed101混合两组完成，数学第32轮
+
+- 10:01:37门后metadata实际：数学第32轮frozen_scores各496更新，混合共同30轮480更新，较08:59增加88/89/24/25。数学两driver/controller原身份匹配，31/31/30/30轮metrics连续有限，source/config与COMMITTED/ready通过，无FAILURE。
+- 10:05:43必要终态补核确认混合formal COMPLETE、原paired_plateau计数2/2、每run6965题最终测试、父真实[0,0]和原driver gone，wrapper原身份仍live。混合最终加权AM92.084441%/GM92.197179%，GM−AM +0.112738个百分点。GPU2/3正常结束释放，执行终态18/20、完整CPU验收仍16/20，不重复optimizer。四run完成后再一次完整状态/逐token最终验收。
+- 数学30轮GSM AM93.9%/GM94.9%，原bad_checks1/0继续；混合30轮验证加权91.979386%/91.660088%。两环境完整验证分别保存math-validation-030.json与mixed-validation-030.json。10:01 GPU0–3 util89/96/0/0%，显存20836/21922/0/0MiB，CPFS3365404672000B，无资源门异常，保护其他项目。
+- Notion混合两项已勾选，子3/6、50%，根7/9、77.78%。原night固定Nov18 10:00决策权已交回，当前pending为空，既有授权工作继续。用户要求后续1h检查，沿同一ACTIVE自动化，将小时锚对齐06分；canonical下一门2026-11-18T03:05:43.623888+00:00，门后核验。接续d3885a0。
+
 ## 2026-11-18 08:59 · seed101数学第26轮、混合第29轮
 
 - 初核08:58距最新门08:59:29约43秒，必要本机与Notion核对后一次34秒有界等门，08:59:49原metadata单次实际，无提前SSH。数学第26轮epoch1更新408/407，混合第29轮epoch1更新456/455，较07:59增加88/87/104/103。四driver/controller原PID/start/UID/fullcmd匹配，25/25/28/28轮metrics连续有限，source/config及COMMITTED/ready匹配，无FAILURE，原共同decision继续。

@@ -1,0 +1,105 @@
+{
+  "observed_at": "2026-11-18T02:01:37.835506+00:00",
+  "environment": "mixed",
+  "round": 30,
+  "runs": [
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-am",
+      "validation": {
+        "round": 30,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.923,
+            "mean_tokens": 618.523,
+            "truncation": 0.052,
+            "valid": 0.947
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.9701754385964912,
+            "mean_tokens": 435.7631578947368,
+            "truncation": 0.017543859649122806,
+            "valid": 0.9824561403508771
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.863,
+            "mean_tokens": 303.278,
+            "truncation": 0.011,
+            "valid": 0.988
+          },
+          "macro": 0.9187251461988305,
+          "mixed_weighted": 0.9197938596491229
+        }
+      },
+      "paired_decision": {
+        "round": 30,
+        "stop": true,
+        "reason": "paired_plateau",
+        "best": {
+          "am": 0.9156666666666667,
+          "gm": 0.9169780701754386
+        },
+        "bad_checks": {
+          "am": 2,
+          "gm": 2
+        },
+        "scores": {
+          "am": 0.9197938596491229,
+          "gm": 0.9166008771929826
+        },
+        "elapsed_seconds": 20078.951995229
+      }
+    },
+    {
+      "directory": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/formal-mixed-gm",
+      "validation": {
+        "round": 30,
+        "metrics": {
+          "gsm8k": {
+            "count": 1000,
+            "accuracy": 0.92,
+            "mean_tokens": 646.474,
+            "truncation": 0.058,
+            "valid": 0.941
+          },
+          "arc": {
+            "count": 570,
+            "accuracy": 0.9614035087719298,
+            "mean_tokens": 453.5561403508772,
+            "truncation": 0.017543859649122806,
+            "valid": 0.980701754385965
+          },
+          "boolq": {
+            "count": 1000,
+            "accuracy": 0.865,
+            "mean_tokens": 309.999,
+            "truncation": 0.012,
+            "valid": 0.988
+          },
+          "macro": 0.91546783625731,
+          "mixed_weighted": 0.9166008771929826
+        }
+      },
+      "paired_decision": {
+        "round": 30,
+        "stop": true,
+        "reason": "paired_plateau",
+        "best": {
+          "am": 0.9156666666666667,
+          "gm": 0.9169780701754386
+        },
+        "bad_checks": {
+          "am": 2,
+          "gm": 2
+        },
+        "scores": {
+          "am": 0.9197938596491229,
+          "gm": 0.9166008771929826
+        },
+        "elapsed_seconds": 20078.951995229
+      }
+    }
+  ]
+}

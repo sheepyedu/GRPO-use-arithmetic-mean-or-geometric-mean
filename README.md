@@ -39,7 +39,7 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 
 ## 项目进度
 
-seed17、29、43、71共16个正式run已完成训练、最终锁定测试及完整状态验收。seed29与43固定审核已通过，seed71审核单nr-3fb8865c93a9b44c1d6e861448ba0164已通过，子项目Done。最后seed101四run已于2026-11-18 03:43单次启动，四组原初始2570题验证已完成并进入第1轮采样。结果见 `reports/seed17-results.md`、`reports/seed29-results.md`、`reports/seed43-results.md` 和 `reports/seed71-results.md`。seed71数学GM第32轮KL尖峰及原浮点早停阈值边界已保留。五seed统计和根项目审核待完成，1小时监督沿用共享时间门。
+seed17、29、43、71共16个正式run已完成训练、最终锁定测试及完整状态验收。seed29与43固定审核已通过，seed71审核单nr-3fb8865c93a9b44c1d6e861448ba0164已通过，子项目Done。最后seed101四run已于2026-11-18 03:43单次启动，混合两组已共同30轮完成最终测试，数学两组10:01实测第32轮；执行终态18/20，完整验收仍16/20。结果见 `reports/seed17-results.md`、`reports/seed29-results.md`、`reports/seed43-results.md` 和 `reports/seed71-results.md`。seed71数学GM第32轮KL尖峰及原浮点早停阈值边界已保留。五seed统计和根项目审核待完成，1小时监督沿用共享时间门。
 
 [Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
 

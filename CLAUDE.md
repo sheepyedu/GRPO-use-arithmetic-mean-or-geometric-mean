@@ -89,7 +89,7 @@ rebase 发生冲突时：
 - 主模型固定为官方 `Qwen/Qwen3-8B`，默认统一启用 thinking 模式；实施时固定 revision 并核验许可证、模板与后端兼容性。
 - 保留纯数学与混合双环境、序列概率比 AM/GM 配对比较及五个 seed（17、29、43、71、101），共 20 个正式运行。AM 组不是标准 token 级 GRPO。
 - 已实现 `src/{data,rewards,objectives,train}.py`、`scripts/run_seed.py` 和 `configs/seed17.json`。Node01现有torch2.10/transformers4.57.6/peft0.17.1/vLLM0.17.1用于BF16 LoRA单卡训练，后端选择见 `docs/method_decision.md`。
-- 首seed17在PAI GPU0–3同时运行数学AM/GM和混合AM/GM。正式采用成对早停，最多200轮。2026-11-18 seed17/29/43/71共16/20已完整验收，seed71固定审核已通过，最后seed101四run已03:43单次启动，初始2570题验证完成并进入第1轮采样。
+- 首seed17在PAI GPU0–3同时运行数学AM/GM和混合AM/GM。正式采用成对早停，最多200轮。2026-11-18 seed17/29/43/71共16/20已完整验收，seed71固定审核已通过，最后seed101四run已03:43单次启动，混合两组30轮最终测试已完成，数学两组10:01实测第32轮继续；执行终态18/20，完整验收仍16/20。
 - 当前服务器工作根 `/mount-data/GRPO-Sequence-Ratio`，官方模型 `/mount-data/Models/Qwen3-8B`，数据 `/mount-data/Datasets/GRPO-Sequence-Ratio/data-v1`。Node01历史试运行及停止证据保留原目录。仓库提交源码、文档和小摘要。
 - 测试 `python -m unittest discover -s tests -v`，19项包含小型Qwen两次优化更新。修改后重新测试，原失败日志保留。
 
