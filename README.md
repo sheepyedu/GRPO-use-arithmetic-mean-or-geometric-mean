@@ -39,7 +39,11 @@ python scripts/run_seed.py --config configs/pai-seed17.json --output /mount-data
 
 ## 项目进度
 
-seed17、29、43、71共16个正式run已完成训练、最终锁定测试及完整状态验收。seed29与43固定审核已通过，seed71审核单nr-3fb8865c93a9b44c1d6e861448ba0164已通过，子项目Done。最后seed101四run已于2026-11-18 03:43单次启动，混合两组已共同30轮完成最终测试，数学两组10:01实测第32轮；执行终态18/20，完整验收仍16/20。结果见 `reports/seed17-results.md`、`reports/seed29-results.md`、`reports/seed43-results.md` 和 `reports/seed71-results.md`。seed71数学GM第32轮KL尖峰及原浮点早停阈值边界已保留。五seed统计和根项目审核待完成，1小时监督沿用共享时间门。
+五个种子的20组训练、锁定测试和最终状态已完整验收，全部种子子任务通过固定审核。最后四组于2026-11-18 13:37:55结束，GPU0–3随后确认释放。GM相对AM的配对均值在纯数学为−0.0152个百分点、混合为−0.1857个百分点，两个95%区间均跨0。累计222.991 H20 GPU小时，按回答计的输入与输出合计641,363,993 token。根项目报告由杨洋审核。
+
+[五种子黑体PDF报告](output/pdf/GRPO五种子实验汇报_黑体_20261118.pdf) · [配对分析与曲线](reports/five-seed-results.md) · [20组明细CSV](reports/five-seed-runs.csv) · [配对统计JSON](reports/five-seed-summary.json)
+
+单种子交付：[17](reports/seed17-results.md)、[29](reports/seed29-results.md)、[43](reports/seed43-results.md)、[71](reports/seed71-results.md)、[101](reports/seed101-results.md)。
 
 [Notion根项目](https://app.notion.com/p/4195e704b6a88148bbfcd9b3c8240945) · [首seed四run](https://app.notion.com/p/4195e704b6a881308564c2afff182ec4)
 

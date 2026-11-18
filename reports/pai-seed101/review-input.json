@@ -1,0 +1,67 @@
+{
+  "page_id": "41b5e704-b6a8-8108-911b-dab774d58c0a",
+  "parent_page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+  "source_thread_id": "01a1df89-2f0c-77c2-a418-5332a834fedf",
+  "source_host_id": "local",
+  "revision": "0ab266868c1f7cd0f03504ef25d20f867103db3a",
+  "scope": "seed101 四个正式 GRPO 运行的锁定测试、最终检查点、token 及资源释放验收。",
+  "acceptance_criteria": [
+    "冻结 source-v4 / data-v1，原始 Qwen3-8B 独立初始化，数学50轮800次更新、混合30轮480次更新，分别成对早停",
+    "每组6965题锁定测试，两对及外层退出码为0，自有进程退出，GPU0–3释放",
+    "检查点 SHA、LoRA、AdamW、scheduler、随机数及数据调度状态核验通过",
+    "160份训练rollout、20份验证和4份最终测试的保存序列 token 核算与报告一致"
+  ],
+  "evidence": [
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed101-results.md",
+      "version": "SHA256 1ff077bc3690ec9ddb02786963a2e77a37470ca2234b3e9f3659d5e204f93660",
+      "supports": "研究结果和开销"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/seed101-summary.json",
+      "version": "SHA256 2d0e2e39af44b6c508cdfe2dc96507e1e692271b359dce5fbbccb547b407d647",
+      "supports": "四组原生汇总"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed101/final-verification.json",
+      "version": "SHA256 37ba68577860982a9858b493053cd06fe7f83bf5fbb251d5f01001e4a8379a5b",
+      "supports": "CPU原验收"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed101/final-verification-receipt.json",
+      "version": "SHA256 ddc5963262aa2d5ab8673b4254b60f06b0801d2d6cbad2e763a45c2706ef963d",
+      "supports": "验收进程退出与结果SHA"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed101/terminal-proof.json",
+      "version": "SHA256 4e0d69b8f9d7725a63a5cbb2aa122ea8ba7275ee502c86cf43026a674ed3ce25",
+      "supports": "四组终态及资源释放"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/pai-seed101/latest-status.json",
+      "version": "SHA256 9d25b377a594f6631d1508009d9b32f521a1c0766a16a5f713232166a3f91638",
+      "supports": "配对终态与冻结来源核验"
+    },
+    {
+      "ref": "/Users/mac/Desktop/work agent skill rsi/GRPO-use-arithmetic-mean-or-geometric-mean/.claude-manager/worktrees/task-seed17/reports/five-seed-curve-data.json",
+      "version": "SHA256 3b8f98596ccd0031e576b8f938d5b37f36055e37766376416262d6b0fab7c5a7",
+      "supports": "实际逐轮曲线与SHA"
+    },
+    {
+      "ref": "/mount-data/GRPO-Sequence-Ratio/runs/seed101/acceptance-v1/RESULT.json",
+      "version": "SHA256 37ba68577860982a9858b493053cd06fe7f83bf5fbb251d5f01001e4a8379a5b",
+      "supports": "远端原始验收"
+    }
+  ],
+  "verification": [
+    "北京时间14:11:39 CPU验收退出0，四份LoRA各504、AdamW各1512张量有限。",
+    "数学94.0106%/93.8590%，混合加权92.0844%/92.1972%。",
+    "总输出83195058、按回答计输入17954892、合计101149950。14:10已核原进程退出且GPU0–3释放。"
+  ],
+  "limitations": [
+    "本次是seed101子任务交付，五seed总体结论单独报告。",
+    "已保存序列的逻辑token统计不覆盖实际缓存命中、prefill或训练内重复前反向。",
+    "有限状态不足以判断整体优化波动，保留逐轮KL及异常。"
+  ],
+  "supersedes": null
+}

@@ -2,13 +2,13 @@
   "observed_at": "2026-11-18T06:10:02.664762+00:00",
   "received_at": "2026-11-18T06:10:02.702504+00:00",
   "current_seed": 101,
-  "phase": "seed101_cpu_accepted",
+  "phase": "seed101_reviewed",
   "formal_complete": 20,
   "planned_runs": 20,
   "current_seed_execution_terminal": 4,
   "campaign_execution_terminal": 20,
   "todos": [
-    5,
+    6,
     6
   ],
   "updates": [
@@ -70,5 +70,17 @@
     "gm": 0.921971789476189
   },
   "final_state_verification_at": "2026-11-18T06:11:39.480551+00:00",
-  "final_verification_sha256": "37ba68577860982a9858b493053cd06fe7f83bf5fbb251d5f01001e4a8379a5b"
+  "final_verification_sha256": "37ba68577860982a9858b493053cd06fe7f83bf5fbb251d5f01001e4a8379a5b",
+  "fixed_review": {
+    "review_id": "nr-24e11bd714d66a9be5e8354b1ecf73c6",
+    "reviewed_at": "2026-11-18T06:17:31.460Z",
+    "review_result": "通过",
+    "review_comment_id": "41c5e704-b6a8-813b-a1ad-001d5c6d35f7",
+    "status": "Done",
+    "todos": [
+      6,
+      6
+    ],
+    "review_revision": "0ab266868c1f7cd0f03504ef25d20f867103db3a"
+  }
 }

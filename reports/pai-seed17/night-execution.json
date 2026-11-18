@@ -38,11 +38,11 @@
     "review_id": "nr-1ae2572bf37a500fcee03dc0bc6f0cd6",
     "current_child": "41b5e704-b6a8-8108-911b-dab774d58c0a",
     "current_child_todos": [
-      5,
+      6,
       6
     ]
   },
-  "next_action": "Submit seed101 fixed review and deliver five-seed analysis. No new science runs.",
+  "next_action": "Root report awaits Yangyang review.",
   "constraints": [
     "Keep active scientific source frozen",
     "Preserve original failures and UNKNOWN",
@@ -51,9 +51,9 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-18T06:12:06.783601+00:00",
+  "updated_at": "2026-11-18T06:20:19.076676+00:00",
   "first_seed_goal_complete": true,
-  "campaign_continues_under_existing_user_authorization": true,
+  "campaign_continues_under_existing_user_authorization": false,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
   "prepared_configs": [
     {
@@ -108,7 +108,7 @@
   "timezone": "Asia/Shanghai",
   "current_decision_authority": "User decides newly arising questions requiring human judgment; existing authorized work continues",
   "night_mode_status": "decision_authority_returned",
-  "campaign_status": "active",
+  "campaign_status": "delivered_pending_root_review",
   "management_updated_at": "2026-11-16T19:20:29.116562+00:00",
   "session_scope": "Complete seed29 then43/71/101, final evaluation and state acceptance, fixed subtask review and five-seed analysis",
   "completed_seeds": [
@@ -125,7 +125,7 @@
   "last_state_verification_at": "2026-11-17T20:55:02.320058+00:00",
   "supervision_interval_seconds": 3600,
   "current_seed": 101,
-  "execution_phase": "seed101_cpu_accepted",
+  "execution_phase": "campaign_delivered",
   "decision_authority_returned_recorded_at": "2026-11-18T02:01:37.020773+00:00",
   "pending_user_decisions": []
 }

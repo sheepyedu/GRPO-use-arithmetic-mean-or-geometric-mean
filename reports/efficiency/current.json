@@ -1,5 +1,5 @@
 {
-  "phase": "seed101_cpu_accepted",
+  "phase": "campaign_delivered",
   "ready": true,
   "next_seed": null,
   "candidate_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -25,7 +25,7 @@
   ],
   "initial_validation_verified": true,
   "current_notion_todos": [
-    5,
+    6,
     6
   ],
   "full_round_speed_verified": false,
@@ -42,7 +42,7 @@
     ],
     "assumption": "Two successive four-card batches, each original12h soft training budget plus final evaluation and state acceptance; plateau may finish earlier. Estimate, not a measured completion time."
   },
-  "updated_at": "2026-11-18T06:12:06.783601+00:00",
+  "updated_at": "2026-11-18T06:20:19.076974+00:00",
   "formal_complete": 20,
   "current_seed": 101,
   "active_output": "/mount-data/GRPO-Sequence-Ratio/runs/seed101",
