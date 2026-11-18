@@ -28,7 +28,7 @@
       19
     ],
     "parent_todos": [
-      7,
+      9,
       9
     ],
     "formal_complete": [
@@ -51,7 +51,7 @@
     "Submit completed child through fixed Notion review skill"
   ],
   "supervision_policy": "reports/pai-seed17/supervision.json",
-  "updated_at": "2026-11-18T06:20:19.076676+00:00",
+  "updated_at": "2026-11-18T06:21:19.863732+00:00",
   "first_seed_goal_complete": true,
   "campaign_continues_under_existing_user_authorization": false,
   "reusable_scientific_source": "/mount-data/GRPO-Sequence-Ratio/source-v4",
@@ -127,5 +127,14 @@
   "current_seed": 101,
   "execution_phase": "campaign_delivered",
   "decision_authority_returned_recorded_at": "2026-11-18T02:01:37.020773+00:00",
-  "pending_user_decisions": []
+  "pending_user_decisions": [],
+  "root_review": {
+    "status": "待审核",
+    "todos": [
+      9,
+      9
+    ],
+    "page_id": "4195e704-b6a8-8148-bbfc-d9b3c8240945",
+    "artifact_commit": "c7edc10fc8b078261ab324820977315acf1f470d"
+  }
 }
